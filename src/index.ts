@@ -57,6 +57,9 @@ export default class WebRTC {
       );
       switch (peer.iceConnectionState) {
         case "closed":
+          this.disconnect();
+          this.isDisconnected = true;
+          this.isConnected = false;
           break;
         case "failed":
           break;

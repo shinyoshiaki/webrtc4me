@@ -1,6 +1,6 @@
 {
-  "name": "babel-typescript-sample",
-  "version": "0.0.1",
+  "name": "webrtc4me",
+  "version": "0.0.2",
   "main": "lib/index.js",
   "files": [
     "lib",
