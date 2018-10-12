@@ -9,7 +9,7 @@ export default class WebRTC {
     isConnected: boolean;
     isDisconnected: boolean;
     onicecandidate: boolean;
-    constructor(_nodeId: string);
+    constructor();
     private prepareNewConnection;
     makeOffer(opt?: {
         disable_stun?: boolean;

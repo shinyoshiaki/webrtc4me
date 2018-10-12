@@ -1,7 +1,7 @@
 require("babel-polyfill");
 import WebRTC from "./index";
-const peerOffer = new WebRTC("offer");
-const peerAnswer = new WebRTC("answer");
+const peerOffer = new WebRTC();
+const peerAnswer = new WebRTC();
 
 peerOffer.makeOffer({ disable_stun: true, nodeId: "offer" });
 peerOffer.signal = sdp => {

@@ -12,7 +12,7 @@ export default class WebRTC {
   isConnected: boolean;
   isDisconnected: boolean;
   onicecandidate: boolean;
-  constructor(_nodeId: string) {
+  constructor() {
     this.rtc = this.prepareNewConnection();
     this.dataChannels = {};
     this.isConnected = false;
