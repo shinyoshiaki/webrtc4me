@@ -5,7 +5,7 @@ export default class WebRTC {
     data: (raw: any) => void;
     disconnect: () => void;
     dataChannels: any;
-    nodeId: string | undefined;
+    nodeId: string;
     isConnected: boolean;
     isDisconnected: boolean;
     onicecandidate: boolean;
