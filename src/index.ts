@@ -8,7 +8,7 @@ export default class WebRTC {
   data: (raw: any) => void;
   disconnect: () => void;
   dataChannels: any;
-  nodeId: string | undefined;
+  nodeId: string;
   isConnected: boolean;
   isDisconnected: boolean;
   onicecandidate: boolean;
@@ -18,7 +18,7 @@ export default class WebRTC {
     this.isConnected = false;
     this.isDisconnected = false;
     this.onicecandidate = false;
-
+    this.nodeId = "peer";
     this.connect = () => {};
     this.data = raw => {};
     this.disconnect = () => {};
