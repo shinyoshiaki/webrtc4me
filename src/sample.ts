@@ -3,10 +3,10 @@ import WebRTC from "./index";
 const peerOffer = new WebRTC("offer");
 const peerAnswer = new WebRTC("answer");
 
-peerOffer.makeOffer({ disable_stun: true });
+peerOffer.makeOffer({ disable_stun: true, nodeId: "offer" });
 peerOffer.signal = sdp => {
   console.log("offer signal");
-  peerAnswer.makeAnswer(sdp, { disable_stun: true });
+  peerAnswer.makeAnswer(sdp, { disable_stun: true, nodeId: "answer" });
   peerAnswer.signal = sdp => {
     console.log("answer signal");
     peerOffer.setAnswer(sdp);

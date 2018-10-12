@@ -5,18 +5,22 @@ export default class WebRTC {
     data: (raw: any) => void;
     disconnect: () => void;
     dataChannels: any;
-    nodeId: string;
+    nodeId: string | undefined;
     isConnected: boolean;
     isDisconnected: boolean;
     onicecandidate: boolean;
     constructor(_nodeId: string);
     private prepareNewConnection;
-    makeOffer(opt?: any): void;
+    makeOffer(opt?: {
+        disable_stun?: boolean;
+        nodeId?: string;
+    }): void;
     private createDatachannel;
     private dataChannelEvents;
-    setAnswer(sdp: any): void;
+    setAnswer(sdp: any, nodeId?: string): void;
     makeAnswer(sdp: any, opt?: {
-        disable_stun: boolean;
+        disable_stun?: boolean;
+        nodeId?: string;
     }): Promise<void>;
     send(data: any, label: string): void;
 }

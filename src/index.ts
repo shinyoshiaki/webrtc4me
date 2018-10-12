@@ -8,12 +8,11 @@ export default class WebRTC {
   data: (raw: any) => void;
   disconnect: () => void;
   dataChannels: any;
-  nodeId: string;
+  nodeId: string | undefined;
   isConnected: boolean;
   isDisconnected: boolean;
   onicecandidate: boolean;
   constructor(_nodeId: string) {
-    this.nodeId = _nodeId;
     this.rtc = this.prepareNewConnection();
     this.dataChannels = {};
     this.isConnected = false;
@@ -27,9 +26,9 @@ export default class WebRTC {
   }
 
   private prepareNewConnection(opt?: any) {
+    if (opt) if (opt.nodeId) this.nodeId = opt.nodeId;
     let peer: RTCPeerConnection;
     if (opt === undefined) opt = {};
-
     if (opt.disable_stun) {
       console.log("disable stun");
       peer = new RTCPeerConnection({
@@ -87,7 +86,7 @@ export default class WebRTC {
     return peer;
   }
 
-  makeOffer(opt?: any) {
+  makeOffer(opt?: { disable_stun?: boolean; nodeId?: string }) {
     this.rtc = this.prepareNewConnection(opt);
     this.rtc.onnegotiationneeded = async () => {
       let offer = await this.rtc.createOffer().catch(console.log);
@@ -129,15 +128,19 @@ export default class WebRTC {
     };
   }
 
-  setAnswer(sdp: any) {
+  setAnswer(sdp: any, nodeId?: string) {
     try {
       this.rtc.setRemoteDescription(new RTCSessionDescription(sdp));
+      if (nodeId) this.nodeId = nodeId;
     } catch (err) {
       console.error("setRemoteDescription(answer) ERROR: ", err);
     }
   }
 
-  async makeAnswer(sdp: any, opt = { disable_stun: false }) {
+  async makeAnswer(
+    sdp: any,
+    opt?: { disable_stun?: boolean; nodeId?: string }
+  ) {
     this.rtc = this.prepareNewConnection(opt);
     await this.rtc
       .setRemoteDescription(new RTCSessionDescription(sdp))
