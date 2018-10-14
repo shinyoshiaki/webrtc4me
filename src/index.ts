@@ -160,4 +160,8 @@ export default class WebRTC {
       this.isDisconnected = true;
     }
   }
+
+  connecting(nodeId: string) {
+    this.nodeId = nodeId;
+  }
 }

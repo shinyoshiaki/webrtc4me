@@ -23,4 +23,5 @@ export default class WebRTC {
         nodeId?: string;
     }): Promise<void>;
     send(data: any, label: string): void;
+    connecting(nodeId: string): void;
 }
