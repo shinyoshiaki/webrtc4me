@@ -2,7 +2,7 @@ export default class WebRTC {
     rtc: RTCPeerConnection;
     signal: (sdp: any) => void;
     connect: () => void;
-    data: (raw: any) => void;
+    data: (raw: message) => void;
     disconnect: () => void;
     dataChannels: any;
     nodeId: string;
