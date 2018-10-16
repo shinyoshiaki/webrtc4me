@@ -1,5 +1,6 @@
 require("babel-polyfill");
 import { RTCPeerConnection, RTCSessionDescription } from "wrtc";
+import { message } from "./interface";
 
 export default class WebRTC {
   rtc: RTCPeerConnection;

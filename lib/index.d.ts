@@ -1,3 +1,4 @@
+import { message } from "./interface";
 export default class WebRTC {
     rtc: RTCPeerConnection;
     signal: (sdp: any) => void;
