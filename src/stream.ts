@@ -45,7 +45,7 @@ export default class Stream {
     stream = stream || (await getLocalStream());
     const track = stream.getVideoTracks()[0];
     const pc = this.peer.rtc;
-    const sender = pc.addTrack(track, stream);
+    pc.addTrack(track, stream);
     pc.onnegotiationneeded = async () => {
       const offer = await pc.createOffer().catch(console.log);
       if (offer) {
