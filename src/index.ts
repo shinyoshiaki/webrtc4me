@@ -2,26 +2,37 @@ require("babel-polyfill");
 import { RTCPeerConnection, RTCSessionDescription } from "wrtc";
 import { message } from "./interface";
 
+function excuteEvent(ev: any, v?: any) {
+  console.log("excuteEvent", ev);
+  Object.keys(ev).forEach(key => {
+    ev[key](v);
+  });
+}
+
 export default class WebRTC {
   rtc: RTCPeerConnection;
+
   signal: (sdp: any) => void;
-  connect: () => void;
-  data: (raw: message) => void;
+  connect: () => void;  
   disconnect: () => void;
+  private data: { [key: string]: (raw: message) => void } = {};
+  events = {
+    data: this.data
+  };
+
   dataChannels: any;
   nodeId: string;
   isConnected: boolean;
   isDisconnected: boolean;
   onicecandidate: boolean;
-  constructor() {
+  constructor(nodeId?: string) {
     this.rtc = this.prepareNewConnection();
     this.dataChannels = {};
     this.isConnected = false;
     this.isDisconnected = false;
     this.onicecandidate = false;
-    this.nodeId = "peer";
+    this.nodeId = nodeId || "peer";
     this.connect = () => {};
-    this.data = raw => {};
     this.disconnect = () => {};
     this.signal = sdp => {};
   }
@@ -107,13 +118,9 @@ export default class WebRTC {
   }
 
   private dataChannelEvents(channel: RTCDataChannel) {
-    channel.onopen = () => {
-      //   this.isConnected = true;
-      //   this.onicecandidate = false;
-      //   this.connect();
-    };
+    channel.onopen = () => {};
     channel.onmessage = event => {
-      this.data({
+      excuteEvent(this.data, {
         label: channel.label,
         data: event.data,
         nodeId: this.nodeId
@@ -150,7 +157,8 @@ export default class WebRTC {
     if (answer) await this.rtc.setLocalDescription(answer).catch(console.log);
   }
 
-  send(data: any, label: string) {
+  send(data: any, label?: string) {
+    if (!label) label = "datachannel";
     if (!Object.keys(this.dataChannels).includes(label)) {
       this.createDatachannel(label);
     }
