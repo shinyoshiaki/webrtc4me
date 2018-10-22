@@ -1,3 +1,4 @@
+require("babel-polyfill");
 import WebRTC from "./index";
 import { message } from "./interface";
 

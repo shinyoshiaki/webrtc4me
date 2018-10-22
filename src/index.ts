@@ -1,6 +1,7 @@
 require("babel-polyfill");
 import { RTCPeerConnection, RTCSessionDescription } from "wrtc";
 import { message } from "./interface";
+import Stream from "./stream";
 
 function excuteEvent(ev: any, v?: any) {
   console.log("excuteEvent", ev);
@@ -13,11 +14,13 @@ export default class WebRTC {
   rtc: RTCPeerConnection;
 
   signal: (sdp: any) => void;
-  connect: () => void;  
+  connect: () => void;
   disconnect: () => void;
-  private data: { [key: string]: (raw: message) => void } = {};
+  private onData: { [key: string]: (raw: message) => void } = {};
+  private onAddTrack: { [key: string]: (stream: MediaStream) => void } = {};
   events = {
-    data: this.data
+    data: this.onData,
+    track: this.onAddTrack
   };
 
   dataChannels: any;
@@ -25,13 +28,18 @@ export default class WebRTC {
   isConnected: boolean;
   isDisconnected: boolean;
   onicecandidate: boolean;
-  constructor(nodeId?: string) {
+  stream?: MediaStream;
+  streamManager: Stream;
+  constructor(opt?: { nodeId?: string; stream?: MediaStream }) {
+    opt = opt || {};
+    this.streamManager = new Stream(this);
     this.rtc = this.prepareNewConnection();
     this.dataChannels = {};
     this.isConnected = false;
     this.isDisconnected = false;
     this.onicecandidate = false;
-    this.nodeId = nodeId || "peer";
+    this.nodeId = opt.nodeId || "peer";
+    this.stream = opt.stream;
     this.connect = () => {};
     this.disconnect = () => {};
     this.signal = sdp => {};
@@ -95,6 +103,11 @@ export default class WebRTC {
       this.dataChannelEvents(dataChannel);
     };
 
+    peer.ontrack = evt => {
+      const stream = evt.streams[0];
+      excuteEvent(this.onAddTrack, stream);
+    };
+
     return peer;
   }
 
@@ -118,9 +131,13 @@ export default class WebRTC {
   }
 
   private dataChannelEvents(channel: RTCDataChannel) {
-    channel.onopen = () => {};
+    channel.onopen = () => {
+      if (this.stream) {
+        this.streamManager.addStream(this.stream);
+      }
+    };
     channel.onmessage = event => {
-      excuteEvent(this.data, {
+      excuteEvent(this.onData, {
         label: channel.label,
         data: event.data,
         nodeId: this.nodeId
@@ -137,12 +154,10 @@ export default class WebRTC {
   }
 
   setAnswer(sdp: any, nodeId?: string) {
-    try {
-      this.rtc.setRemoteDescription(new RTCSessionDescription(sdp));
-      if (nodeId) this.nodeId = nodeId;
-    } catch (err) {
-      console.error("setRemoteDescription(answer) ERROR: ", err);
-    }
+    this.rtc
+      .setRemoteDescription(new RTCSessionDescription(sdp))
+      .catch(console.log);
+    this.nodeId = nodeId || this.nodeId;
   }
 
   async makeAnswer(
@@ -158,7 +173,7 @@ export default class WebRTC {
   }
 
   send(data: any, label?: string) {
-    if (!label) label = "datachannel";
+    label = label || "datachannel";
     if (!Object.keys(this.dataChannels).includes(label)) {
       this.createDatachannel(label);
     }

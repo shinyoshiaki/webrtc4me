@@ -1,13 +1,18 @@
 import { message } from "./interface";
+import Stream from "./stream";
 export default class WebRTC {
     rtc: RTCPeerConnection;
     signal: (sdp: any) => void;
     connect: () => void;
     disconnect: () => void;
-    private data;
+    private onData;
+    private onAddTrack;
     events: {
         data: {
             [key: string]: (raw: message) => void;
+        };
+        track: {
+            [key: string]: (stream: MediaStream) => void;
         };
     };
     dataChannels: any;
@@ -15,7 +20,12 @@ export default class WebRTC {
     isConnected: boolean;
     isDisconnected: boolean;
     onicecandidate: boolean;
-    constructor(nodeId?: string);
+    stream?: MediaStream;
+    streamManager: Stream;
+    constructor(opt?: {
+        nodeId?: string;
+        stream?: MediaStream;
+    });
     private prepareNewConnection;
     makeOffer(opt?: {
         disable_stun?: boolean;
