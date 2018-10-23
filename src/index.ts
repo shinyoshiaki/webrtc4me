@@ -83,16 +83,8 @@ export default class WebRTC {
         case "failed":
           break;
         case "connected":
-          this.isConnected = true;
-          this.onicecandidate = false;
-          this.connect();
           break;
         case "completed":
-          if (!this.isConnected) {
-            this.isConnected = true;
-            this.onicecandidate = false;
-            this.connect();
-          }
           break;
       }
     };
@@ -135,6 +127,9 @@ export default class WebRTC {
       if (this.stream) {
         this.streamManager.addStream(this.stream);
       }
+      this.isConnected = true;
+      this.onicecandidate = false;
+      this.connect();
     };
     channel.onmessage = event => {
       excuteEvent(this.onData, {
