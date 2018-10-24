@@ -76,15 +76,17 @@ export default class WebRTC {
       );
       switch (peer.iceConnectionState) {
         case "closed":
-          this.disconnect();
-          this.isDisconnected = true;
-          this.isConnected = false;
           break;
         case "failed":
           break;
         case "connected":
           break;
         case "completed":
+          break;
+        case "disconnected":
+          this.disconnect();
+          this.isDisconnected = true;
+          this.isConnected = false;
           break;
       }
     };
