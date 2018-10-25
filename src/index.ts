@@ -129,9 +129,9 @@ export default class WebRTC {
       if (this.stream) {
         this.streamManager.addStream(this.stream);
       }
+      if (!this.isConnected) this.connect();
       this.isConnected = true;
       this.onicecandidate = false;
-      this.connect();
     };
     channel.onmessage = event => {
       excuteEvent(this.onData, {
