@@ -35,21 +35,22 @@ export default class Stream {
       p = new Peer({ initiator: true, stream, trickle: false });
       p.on("signal", data => {
         console.log("w4me stream offer signal", { data });
-        this.peer.send(data, "stream_offer");
+        this.peer.send(JSON.stringify(data), "stream_offer");
       });
     } else {
       console.log("w4me stream isAnswer");
       p = new Peer({ stream, trickle: false });
       p.on("signal", data => {
         console.log("w4me stream answer signal", { data });
-        this.peer.send(data, "stream_answer");
+        this.peer.send(JSON.stringify(data), "stream_answer");
       });
     }
     this.peer.events.data["stream.ts"] = data => {
       console.log("w4me stream ondata", { data });
+      const sdp = JSON.parse(data.data);
       if (data.label === "stream_answer" || data.label === "stream_offer") {
-        console.log("w4me stream signal", data.data);
-        p.signal(data.data);
+        console.log("w4me stream signal", { sdp });
+        p.signal(sdp);
       }
     };
     p.on("error", err => {
