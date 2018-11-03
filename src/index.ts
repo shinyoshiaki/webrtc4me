@@ -1,7 +1,6 @@
 require("babel-polyfill");
 import { RTCPeerConnection, RTCSessionDescription } from "wrtc";
 import { message } from "./interface";
-import Stream from "./stream";
 
 function excuteEvent(ev: any, v?: any) {
   console.log("excuteEvent", ev);
@@ -29,11 +28,10 @@ export default class WebRTC {
   isDisconnected: boolean;
   onicecandidate: boolean;
   stream?: MediaStream;
-  streamManager: Stream;
+
   isOffer = false;
   constructor(opt?: { nodeId?: string; stream?: MediaStream }) {
     opt = opt || {};
-    this.streamManager = new Stream(this);
     this.rtc = this.prepareNewConnection();
     this.dataChannels = {};
     this.isConnected = false;
@@ -131,9 +129,6 @@ export default class WebRTC {
 
   private dataChannelEvents(channel: RTCDataChannel) {
     channel.onopen = () => {
-      if (this.stream) {
-        this.streamManager.addStream(this.stream);
-      }
       if (!this.isConnected) this.connect();
       this.isConnected = true;
       this.onicecandidate = false;

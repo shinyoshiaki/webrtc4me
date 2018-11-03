@@ -1,6 +1,6 @@
 require("babel-polyfill");
 import WebRTC from "./index";
-import { message } from "./interface";
+import Peer from "simple-peer";
 
 export function getLocalStream(opt?: { width: number; height: number }) {
   return new Promise<MediaStream>((resolve: (v: MediaStream) => void) => {
@@ -20,41 +20,37 @@ export function getLocalStream(opt?: { width: number; height: number }) {
 
 export default class Stream {
   peer: WebRTC;
+  stream: (stream: MediaStream) => void;
 
-  constructor(_peer: WebRTC) {
+  constructor(_peer: WebRTC, stream?: MediaStream) {
     this.peer = _peer;
+    this.stream = (stream: MediaStream) => {};
+    (async () => {
+      if (!stream) stream = await getLocalStream();
+    })();
 
-    const pc = this.peer.rtc;
-    this.peer.events.data["stream.ts"] = async (msg: message) => {
-      if (msg.label === "sdp") {
-        const sdp: RTCSessionDescription = msg.data;
-        if (sdp.type === "offer") {
-          await pc.setRemoteDescription(sdp).catch(console.log);
-          const answer = await pc.createAnswer();
-          if (answer) {
-            await pc.setLocalDescription(answer).catch(console.log);
-            this.peer.send(pc.localDescription, "sdp");
-          }
-        } else if (sdp.type === "answer") {
-          await pc.setRemoteDescription(sdp).catch(console.log);
-        }
+    let p: Peer.Instance;
+    if (this.peer.isOffer) {
+      p = new Peer({ initiator: true, stream, trickle: false });
+      p.on("signal", data => {
+        this.peer.send(data, "stream_offer");
+      });
+    } else {
+      p = new Peer({ stream, trickle: false });
+      p.on("signal", data => {
+        this.peer.send(data, "stream_answer");
+      });
+    }
+    this.peer.events.data["stream.ts"] = data => {
+      if (data.label === "stream_answer") {
+        p.signal(data.data);
+      } else if (data.label === "stream_offer") {
+        p.signal(data.data);
       }
     };
-  }
 
-  async addStream(stream?: MediaStream) {
-    stream = stream || (await getLocalStream());
-    const track = stream.getVideoTracks()[0];
-    const pc = this.peer.rtc;
-    pc.addTrack(track, stream);
-    pc.onnegotiationneeded = async evt => {
-      console.log("w4me stream onnnegotiationneeded", { evt });
-      const offer = await pc.createOffer().catch(console.log);
-      if (offer) {
-        await pc.setLocalDescription(offer).catch(console.log);
-        console.log("w4me send offer sdp", pc.localDescription);
-        this.peer.send(pc.localDescription, "sdp");
-      }
-    };
+    p.on("stream", stream => {
+      this.stream(stream);
+    });
   }
 }

@@ -1,5 +1,4 @@
 import { message } from "./interface";
-import Stream from "./stream";
 export default class WebRTC {
     rtc: RTCPeerConnection;
     signal: (sdp: any) => void;
@@ -21,7 +20,6 @@ export default class WebRTC {
     isDisconnected: boolean;
     onicecandidate: boolean;
     stream?: MediaStream;
-    streamManager: Stream;
     isOffer: boolean;
     constructor(opt?: {
         nodeId?: string;

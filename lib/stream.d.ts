@@ -5,6 +5,6 @@ export declare function getLocalStream(opt?: {
 }): Promise<MediaStream>;
 export default class Stream {
     peer: WebRTC;
-    constructor(_peer: WebRTC);
-    addStream(stream?: MediaStream): Promise<void>;
+    stream: (stream: MediaStream) => void;
+    constructor(_peer: WebRTC, stream?: MediaStream);
 }
