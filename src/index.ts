@@ -101,6 +101,9 @@ export default class WebRTC {
     peer.ontrack = evt => {
       const stream = evt.streams[0];
       excuteEvent(this.onAddTrack, stream);
+      stream.onaddtrack = track => {
+        excuteEvent(this.onAddTrack, track);
+      };
     };
 
     return peer;

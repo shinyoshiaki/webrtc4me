@@ -24,8 +24,8 @@ export default class Stream {
   constructor(_peer: WebRTC) {
     this.peer = _peer;
 
+    const pc = this.peer.rtc;
     this.peer.events.data["stream.ts"] = async (msg: message) => {
-      const pc = this.peer.rtc;
       if (msg.label === "sdp") {
         const sdp: RTCSessionDescription = msg.data;
         if (sdp.type === "offer") {
@@ -47,10 +47,12 @@ export default class Stream {
     const track = stream.getVideoTracks()[0];
     const pc = this.peer.rtc;
     pc.addTrack(track, stream);
-    pc.onnegotiationneeded = async () => {
+    pc.onnegotiationneeded = async evt => {
+      console.log("w4me stream onnnegotiationneeded", { evt });
       const offer = await pc.createOffer().catch(console.log);
       if (offer) {
         await pc.setLocalDescription(offer).catch(console.log);
+        console.log("w4me send offer sdp", pc.localDescription);
         this.peer.send(pc.localDescription, "sdp");
       }
     };
