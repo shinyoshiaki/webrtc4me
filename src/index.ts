@@ -30,6 +30,7 @@ export default class WebRTC {
   onicecandidate: boolean;
   stream?: MediaStream;
   streamManager: Stream;
+  isOffer = false;
   constructor(opt?: { nodeId?: string; stream?: MediaStream }) {
     opt = opt || {};
     this.streamManager = new Stream(this);
@@ -111,6 +112,7 @@ export default class WebRTC {
       let offer = await this.rtc.createOffer().catch(console.log);
       if (offer) await this.rtc.setLocalDescription(offer).catch(console.log);
     };
+    this.isOffer = true;
     this.createDatachannel("datachannel");
   }
 

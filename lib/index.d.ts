@@ -22,6 +22,7 @@ export default class WebRTC {
     onicecandidate: boolean;
     stream?: MediaStream;
     streamManager: Stream;
+    isOffer: boolean;
     constructor(opt?: {
         nodeId?: string;
         stream?: MediaStream;
