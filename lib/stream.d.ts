@@ -7,4 +7,5 @@ export default class Stream {
     peer: WebRTC;
     stream: (stream: MediaStream) => void;
     constructor(_peer: WebRTC, stream?: MediaStream);
+    init(stream?: MediaStream): Promise<void>;
 }

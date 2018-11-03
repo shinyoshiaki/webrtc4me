@@ -25,21 +25,23 @@ export default class Stream {
   constructor(_peer: WebRTC, stream?: MediaStream) {
     this.peer = _peer;
     this.stream = (stream: MediaStream) => {};
-    (async () => {
-      if (!stream) stream = await getLocalStream();
-    })();
+    this.init(stream);
+  }
 
+  async init(stream?: MediaStream) {
+    if (!stream) stream = await getLocalStream();
+    console.log("w4me stream", { stream });
     let p: Peer.Instance;
     if (this.peer.isOffer) {
       console.log("w4me stream isoffer");
-      p = new Peer({ initiator: true, stream, trickle: false });
+      p = new Peer({ initiator: true, stream });
       p.on("signal", data => {
         console.log("w4me stream offer signal", { data });
         this.peer.send(JSON.stringify(data), "stream_offer");
       });
     } else {
       console.log("w4me stream isAnswer");
-      p = new Peer({ stream, trickle: false });
+      p = new Peer({ stream });
       p.on("signal", data => {
         console.log("w4me stream answer signal", { data });
         this.peer.send(JSON.stringify(data), "stream_answer");
@@ -59,6 +61,9 @@ export default class Stream {
     p.on("stream", stream => {
       console.log("w4me stream stream", { stream });
       this.stream(stream);
+    });
+    p.on("connect", () => {
+      console.log("w4me connected");
     });
   }
 }
