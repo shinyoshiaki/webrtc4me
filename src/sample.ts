@@ -16,17 +16,18 @@ peerOffer.signal = sdp => {
 peerOffer.connect = () => {
   console.log("offer connect");
 
-  peerOffer.data = raw => {
+  peerOffer.events.data["sample.ts"] = raw => {
     console.log("ondata offer", raw);
   };
+
   peerOffer.send("hello", "test");
   peerOffer.send("test", "second");
 };
 
 peerAnswer.connect = () => {
   console.log("answer connect");
-  peerAnswer.data = raw => {
-    console.log("ondata answer", raw);
+  peerAnswer.events.data["sample.ts"] = raw => {
+    console.log("ondata offer", raw);
   };
   peerAnswer.send("hi", "test");
   peerAnswer.send("test!!", "third");

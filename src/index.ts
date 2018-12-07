@@ -2,34 +2,57 @@ require("babel-polyfill");
 import { RTCPeerConnection, RTCSessionDescription } from "wrtc";
 import { message } from "./interface";
 
+interface option {
+  disable_stun?: boolean;
+  nodeId?: string;
+}
+
+function excuteEvent(ev: any, v?: any) {
+  console.log("excuteEvent", ev);
+  Object.keys(ev).forEach(key => {
+    ev[key](v);
+  });
+}
+
 export default class WebRTC {
   rtc: RTCPeerConnection;
+
   signal: (sdp: any) => void;
   connect: () => void;
-  data: (raw: message) => void;
   disconnect: () => void;
-  dataChannels: any;
+  private onData: { [key: string]: (raw: message) => void } = {};
+  private onAddTrack: { [key: string]: (stream: MediaStream) => void } = {};
+  events = {
+    data: this.onData,
+    track: this.onAddTrack
+  };
+
+  dataChannels: { [key: string]: RTCDataChannel };
   nodeId: string;
   isConnected: boolean;
   isDisconnected: boolean;
   onicecandidate: boolean;
-  constructor() {
+  stream?: MediaStream;
+
+  isOffer = false;
+  constructor(opt?: { nodeId?: string; stream?: MediaStream }) {
+    opt = opt || {};
     this.rtc = this.prepareNewConnection();
     this.dataChannels = {};
     this.isConnected = false;
     this.isDisconnected = false;
     this.onicecandidate = false;
-    this.nodeId = "peer";
+    this.nodeId = opt.nodeId || "peer";
+    this.stream = opt.stream;
     this.connect = () => {};
-    this.data = raw => {};
     this.disconnect = () => {};
     this.signal = sdp => {};
   }
 
-  private prepareNewConnection(opt?: any) {
-    if (opt) if (opt.nodeId) this.nodeId = opt.nodeId;
+  private prepareNewConnection(opt?: option) {
     let peer: RTCPeerConnection;
-    if (opt === undefined) opt = {};
+    if (!opt) opt = {};
+    if (opt.nodeId) this.nodeId = opt.nodeId;
     if (opt.disable_stun) {
       console.log("disable stun");
       peer = new RTCPeerConnection({
@@ -57,23 +80,17 @@ export default class WebRTC {
       );
       switch (peer.iceConnectionState) {
         case "closed":
-          this.disconnect();
-          this.isDisconnected = true;
-          this.isConnected = false;
           break;
         case "failed":
           break;
         case "connected":
-          this.isConnected = true;
-          this.onicecandidate = false;
-          this.connect();
           break;
         case "completed":
-          if (!this.isConnected) {
-            this.isConnected = true;
-            this.onicecandidate = false;
-            this.connect();
-          }
+          break;
+        case "disconnected":
+          this.disconnect();
+          this.isDisconnected = true;
+          this.isConnected = false;
           break;
       }
     };
@@ -84,15 +101,24 @@ export default class WebRTC {
       this.dataChannelEvents(dataChannel);
     };
 
+    peer.ontrack = evt => {
+      const stream = evt.streams[0];
+      excuteEvent(this.onAddTrack, stream);
+      stream.onaddtrack = track => {
+        excuteEvent(this.onAddTrack, track);
+      };
+    };
+
     return peer;
   }
 
-  makeOffer(opt?: { disable_stun?: boolean; nodeId?: string }) {
+  makeOffer(opt?: option) {
     this.rtc = this.prepareNewConnection(opt);
     this.rtc.onnegotiationneeded = async () => {
-      let offer = await this.rtc.createOffer().catch(console.log);
+      const offer = await this.rtc.createOffer().catch(console.log);
       if (offer) await this.rtc.setLocalDescription(offer).catch(console.log);
     };
+    this.isOffer = true;
     this.createDatachannel("datachannel");
   }
 
@@ -108,12 +134,12 @@ export default class WebRTC {
 
   private dataChannelEvents(channel: RTCDataChannel) {
     channel.onopen = () => {
-      //   this.isConnected = true;
-      //   this.onicecandidate = false;
-      //   this.connect();
+      if (!this.isConnected) this.connect();
+      this.isConnected = true;
+      this.onicecandidate = false;
     };
     channel.onmessage = event => {
-      this.data({
+      excuteEvent(this.onData, {
         label: channel.label,
         data: event.data,
         nodeId: this.nodeId
@@ -130,18 +156,13 @@ export default class WebRTC {
   }
 
   setAnswer(sdp: any, nodeId?: string) {
-    try {
-      this.rtc.setRemoteDescription(new RTCSessionDescription(sdp));
-      if (nodeId) this.nodeId = nodeId;
-    } catch (err) {
-      console.error("setRemoteDescription(answer) ERROR: ", err);
-    }
+    this.rtc
+      .setRemoteDescription(new RTCSessionDescription(sdp))
+      .catch(console.log);
+    this.nodeId = nodeId || this.nodeId;
   }
 
-  async makeAnswer(
-    sdp: any,
-    opt?: { disable_stun?: boolean; nodeId?: string }
-  ) {
+  async makeAnswer(sdp: any, opt?: option) {
     this.rtc = this.prepareNewConnection(opt);
     await this.rtc
       .setRemoteDescription(new RTCSessionDescription(sdp))
@@ -150,7 +171,8 @@ export default class WebRTC {
     if (answer) await this.rtc.setLocalDescription(answer).catch(console.log);
   }
 
-  send(data: any, label: string) {
+  send(data: any, label?: string) {
+    label = label || "datachannel";
     if (!Object.keys(this.dataChannels).includes(label)) {
       this.createDatachannel(label);
     }
@@ -159,6 +181,7 @@ export default class WebRTC {
     } catch (error) {
       console.log("dc send error", error);
       this.isDisconnected = true;
+      this.disconnect();
     }
   }
 
