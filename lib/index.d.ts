@@ -1,4 +1,8 @@
 import { message } from "./interface";
+interface option {
+    disable_stun?: boolean;
+    nodeId?: string;
+}
 export default class WebRTC {
     rtc: RTCPeerConnection;
     signal: (sdp: any) => void;
@@ -14,7 +18,9 @@ export default class WebRTC {
             [key: string]: (stream: MediaStream) => void;
         };
     };
-    dataChannels: any;
+    dataChannels: {
+        [key: string]: RTCDataChannel;
+    };
     nodeId: string;
     isConnected: boolean;
     isDisconnected: boolean;
@@ -26,17 +32,12 @@ export default class WebRTC {
         stream?: MediaStream;
     });
     private prepareNewConnection;
-    makeOffer(opt?: {
-        disable_stun?: boolean;
-        nodeId?: string;
-    }): void;
+    makeOffer(opt?: option): void;
     private createDatachannel;
     private dataChannelEvents;
     setAnswer(sdp: any, nodeId?: string): void;
-    makeAnswer(sdp: any, opt?: {
-        disable_stun?: boolean;
-        nodeId?: string;
-    }): Promise<void>;
+    makeAnswer(sdp: any, opt?: option): Promise<void>;
     send(data: any, label?: string): void;
     connecting(nodeId: string): void;
 }
+export {};

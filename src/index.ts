@@ -2,6 +2,11 @@ require("babel-polyfill");
 import { RTCPeerConnection, RTCSessionDescription } from "wrtc";
 import { message } from "./interface";
 
+interface option {
+  disable_stun?: boolean;
+  nodeId?: string;
+}
+
 function excuteEvent(ev: any, v?: any) {
   console.log("excuteEvent", ev);
   Object.keys(ev).forEach(key => {
@@ -22,7 +27,7 @@ export default class WebRTC {
     track: this.onAddTrack
   };
 
-  dataChannels: any;
+  dataChannels: { [key: string]: RTCDataChannel };
   nodeId: string;
   isConnected: boolean;
   isDisconnected: boolean;
@@ -44,10 +49,10 @@ export default class WebRTC {
     this.signal = sdp => {};
   }
 
-  private prepareNewConnection(opt?: any) {
-    if (opt) if (opt.nodeId) this.nodeId = opt.nodeId;
+  private prepareNewConnection(opt?: option) {
     let peer: RTCPeerConnection;
-    if (opt === undefined) opt = {};
+    if (!opt) opt = {};
+    if (opt.nodeId) this.nodeId = opt.nodeId;
     if (opt.disable_stun) {
       console.log("disable stun");
       peer = new RTCPeerConnection({
@@ -107,10 +112,10 @@ export default class WebRTC {
     return peer;
   }
 
-  makeOffer(opt?: { disable_stun?: boolean; nodeId?: string }) {
+  makeOffer(opt?: option) {
     this.rtc = this.prepareNewConnection(opt);
     this.rtc.onnegotiationneeded = async () => {
-      let offer = await this.rtc.createOffer().catch(console.log);
+      const offer = await this.rtc.createOffer().catch(console.log);
       if (offer) await this.rtc.setLocalDescription(offer).catch(console.log);
     };
     this.isOffer = true;
@@ -157,10 +162,7 @@ export default class WebRTC {
     this.nodeId = nodeId || this.nodeId;
   }
 
-  async makeAnswer(
-    sdp: any,
-    opt?: { disable_stun?: boolean; nodeId?: string }
-  ) {
+  async makeAnswer(sdp: any, opt?: option) {
     this.rtc = this.prepareNewConnection(opt);
     await this.rtc
       .setRemoteDescription(new RTCSessionDescription(sdp))
@@ -179,6 +181,7 @@ export default class WebRTC {
     } catch (error) {
       console.log("dc send error", error);
       this.isDisconnected = true;
+      this.disconnect();
     }
   }
 
