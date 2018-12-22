@@ -135,9 +135,9 @@ export default class WebRTC {
 
   private dataChannelEvents(channel: RTCDataChannel) {
     channel.onopen = () => {
+      if (!this.isConnected) this.connect();
       this.isConnected = true;
       this.onicecandidate = false;
-      if (!this.isConnected) this.connect();
     };
     channel.onmessage = event => {
       excuteEvent(this.onData, {
