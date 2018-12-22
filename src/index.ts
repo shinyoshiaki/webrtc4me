@@ -88,9 +88,10 @@ export default class WebRTC {
         case "completed":
           break;
         case "disconnected":
-          this.disconnect();
+          console.log("webrtc4me disconnected");
           this.isDisconnected = true;
           this.isConnected = false;
+          this.disconnect();
           break;
       }
     };
@@ -134,9 +135,9 @@ export default class WebRTC {
 
   private dataChannelEvents(channel: RTCDataChannel) {
     channel.onopen = () => {
-      if (!this.isConnected) this.connect();
       this.isConnected = true;
       this.onicecandidate = false;
+      if (!this.isConnected) this.connect();
     };
     channel.onmessage = event => {
       excuteEvent(this.onData, {
