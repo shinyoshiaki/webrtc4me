@@ -16,7 +16,7 @@ interface OnAddTrack {
 
 type Event = OnData | OnAddTrack;
 
-export function excuteEvent(ev: Event, v?: any) {
+function excuteEvent(ev: Event, v?: any) {
   console.log("excuteEvent", { ev });
   Object.keys(ev).forEach(key => {
     const func: any = ev[key];
@@ -28,11 +28,7 @@ export function excuteEvent(ev: Event, v?: any) {
   });
 }
 
-export function addEvent<T extends Event>(
-  event: T,
-  func: T[keyof T],
-  tag?: string
-) {
+function addEvent<T extends Event>(event: T, func: T[keyof T], tag?: string) {
   tag =
     tag ||
     (() => {
@@ -64,7 +60,8 @@ export default class WebRTC {
     addEvent<OnAddTrack>(this.onAddTrack, func, tag);
   };
 
-  dataChannels: { [key: string]: RTCDataChannel };
+  private dataChannels: { [key: string]: RTCDataChannel };
+
   nodeId: string;
   isConnected: boolean;
   isDisconnected: boolean;
