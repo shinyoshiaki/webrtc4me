@@ -29,10 +29,19 @@ export function excuteEvent(ev: Event, v?: any) {
 }
 
 export function addEvent<T extends Event>(
-  tag: string,
   event: T,
-  func: T[keyof T]
+  func: T[keyof T],
+  tag?: string
 ) {
+  tag =
+    tag ||
+    (() => {
+      let gen = Math.random().toString();
+      while (Object.keys({}).includes(gen)) {
+        gen = Math.random().toString();
+      }
+      return gen;
+    })();
   if (Object.keys(event).includes(tag)) {
     console.error("include tag");
   } else {
@@ -47,12 +56,12 @@ export default class WebRTC {
   connect: () => void;
   disconnect: () => void;
   private onData: OnData = {};
-  addOnData = (tag: string, func: OnData[keyof OnData]) => {
-    addEvent<OnData>(tag, this.onData, func);
+  addOnData = (func: OnData[keyof OnData], tag?: string) => {
+    addEvent<OnData>(this.onData, func, tag);
   };
   private onAddTrack: OnAddTrack = {};
-  addOnAddTrack = (tag: string, func: OnAddTrack[keyof OnData]) => {
-    addEvent<OnAddTrack>(tag, this.onAddTrack, func);
+  addOnAddTrack = (func: OnAddTrack[keyof OnData], tag?: string) => {
+    addEvent<OnAddTrack>(this.onAddTrack, func, tag);
   };
 
   dataChannels: { [key: string]: RTCDataChannel };
