@@ -7,11 +7,37 @@ interface option {
   nodeId?: string;
 }
 
-function excuteEvent(ev: any, v?: any) {
-  console.log("excuteEvent", ev);
+interface OnData {
+  [key: string]: (raw: message) => void;
+}
+interface OnAddTrack {
+  [key: string]: (stream: MediaStream) => void;
+}
+
+type Event = OnData | OnAddTrack;
+
+export function excuteEvent(ev: Event, v?: any) {
+  console.log("excuteEvent", { ev });
   Object.keys(ev).forEach(key => {
-    ev[key](v);
+    const func: any = ev[key];
+    if (v) {
+      func(v);
+    } else {
+      func();
+    }
   });
+}
+
+export function addEvent<T extends Event>(
+  tag: string,
+  event: T,
+  func: T[keyof T]
+) {
+  if (Object.keys(event).includes(tag)) {
+    console.error("include tag");
+  } else {
+    event[tag] = func;
+  }
 }
 
 export default class WebRTC {
@@ -20,11 +46,13 @@ export default class WebRTC {
   signal: (sdp: any) => void;
   connect: () => void;
   disconnect: () => void;
-  private onData: { [key: string]: (raw: message) => void } = {};
-  private onAddTrack: { [key: string]: (stream: MediaStream) => void } = {};
-  events = {
-    data: this.onData,
-    track: this.onAddTrack
+  private onData: OnData = {};
+  addOnData = (tag: string, func: OnData[keyof OnData]) => {
+    addEvent<OnData>(tag, this.onData, func);
+  };
+  private onAddTrack: OnAddTrack = {};
+  addOnAddTrack = (tag: string, func: OnAddTrack[keyof OnData]) => {
+    addEvent<OnAddTrack>(tag, this.onAddTrack, func);
   };
 
   dataChannels: { [key: string]: RTCDataChannel };

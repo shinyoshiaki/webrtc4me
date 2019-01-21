@@ -47,14 +47,14 @@ export default class Stream {
         this.peer.send(JSON.stringify(data), "stream_answer");
       });
     }
-    this.peer.events.data["stream.ts"] = data => {
+    this.peer.addOnData("stream", data => {
       console.log("w4me stream ondata", { data });
       const sdp = JSON.parse(data.data);
       if (data.label === "stream_answer" || data.label === "stream_offer") {
         console.log("w4me stream signal", { sdp });
         p.signal(sdp);
       }
-    };
+    });
     p.on("error", err => {
       console.log({ err });
     });
