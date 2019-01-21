@@ -2,7 +2,7 @@ require("babel-polyfill");
 import WebRTC from "./index";
 import Peer from "simple-peer";
 
-export function getLocalStream(opt?: { width: number; height: number }) {
+export function getLocalVideo(opt?: { width: number; height: number }) {
   return new Promise<MediaStream>((resolve: (v: MediaStream) => void) => {
     navigator.getUserMedia =
       navigator.getUserMedia ||
@@ -17,32 +17,60 @@ export function getLocalStream(opt?: { width: number; height: number }) {
       });
   });
 }
+export function getLocalAudio(opt?: { width: number; height: number }) {
+  return new Promise<MediaStream>((resolve: (v: MediaStream) => void) => {
+    navigator.getUserMedia =
+      navigator.getUserMedia ||
+      navigator.webkitGetUserMedia ||
+      navigator.mozGetUserMedia ||
+      navigator.msGetUserMedia;
+    if (!opt) opt = { width: 1280, height: 720 };
+    navigator.mediaDevices
+      .getUserMedia({ audio: true, video: false })
+      .then(stream => {
+        resolve(stream);
+      });
+  });
+}
+
+export enum MediaType {
+  video,
+  audio
+}
 
 export default class Stream {
-  peer: WebRTC;
   onStream: (stream: MediaStream) => void;
 
-  constructor(_peer: WebRTC, stream?: MediaStream) {
-    this.peer = _peer;
-    this.onStream = (stream: MediaStream) => {};
-    this.init(stream);
+  constructor(peer: WebRTC, opt?: { stream?: MediaStream; type?: MediaType }) {
+    opt = opt || {};
+    this.onStream = _ => {};
+    this.init(peer, opt.stream, opt.type);
   }
 
-  private async init(stream?: MediaStream) {
-    if (!stream) stream = await getLocalStream();
+  private async init(peer: WebRTC, _stream?: MediaStream, type?: MediaType) {
+    const stream: MediaStream =
+      _stream ||
+      (await (async () => {
+        if (type && (type as MediaType) == MediaType.video) {
+          return await getLocalVideo();
+        } else {
+          return await getLocalAudio();
+        }
+      })());
+
     let p: Peer.Instance;
-    if (this.peer.isOffer) {
+    if (peer.isOffer) {
       p = new Peer({ initiator: true, stream });
       p.on("signal", data => {
-        this.peer.send(JSON.stringify(data), "stream_offer");
+        peer.send(JSON.stringify(data), "stream_offer");
       });
     } else {
       p = new Peer({ stream });
       p.on("signal", data => {
-        this.peer.send(JSON.stringify(data), "stream_answer");
+        peer.send(JSON.stringify(data), "stream_answer");
       });
     }
-    this.peer.addOnData(data => {
+    peer.addOnData(data => {
       const sdp = JSON.parse(data.data);
       if (data.label === "stream_answer" || data.label === "stream_offer") {
         p.signal(sdp);

@@ -1,11 +1,21 @@
 import WebRTC from "./index";
-export declare function getLocalStream(opt?: {
+export declare function getLocalVideo(opt?: {
     width: number;
     height: number;
 }): Promise<MediaStream>;
+export declare function getLocalAudio(opt?: {
+    width: number;
+    height: number;
+}): Promise<MediaStream>;
+export declare enum MediaType {
+    video = 0,
+    audio = 1
+}
 export default class Stream {
-    peer: WebRTC;
     onStream: (stream: MediaStream) => void;
-    constructor(_peer: WebRTC, stream?: MediaStream);
+    constructor(peer: WebRTC, opt?: {
+        stream?: MediaStream;
+        type?: MediaType;
+    });
     private init;
 }
