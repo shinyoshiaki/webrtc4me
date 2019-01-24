@@ -3,6 +3,15 @@ interface option {
     disable_stun?: boolean;
     nodeId?: string;
 }
+export interface OnData {
+    [key: string]: (raw: message) => void;
+}
+interface OnAddTrack {
+    [key: string]: (stream: MediaStream) => void;
+}
+declare type Event = OnData | OnAddTrack;
+export declare function excuteEvent(ev: Event, v?: any): void;
+export declare function addEvent<T extends Event>(event: T, func: T[keyof T], _tag?: string): void;
 export default class WebRTC {
     rtc: RTCPeerConnection;
     signal: (sdp: any) => void;

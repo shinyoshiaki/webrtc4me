@@ -1,6 +1,6 @@
 {
   "name": "webrtc4me",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/index.js",
   "files": [
     "lib",
@@ -13,7 +13,7 @@
     "build": "npm run build:types && npm run build:js",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
-    "test": "yarn build && node ./lib/sample.js"
+    "test": "rm -rf lib && jest"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.0",
@@ -22,8 +22,11 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
     "@babel/preset-typescript": "^7.1.0",
+    "@types/jest": "^23.3.13",
     "@types/node": "^10.11.7",
     "@types/webrtc": "^0.0.23",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
     "tslib": "^1.9.3",
     "typescript": "^3.2.4"
   },
@@ -32,5 +35,23 @@
     "babel-polyfill": "^6.26.0",
     "simple-peer": "^9.2.1",
     "wrtc": "^0.3.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "**/test/*.+(ts|tsx|js)"
+    ]
   }
 }

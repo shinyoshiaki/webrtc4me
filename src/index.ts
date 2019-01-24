@@ -7,7 +7,7 @@ interface option {
   nodeId?: string;
 }
 
-interface OnData {
+export interface OnData {
   [key: string]: (raw: message) => void;
 }
 interface OnAddTrack {
@@ -16,7 +16,7 @@ interface OnAddTrack {
 
 type Event = OnData | OnAddTrack;
 
-function excuteEvent(ev: Event, v?: any) {
+export function excuteEvent(ev: Event, v?: any) {
   console.log("excuteEvent", { ev });
   Object.keys(ev).forEach(key => {
     const func: any = ev[key];
@@ -28,12 +28,16 @@ function excuteEvent(ev: Event, v?: any) {
   });
 }
 
-function addEvent<T extends Event>(event: T, func: T[keyof T], tag?: string) {
-  tag =
-    tag ||
+export function addEvent<T extends Event>(
+  event: T,
+  func: T[keyof T],
+  _tag?: string
+) {
+  const tag =
+    _tag ||
     (() => {
       let gen = Math.random().toString();
-      while (Object.keys({}).includes(gen)) {
+      while (Object.keys(event).includes(gen)) {
         gen = Math.random().toString();
       }
       return gen;
