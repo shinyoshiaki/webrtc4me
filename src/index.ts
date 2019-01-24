@@ -136,7 +136,7 @@ export default class WebRTC {
           console.log("webrtc4me disconnected");
           this.isDisconnected = true;
           this.isConnected = false;
-          this.disconnect();
+          // this.disconnect();
           break;
       }
     };
@@ -163,6 +163,9 @@ export default class WebRTC {
     this.rtc.onnegotiationneeded = async () => {
       const offer = await this.rtc.createOffer().catch(console.log);
       if (offer) await this.rtc.setLocalDescription(offer).catch(console.log);
+      if (this.isConnected) {
+        this.send(JSON.stringify({ sdp: this.rtc.localDescription }), "webrtc");
+      }
     };
     this.isOffer = true;
     this.createDatachannel("datachannel");
@@ -184,12 +187,32 @@ export default class WebRTC {
       this.isConnected = true;
       this.onicecandidate = false;
     };
-    channel.onmessage = event => {
+    channel.onmessage = async event => {
       excuteEvent(this.onData, {
         label: channel.label,
         data: event.data,
         nodeId: this.nodeId
       });
+      if (channel.label === "webrtc") {
+        const obj = JSON.parse(event.data);
+        if (obj.sdp.type === "offer") {
+          console.log("debug offer");
+          await this.rtc.setRemoteDescription(obj.sdp);
+          const sdp = await this.rtc.createAnswer();
+          await this.rtc.setLocalDescription(sdp);
+          this.send(
+            JSON.stringify({ sdp: this.rtc.localDescription }),
+            "webrtc"
+          );
+        } else {
+          console.log("debug answer");
+          const sdp = new RTCSessionDescription({
+            type: "answer",
+            sdp: obj.sdp
+          });
+          await this.rtc.setRemoteDescription(sdp);
+        }
+      }
     };
     channel.onerror = err => {
       console.log("Datachannel Error: " + err);
