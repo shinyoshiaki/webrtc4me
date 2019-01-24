@@ -38,6 +38,11 @@ export enum MediaType {
   audio
 }
 
+enum Label {
+  offer = "stream_offer",
+  answer = "stream_answer"
+}
+
 export default class Stream {
   onStream: (stream: MediaStream) => void;
 
@@ -61,18 +66,19 @@ export default class Stream {
     let p: Peer.Instance;
     if (peer.isOffer) {
       p = new Peer({ initiator: true, stream });
-      p.on("signal", data => {
-        peer.send(JSON.stringify(data), "stream_offer");
+      p.on("signal", sdp => {
+        peer.send(JSON.stringify(sdp), Label.offer);
       });
     } else {
       p = new Peer({ stream });
-      p.on("signal", data => {
-        peer.send(JSON.stringify(data), "stream_answer");
+      p.on("signal", sdp => {
+        peer.send(JSON.stringify(sdp), Label.answer);
       });
     }
-    peer.addOnData(data => {
-      const sdp = JSON.parse(data.data);
-      if (data.label === "stream_answer" || data.label === "stream_offer") {
+    peer.addOnData(raw => {
+      const sdp = JSON.parse(raw.data);
+      if (raw.label === Label.answer || raw.label === Label.offer) {
+        console.log("signal", { sdp });
         p.signal(sdp);
       }
     }, "stream");
@@ -82,6 +88,8 @@ export default class Stream {
     p.on("stream", stream => {
       this.onStream(stream);
     });
-    p.on("connect", () => {});
+    p.on("connect", () => {
+      console.log("simple-peer");
+    });
   }
 }
