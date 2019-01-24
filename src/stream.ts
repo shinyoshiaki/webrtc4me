@@ -1,6 +1,5 @@
 require("babel-polyfill");
 import WebRTC from "./index";
-import Peer from "simple-peer";
 
 export function getLocalVideo(opt?: { width: number; height: number }) {
   return new Promise<MediaStream>((resolve: (v: MediaStream) => void) => {
@@ -38,11 +37,6 @@ export enum MediaType {
   audio
 }
 
-enum Label {
-  offer = "stream_offer",
-  answer = "stream_answer"
-}
-
 export default class Stream {
   onStream: (stream: MediaStream) => void;
 
@@ -63,33 +57,11 @@ export default class Stream {
         }
       })());
 
-    let p: Peer.Instance;
-    if (peer.isOffer) {
-      p = new Peer({ initiator: true, stream });
-      p.on("signal", sdp => {
-        peer.send(JSON.stringify(sdp), Label.offer);
-      });
-    } else {
-      p = new Peer({ stream });
-      p.on("signal", sdp => {
-        peer.send(JSON.stringify(sdp), Label.answer);
-      });
-    }
-    peer.addOnData(raw => {
-      const sdp = JSON.parse(raw.data);
-      if (raw.label === Label.answer || raw.label === Label.offer) {
-        console.log("signal", { sdp });
-        p.signal(sdp);
-      }
-    }, "stream");
-    p.on("error", err => {
-      console.log({ err });
-    });
-    p.on("stream", stream => {
+    const track = stream.getVideoTracks()[0];
+    peer.rtc.addTrack(track, stream);
+    peer.rtc.ontrack = event => {
+      const stream = event.streams[0];
       this.onStream(stream);
-    });
-    p.on("connect", () => {
-      console.log("simple-peer");
-    });
+    };
   }
 }
