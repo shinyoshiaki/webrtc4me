@@ -1,16 +1,15 @@
-require("babel-polyfill");
 import WebRTC from "./index";
 
 export function getLocalVideo(opt?: { width: number; height: number }) {
   return new Promise<MediaStream>((resolve: (v: MediaStream) => void) => {
-    navigator.getUserMedia =
-      navigator.getUserMedia ||
-      navigator.webkitGetUserMedia ||
-      navigator.mozGetUserMedia ||
-      navigator.msGetUserMedia;
+    navigator.getUserMedia = navigator.getUserMedia;
+
     if (!opt) opt = { width: 1280, height: 720 };
     navigator.mediaDevices
-      .getUserMedia({ video: { width: opt.width, height: opt.height } })
+      .getUserMedia({
+        audio: true,
+        video: { width: opt.width, height: opt.height }
+      })
       .then(stream => {
         resolve(stream);
       });
@@ -18,11 +17,7 @@ export function getLocalVideo(opt?: { width: number; height: number }) {
 }
 export function getLocalAudio(opt?: { width: number; height: number }) {
   return new Promise<MediaStream>((resolve: (v: MediaStream) => void) => {
-    navigator.getUserMedia =
-      navigator.getUserMedia ||
-      navigator.webkitGetUserMedia ||
-      navigator.mozGetUserMedia ||
-      navigator.msGetUserMedia;
+    navigator.getUserMedia = navigator.getUserMedia;
     if (!opt) opt = { width: 1280, height: 720 };
     navigator.mediaDevices
       .getUserMedia({ audio: true, video: false })
@@ -57,10 +52,12 @@ export default class Stream {
         }
       })());
 
-    const track = stream.getVideoTracks()[0];
-    peer.rtc.addTrack(track, stream);
-    peer.rtc.ontrack = event => {
+    stream.getTracks().forEach(track => peer.rtc.addTrack(track, stream));
+    peer.rtc.ontrack = (event: RTCTrackEvent) => {
+      console.log("ontrack", { event });
+
       const stream = event.streams[0];
+
       this.onStream(stream);
     };
   }

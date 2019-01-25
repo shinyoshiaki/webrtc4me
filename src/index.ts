@@ -1,6 +1,8 @@
-require("babel-polyfill");
-import { RTCPeerConnection, RTCSessionDescription } from "wrtc";
-import { message } from "./interface";
+export interface message {
+  label: string;
+  data: any;
+  nodeId: string;
+}
 
 interface option {
   disable_stun?: boolean;
@@ -133,9 +135,9 @@ export default class WebRTC {
         case "completed":
           break;
         case "disconnected":
-          console.log("webrtc4me disconnected");
-          this.isDisconnected = true;
-          this.isConnected = false;
+          // console.log("webrtc4me disconnected");
+          // this.isDisconnected = true;
+          // this.isConnected = false;
           // this.disconnect();
           break;
       }
@@ -147,22 +149,25 @@ export default class WebRTC {
       this.dataChannelEvents(dataChannel);
     };
 
-    peer.ontrack = evt => {
-      const stream = evt.streams[0];
-      excuteEvent(this.onAddTrack, stream);
-      stream.onaddtrack = track => {
-        excuteEvent(this.onAddTrack, track);
-      };
+    peer.onsignalingstatechange = e => {
+      this.negotiating = peer.signalingState != "stable";
     };
 
     return peer;
   }
 
+  negotiating = false;
   makeOffer(opt?: option) {
     this.rtc = this.prepareNewConnection(opt);
     this.rtc.onnegotiationneeded = async () => {
+      if (this.negotiating) {
+        console.warn("dupli");
+        return;
+      }
+      this.negotiating = true;
       const offer = await this.rtc.createOffer().catch(console.log);
       if (offer) await this.rtc.setLocalDescription(offer).catch(console.log);
+
       if (this.isConnected) {
         this.send(JSON.stringify({ sdp: this.rtc.localDescription }), "webrtc");
       }
@@ -187,33 +192,45 @@ export default class WebRTC {
       this.isConnected = true;
       this.onicecandidate = false;
     };
-    channel.onmessage = async event => {
-      excuteEvent(this.onData, {
-        label: channel.label,
-        data: event.data,
-        nodeId: this.nodeId
-      });
-      if (channel.label === "webrtc") {
-        const obj = JSON.parse(event.data);
-        if (obj.sdp.type === "offer") {
-          console.log("debug offer");
-          await this.rtc.setRemoteDescription(obj.sdp);
-          const sdp = await this.rtc.createAnswer();
-          await this.rtc.setLocalDescription(sdp);
-          this.send(
-            JSON.stringify({ sdp: this.rtc.localDescription }),
-            "webrtc"
-          );
-        } else {
-          console.log("debug answer");
-          const sdp = new RTCSessionDescription({
-            type: "answer",
-            sdp: obj.sdp
-          });
-          await this.rtc.setRemoteDescription(sdp);
+    try {
+      channel.onmessage = async event => {
+        if (!event) return;
+        excuteEvent(this.onData, {
+          label: channel.label,
+          data: event.data,
+          nodeId: this.nodeId
+        });
+        if (channel.label === "webrtc") {
+          const obj = JSON.parse(event.data);
+          console.log({ obj });
+          if (!obj || !obj.sdp) return;
+          if (obj.sdp.type === "offer") {
+            console.log("debug offer", { obj });
+            await this.rtc.setRemoteDescription(obj.sdp);
+            const create = await this.rtc.createAnswer().catch(console.warn);
+            if (!create) return;
+            await this.rtc.setLocalDescription(create).catch(console.warn);
+            let local = this.rtc.localDescription;
+            if (local && !local.type) {
+              console.log({ local });
+              local = new RTCSessionDescription({
+                type: "answer",
+                sdp: local.sdp
+              });
+            }
+            this.send(
+              JSON.stringify({ sdp: this.rtc.localDescription }),
+              "webrtc"
+            );
+          } else {
+            console.log("debug answer", { obj });
+            await this.rtc.setRemoteDescription(obj.sdp);
+          }
         }
-      }
-    };
+      };
+    } catch (error) {
+      console.log(error);
+    }
     channel.onerror = err => {
       console.log("Datachannel Error: " + err);
     };

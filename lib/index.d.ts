@@ -1,4 +1,8 @@
-import { message } from "./interface";
+export interface message {
+    label: string;
+    data: any;
+    nodeId: string;
+}
 interface option {
     disable_stun?: boolean;
     nodeId?: string;
@@ -33,6 +37,7 @@ export default class WebRTC {
         stream?: MediaStream;
     });
     private prepareNewConnection;
+    negotiating: boolean;
     makeOffer(opt?: option): void;
     private createDatachannel;
     private dataChannelEvents;
