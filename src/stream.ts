@@ -1,65 +1,38 @@
+require("babel-polyfill");
+
 import WebRTC from "./index";
-
-export function getLocalVideo(opt?: { width: number; height: number }) {
-  return new Promise<MediaStream>((resolve: (v: MediaStream) => void) => {
-    navigator.getUserMedia = navigator.getUserMedia;
-
-    if (!opt) opt = { width: 1280, height: 720 };
-    navigator.mediaDevices
-      .getUserMedia({
-        audio: true,
-        video: { width: opt.width, height: opt.height }
-      })
-      .then(stream => {
-        resolve(stream);
-      });
-  });
-}
-export function getLocalAudio(opt?: { width: number; height: number }) {
-  return new Promise<MediaStream>((resolve: (v: MediaStream) => void) => {
-    navigator.getUserMedia = navigator.getUserMedia;
-    if (!opt) opt = { width: 1280, height: 720 };
-    navigator.mediaDevices
-      .getUserMedia({ audio: true, video: false })
-      .then(stream => {
-        resolve(stream);
-      });
-  });
-}
+import { getLocalVideo, getLocalAudio } from "./utill";
 
 export enum MediaType {
   video,
   audio
 }
 
+interface Option {
+  stream?: MediaStream;
+  type?: MediaType;
+}
+
 export default class Stream {
   onStream: (stream: MediaStream) => void;
-
-  constructor(peer: WebRTC, opt?: { stream?: MediaStream; type?: MediaType }) {
-    opt = opt || {};
+  opt: Option;
+  constructor(peer: WebRTC, opt: Partial<Option> = {}) {
     this.onStream = _ => {};
-    this.init(peer, opt.stream, opt.type);
+    this.opt = opt;
+    this.init(peer);
   }
 
-  private async init(peer: WebRTC, _stream?: MediaStream, type?: MediaType) {
+  private async init(peer: WebRTC) {
     const stream: MediaStream =
-      _stream ||
+      this.opt.stream ||
       (await (async () => {
-        if (type && (type as MediaType) == MediaType.video) {
+        if (this.opt.type && (this.opt.type as MediaType) == MediaType.video) {
           return await getLocalVideo();
         } else {
           return await getLocalAudio();
         }
       })());
 
-    // stream.getTracks().forEach(track => peer.rtc.addTrack(track, stream));
-    // peer.rtc.ontrack = (event: RTCTrackEvent) => {
-    //   console.log("ontrack", { event });
-
-    //   const stream = event.streams[0];
-
-    //   this.onStream(stream);
-    // };
     const rtc = new WebRTC({ stream });
     if (peer.isOffer) {
       setTimeout(() => {
@@ -72,7 +45,7 @@ export default class Stream {
             rtc.setAnswer(JSON.parse(raw.data));
           }
         });
-      }, 1000);
+      }, 500);
     } else {
       peer.addOnData(raw => {
         if (raw.label === "test_offer") {

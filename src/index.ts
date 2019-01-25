@@ -1,3 +1,7 @@
+require("babel-polyfill");
+
+import { RTCPeerConnection, RTCSessionDescription } from "wrtc";
+
 export interface message {
   label: string;
   data: any;
@@ -5,9 +9,9 @@ export interface message {
 }
 
 interface option {
-  disable_stun?: boolean;
-  stream?: MediaStream;
-  nodeId?: string;
+  disable_stun: boolean;
+  stream: MediaStream;
+  nodeId: string;
 }
 
 export interface OnData {
@@ -72,20 +76,19 @@ export default class WebRTC {
   nodeId: string;
   isConnected: boolean;
   isDisconnected: boolean;
-  onicecandidate: boolean;
-  stream?: MediaStream;
-  opt?: option;
+
+  opt: Partial<option>;
 
   isOffer = false;
-  constructor(opt?: option) {
-    this.opt = opt || {};
+
+  constructor(opt: Partial<option> = {}) {
+    this.opt = opt;
     this.rtc = this.prepareNewConnection();
     this.dataChannels = {};
     this.isConnected = false;
     this.isDisconnected = false;
-    this.onicecandidate = false;
     this.nodeId = this.opt.nodeId || "peer";
-    this.stream = this.opt.stream;
+
     this.connect = () => {};
     this.disconnect = () => {};
     this.signal = sdp => {};
@@ -93,11 +96,8 @@ export default class WebRTC {
 
   private prepareNewConnection() {
     let peer: RTCPeerConnection;
-    let opt = this.opt;
-    if (!opt) opt = {};
-    if (opt.nodeId) this.nodeId = opt.nodeId;
-    if (opt.disable_stun) {
-      console.log("disable stun");
+    if (this.opt.nodeId) this.nodeId = this.opt.nodeId;
+    if (this.opt.disable_stun) {
       peer = new RTCPeerConnection({
         iceServers: []
       });
@@ -138,10 +138,8 @@ export default class WebRTC {
         case "completed":
           break;
         case "disconnected":
-          // console.log("webrtc4me disconnected");
-          // this.isDisconnected = true;
-          // this.isConnected = false;
-          // this.disconnect();
+          console.log("webrtc4me disconnected");
+          this.hangUp();
           break;
       }
     };
@@ -162,6 +160,12 @@ export default class WebRTC {
     };
 
     return peer;
+  }
+
+  hangUp() {
+    this.isDisconnected = true;
+    this.isConnected = false;
+    this.disconnect();
   }
 
   negotiating = false;
@@ -202,9 +206,10 @@ export default class WebRTC {
 
   private dataChannelEvents(channel: RTCDataChannel) {
     channel.onopen = () => {
-      if (!this.isConnected) this.connect();
-      this.isConnected = true;
-      this.onicecandidate = false;
+      if (!this.isConnected) {
+        this.connect();
+        this.isConnected = true;
+      }
     };
     try {
       channel.onmessage = async event => {
@@ -239,13 +244,12 @@ export default class WebRTC {
     };
     channel.onclose = () => {
       console.log("DataChannel is closed");
-      this.isDisconnected = true;
-      this.disconnect();
+      this.hangUp();
     };
   }
 
   addStream() {
-    if (this.opt && this.opt.stream) {
+    if (this.opt.stream) {
       const stream = this.opt.stream;
       stream.getTracks().forEach(track => this.rtc.addTrack(track, stream));
     }
@@ -279,8 +283,7 @@ export default class WebRTC {
       this.dataChannels[label].send(data);
     } catch (error) {
       console.log("dc send error", error);
-      this.isDisconnected = true;
-      this.disconnect();
+      this.hangUp();
     }
   }
 

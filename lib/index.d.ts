@@ -4,9 +4,9 @@ export interface message {
     nodeId: string;
 }
 interface option {
-    disable_stun?: boolean;
-    stream?: MediaStream;
-    nodeId?: string;
+    disable_stun: boolean;
+    stream: MediaStream;
+    nodeId: string;
 }
 export interface OnData {
     [key: string]: (raw: message) => void;
@@ -30,12 +30,11 @@ export default class WebRTC {
     nodeId: string;
     isConnected: boolean;
     isDisconnected: boolean;
-    onicecandidate: boolean;
-    stream?: MediaStream;
-    opt?: option;
+    opt: Partial<option>;
     isOffer: boolean;
-    constructor(opt?: option);
+    constructor(opt?: Partial<option>);
     private prepareNewConnection;
+    hangUp(): void;
     negotiating: boolean;
     makeOffer(): void;
     private createDatachannel;
