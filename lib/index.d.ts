@@ -5,6 +5,7 @@ export interface message {
 }
 interface option {
     disable_stun?: boolean;
+    stream?: MediaStream;
     nodeId?: string;
 }
 export interface OnData {
@@ -31,18 +32,18 @@ export default class WebRTC {
     isDisconnected: boolean;
     onicecandidate: boolean;
     stream?: MediaStream;
+    opt?: option;
     isOffer: boolean;
-    constructor(opt?: {
-        nodeId?: string;
-        stream?: MediaStream;
-    });
+    constructor(opt?: option);
     private prepareNewConnection;
     negotiating: boolean;
-    makeOffer(opt?: option): void;
+    makeOffer(): void;
     private createDatachannel;
+    sendSdp(type: string, local: any): void;
     private dataChannelEvents;
-    setAnswer(sdp: any, nodeId?: string): void;
-    makeAnswer(sdp: any, opt?: option): Promise<void>;
+    addStream(): void;
+    setAnswer(sdp: any, nodeId?: string): Promise<void>;
+    makeAnswer(sdp: any): Promise<void>;
     send(data: any, label?: string): void;
     connecting(nodeId: string): void;
 }

@@ -52,13 +52,40 @@ export default class Stream {
         }
       })());
 
-    stream.getTracks().forEach(track => peer.rtc.addTrack(track, stream));
-    peer.rtc.ontrack = (event: RTCTrackEvent) => {
-      console.log("ontrack", { event });
+    // stream.getTracks().forEach(track => peer.rtc.addTrack(track, stream));
+    // peer.rtc.ontrack = (event: RTCTrackEvent) => {
+    //   console.log("ontrack", { event });
 
-      const stream = event.streams[0];
+    //   const stream = event.streams[0];
 
+    //   this.onStream(stream);
+    // };
+    const rtc = new WebRTC({ stream });
+    if (peer.isOffer) {
+      setTimeout(() => {
+        rtc.makeOffer();
+        rtc.signal = sdp => {
+          peer.send(JSON.stringify(sdp), "test_offer");
+        };
+        peer.addOnData(raw => {
+          if (raw.label === "test_answer") {
+            rtc.setAnswer(JSON.parse(raw.data));
+          }
+        });
+      }, 1000);
+    } else {
+      peer.addOnData(raw => {
+        if (raw.label === "test_offer") {
+          rtc.makeAnswer(JSON.parse(raw.data));
+          rtc.signal = sdp => {
+            peer.send(JSON.stringify(sdp), "test_answer");
+          };
+        }
+      });
+    }
+    rtc.addOnAddTrack(stream => {
+      console.log({ stream });
       this.onStream(stream);
-    };
+    });
   }
 }

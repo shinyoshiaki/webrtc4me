@@ -6,6 +6,7 @@ export interface message {
 
 interface option {
   disable_stun?: boolean;
+  stream?: MediaStream;
   nodeId?: string;
 }
 
@@ -73,24 +74,26 @@ export default class WebRTC {
   isDisconnected: boolean;
   onicecandidate: boolean;
   stream?: MediaStream;
+  opt?: option;
 
   isOffer = false;
-  constructor(opt?: { nodeId?: string; stream?: MediaStream }) {
-    opt = opt || {};
+  constructor(opt?: option) {
+    this.opt = opt || {};
     this.rtc = this.prepareNewConnection();
     this.dataChannels = {};
     this.isConnected = false;
     this.isDisconnected = false;
     this.onicecandidate = false;
-    this.nodeId = opt.nodeId || "peer";
-    this.stream = opt.stream;
+    this.nodeId = this.opt.nodeId || "peer";
+    this.stream = this.opt.stream;
     this.connect = () => {};
     this.disconnect = () => {};
     this.signal = sdp => {};
   }
 
-  private prepareNewConnection(opt?: option) {
+  private prepareNewConnection() {
     let peer: RTCPeerConnection;
+    let opt = this.opt;
     if (!opt) opt = {};
     if (opt.nodeId) this.nodeId = opt.nodeId;
     if (opt.disable_stun) {
@@ -113,9 +116,9 @@ export default class WebRTC {
 
     peer.onicecandidate = evt => {
       if (!evt.candidate) {
-        if (!this.onicecandidate) {
-          this.signal(peer.localDescription);
-          this.onicecandidate = true;
+        this.signal(peer.localDescription);
+        if (this.isConnected && this.isOffer) {
+          this.sendSdp("offer", this.rtc.localDescription);
         }
       }
     };
@@ -153,12 +156,19 @@ export default class WebRTC {
       this.negotiating = peer.signalingState != "stable";
     };
 
+    peer.ontrack = evt => {
+      const stream = evt.streams[0];
+      excuteEvent(this.onAddTrack, stream);
+    };
+
     return peer;
   }
 
   negotiating = false;
-  makeOffer(opt?: option) {
-    this.rtc = this.prepareNewConnection(opt);
+  makeOffer() {
+    this.rtc = this.prepareNewConnection();
+    this.addStream();
+
     this.rtc.onnegotiationneeded = async () => {
       if (this.negotiating) {
         console.warn("dupli");
@@ -167,10 +177,6 @@ export default class WebRTC {
       this.negotiating = true;
       const offer = await this.rtc.createOffer().catch(console.log);
       if (offer) await this.rtc.setLocalDescription(offer).catch(console.log);
-
-      if (this.isConnected) {
-        this.send(JSON.stringify({ sdp: this.rtc.localDescription }), "webrtc");
-      }
     };
     this.isOffer = true;
     this.createDatachannel("datachannel");
@@ -184,6 +190,14 @@ export default class WebRTC {
     } catch (dce) {
       console.log("dc established error: " + dce.message);
     }
+  }
+
+  sendSdp(type: string, local: any) {
+    let sdp = local;
+    if (!local.type) {
+      sdp = new RTCSessionDescription({ type: type as any, sdp: local.sdp });
+    }
+    this.send(JSON.stringify({ sdp }), "webrtc");
   }
 
   private dataChannelEvents(channel: RTCDataChannel) {
@@ -201,31 +215,20 @@ export default class WebRTC {
           nodeId: this.nodeId
         });
         if (channel.label === "webrtc") {
-          const obj = JSON.parse(event.data);
-          console.log({ obj });
-          if (!obj || !obj.sdp) return;
-          if (obj.sdp.type === "offer") {
-            console.log("debug offer", { obj });
-            await this.rtc.setRemoteDescription(obj.sdp);
-            const create = await this.rtc.createAnswer().catch(console.warn);
-            if (!create) return;
-            await this.rtc.setLocalDescription(create).catch(console.warn);
-            let local = this.rtc.localDescription;
-            if (local && !local.type) {
-              console.log({ local });
-              local = new RTCSessionDescription({
-                type: "answer",
-                sdp: local.sdp
-              });
-            }
-            this.send(
-              JSON.stringify({ sdp: this.rtc.localDescription }),
-              "webrtc"
-            );
-          } else {
-            console.log("debug answer", { obj });
-            await this.rtc.setRemoteDescription(obj.sdp);
-          }
+          // const obj = JSON.parse(event.data);
+          // console.log({ obj });
+          // if (!obj || !obj.sdp) return;
+          // if (obj.sdp.type === "offer") {
+          //   console.log("debug offer", { obj });
+          //   await this.rtc.setRemoteDescription(obj.sdp);
+          //   const create = await this.rtc.createAnswer().catch(console.warn);
+          //   if (!create) return;
+          //   await this.rtc.setLocalDescription(create).catch(console.warn);
+          //   this.sendSdp("answer", this.rtc.localDescription);
+          // } else {
+          //   console.log("debug answer", { obj });
+          //   await this.rtc.setRemoteDescription(obj.sdp);
+          // }
         }
       };
     } catch (error) {
@@ -241,18 +244,28 @@ export default class WebRTC {
     };
   }
 
-  setAnswer(sdp: any, nodeId?: string) {
-    this.rtc
-      .setRemoteDescription(new RTCSessionDescription(sdp))
-      .catch(console.log);
-    this.nodeId = nodeId || this.nodeId;
+  addStream() {
+    if (this.opt && this.opt.stream) {
+      const stream = this.opt.stream;
+      stream.getTracks().forEach(track => this.rtc.addTrack(track, stream));
+    }
   }
-
-  async makeAnswer(sdp: any, opt?: option) {
-    this.rtc = this.prepareNewConnection(opt);
+  async setAnswer(sdp: any, nodeId?: string) {
     await this.rtc
       .setRemoteDescription(new RTCSessionDescription(sdp))
       .catch(console.log);
+
+    this.nodeId = nodeId || this.nodeId;
+  }
+
+  async makeAnswer(sdp: any) {
+    this.rtc = this.prepareNewConnection();
+    this.addStream();
+    console.log({ sdp });
+    await this.rtc
+      .setRemoteDescription(new RTCSessionDescription(sdp))
+      .catch(console.log);
+
     const answer = await this.rtc.createAnswer().catch(console.log);
     if (answer) await this.rtc.setLocalDescription(answer).catch(console.log);
   }
