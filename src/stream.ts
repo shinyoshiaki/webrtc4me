@@ -42,14 +42,14 @@ export default class Stream {
         };
         peer.addOnData(raw => {
           if (raw.label === "test_answer") {
-            rtc.setAnswer(JSON.parse(raw.data));
+            rtc.setSdp(JSON.parse(raw.data));
           }
         });
       }, 500);
     } else {
       peer.addOnData(raw => {
         if (raw.label === "test_offer") {
-          rtc.makeAnswer(JSON.parse(raw.data));
+          rtc.setSdp(JSON.parse(raw.data));
           rtc.signal = sdp => {
             peer.send(JSON.stringify(sdp), "test_answer");
           };

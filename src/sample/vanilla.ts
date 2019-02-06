@@ -5,9 +5,9 @@ const peerAnswer = new WebRTC({ disable_stun: true, nodeId: "answer" });
 
 peerOffer.makeOffer();
 peerOffer.signal = (sdp: any) => {
-  peerAnswer.makeAnswer(sdp);
+  peerAnswer.setSdp(sdp);
   peerAnswer.signal = (sdp: any) => {
-    peerOffer.setAnswer(sdp);
+    peerOffer.setSdp(sdp);
   };
 };
 

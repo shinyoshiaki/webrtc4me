@@ -1,5 +1,5 @@
 require("babel-polyfill");
-import WebRTC from "../trickle";
+import WebRTC from "../index";
 const peerOffer = new WebRTC({ nodeId: "offer", trickle: true });
 const peerAnswer = new WebRTC({ nodeId: "answer", trickle: true });
 
