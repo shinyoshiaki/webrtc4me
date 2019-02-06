@@ -1,10 +1,6 @@
 require("babel-polyfill");
 
-import {
-  RTCPeerConnection,
-  RTCSessionDescription,
-  RTCIceCandidate
-} from "wrtc";
+import { RTCPeerConnection, RTCSessionDescription } from "wrtc";
 
 export interface message {
   label: string;
@@ -78,25 +74,24 @@ export default class WebRTC {
   private dataChannels: { [key: string]: RTCDataChannel };
 
   nodeId: string;
-  isConnected: boolean;
-  isDisconnected: boolean;
-
-  opt: Partial<option>;
-
+  isConnected = false;
+  isDisconnected = false;
   isOffer = false;
   isMadeAnswer = false;
 
+  opt: Partial<option>;
+
   constructor(opt: Partial<option> = {}) {
     this.opt = opt;
-    this.rtc = this.prepareNewConnection();
     this.dataChannels = {};
-    this.isConnected = false;
-    this.isDisconnected = false;
     this.nodeId = this.opt.nodeId || "peer";
 
     this.connect = () => {};
     this.disconnect = () => {};
     this.signal = sdp => {};
+
+    this.rtc = this.prepareNewConnection();
+    this.addStream();
   }
 
   private prepareNewConnection() {
@@ -170,9 +165,6 @@ export default class WebRTC {
 
   negotiating = false;
   makeOffer() {
-    this.rtc = this.prepareNewConnection();
-    this.addStream();
-
     this.rtc.onnegotiationneeded = async () => {
       if (this.negotiating) {
         console.warn("dupli");
@@ -240,9 +232,6 @@ export default class WebRTC {
   private async makeAnswer(sdp: any) {
     if (this.isMadeAnswer) return;
     this.isMadeAnswer = true;
-
-    this.rtc = this.prepareNewConnection();
-    this.addStream();
 
     await this.rtc
       .setRemoteDescription(new RTCSessionDescription(sdp))

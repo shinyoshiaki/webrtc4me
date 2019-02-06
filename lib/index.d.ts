@@ -31,9 +31,9 @@ export default class WebRTC {
     nodeId: string;
     isConnected: boolean;
     isDisconnected: boolean;
-    opt: Partial<option>;
     isOffer: boolean;
     isMadeAnswer: boolean;
+    opt: Partial<option>;
     constructor(opt?: Partial<option>);
     private prepareNewConnection;
     hangUp(): void;

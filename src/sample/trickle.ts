@@ -5,12 +5,10 @@ const peerAnswer = new WebRTC({ nodeId: "answer", trickle: true });
 
 peerOffer.makeOffer();
 peerOffer.signal = (sdp: any) => {
-  if (!peerAnswer.isMadeAnswer) {
-    peerAnswer.signal = (sdp: any) => {
-      peerOffer.setSdp(sdp);
-    };
-  }
   peerAnswer.setSdp(sdp);
+};
+peerAnswer.signal = (sdp: any) => {
+  peerOffer.setSdp(sdp);
 };
 
 peerOffer.connect = () => {
