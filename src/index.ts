@@ -59,7 +59,7 @@ export function addEvent<T extends Event>(
 export default class WebRTC {
   rtc: RTCPeerConnection;
 
-  signal: (sdp: any) => void;
+  signal: (sdp: object) => void;
   connect: () => void;
   disconnect: () => void;
   private onData: OnData = {};
@@ -115,7 +115,7 @@ export default class WebRTC {
     }
 
     peer.onicecandidate = evt => {
-      if (!evt.candidate) {
+      if (!evt.candidate && peer.localDescription) {
         this.signal(peer.localDescription);
         if (this.isConnected && this.isOffer) {
           this.sendSdp("offer", this.rtc.localDescription);
