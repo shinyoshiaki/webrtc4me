@@ -1,5 +1,5 @@
 require("babel-polyfill");
-import WebRTC from "./index";
+import WebRTC from "../index";
 const peerOffer = new WebRTC({ disable_stun: true, nodeId: "offer" });
 const peerAnswer = new WebRTC({ disable_stun: true, nodeId: "answer" });
 
