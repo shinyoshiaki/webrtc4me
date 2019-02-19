@@ -115,7 +115,7 @@ export default class WebRTC {
     peer.onicecandidate = evt => {
       if (evt.candidate) {
         if (this.opt.trickle) {
-          this.signal(evt.candidate);
+          this.signal({ type: "candidate", sdp: evt.candidate });
         }
       } else {
         if (!this.opt.trickle && peer.localDescription) {
