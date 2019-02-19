@@ -1,6 +1,9 @@
 require("babel-polyfill");
-
-import { RTCPeerConnection, RTCSessionDescription } from "wrtc";
+import {
+  RTCPeerConnection,
+  RTCSessionDescription,
+  RTCIceCandidate
+} from "wrtc";
 
 export interface message {
   label: string;
@@ -115,7 +118,7 @@ export default class WebRTC {
     peer.onicecandidate = evt => {
       if (evt.candidate) {
         if (this.opt.trickle) {
-          this.signal({ type: "candidate", sdp: evt.candidate });
+          this.signal({ type: "candidate", ice: evt.candidate });
         }
       } else {
         if (!this.opt.trickle && peer.localDescription) {
@@ -251,7 +254,7 @@ export default class WebRTC {
         this.setAnswer(sdp);
         break;
       case "candidate":
-        this.rtc.addIceCandidate(sdp);
+        this.rtc.addIceCandidate(new RTCIceCandidate(sdp.ice));
         break;
     }
   }
