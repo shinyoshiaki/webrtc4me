@@ -33,15 +33,15 @@ export default class WebRTC {
     isDisconnected: boolean;
     isOffer: boolean;
     isMadeAnswer: boolean;
+    negotiating: boolean;
     opt: Partial<option>;
     constructor(opt?: Partial<option>);
     private prepareNewConnection;
-    hangUp(): void;
-    negotiating: boolean;
+    private hangUp;
     makeOffer(): void;
     private createDatachannel;
     private dataChannelEvents;
-    addStream(): void;
+    private addStream;
     private setAnswer;
     private makeAnswer;
     setSdp(sdp: any): void;
