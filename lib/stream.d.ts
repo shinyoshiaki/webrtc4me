@@ -13,7 +13,9 @@ export default class Stream {
     private peer;
     private opt;
     onStream: (stream: MediaStream) => void;
+    onLocalStream: (stream: MediaStream) => void;
     label: string;
+    initDone: boolean;
     constructor(peer: WebRTC, opt?: Partial<Option>);
     private listen;
     private init;
