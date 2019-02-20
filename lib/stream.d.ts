@@ -1,18 +1,21 @@
-import WebRTC from "./index";
+import WebRTC from "./";
+import { getLocalAudio, getLocalDesktop, getLocalVideo } from "./utill";
+declare type Get = ReturnType<typeof getLocalAudio> | ReturnType<typeof getLocalDesktop> | ReturnType<typeof getLocalVideo> | undefined;
 export declare enum MediaType {
     video = 0,
     audio = 1
 }
 interface Option {
-    stream: MediaStream;
-    type: MediaType;
+    get: Get;
     label: string;
 }
 export default class Stream {
+    private peer;
+    private opt;
     onStream: (stream: MediaStream) => void;
-    opt: Partial<Option>;
     label: string;
     constructor(peer: WebRTC, opt?: Partial<Option>);
+    private listen;
     private init;
 }
 export {};

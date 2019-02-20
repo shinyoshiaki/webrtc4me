@@ -1,7 +1,13 @@
 require("babel-polyfill");
 
-import WebRTC from "./index";
-import { getLocalVideo, getLocalAudio } from "./utill";
+import WebRTC from "./";
+import { getLocalAudio, getLocalDesktop, getLocalVideo } from "./utill";
+
+type Get =
+  | ReturnType<typeof getLocalAudio>
+  | ReturnType<typeof getLocalDesktop>
+  | ReturnType<typeof getLocalVideo>
+  | undefined;
 
 export enum MediaType {
   video,
@@ -9,33 +15,47 @@ export enum MediaType {
 }
 
 interface Option {
-  stream: MediaStream;
-  type: MediaType;
+  get: Get;
   label: string;
 }
 
 export default class Stream {
   onStream: (stream: MediaStream) => void;
-  opt: Partial<Option>;
   label: string;
-  constructor(peer: WebRTC, opt: Partial<Option> = {}) {
+
+  constructor(private peer: WebRTC, private opt: Partial<Option> = {}) {
     this.onStream = _ => {};
-    this.opt = opt;
     this.label = opt.label || "stream";
-    this.init(peer);
+    this.listen();
   }
 
-  private async init(peer: WebRTC) {
-    const stream: MediaStream =
-      this.opt.stream ||
-      (await (async () => {
-        if (this.opt.type && (this.opt.type as MediaType) == MediaType.video) {
-          return await getLocalVideo();
-        } else {
-          return await getLocalAudio();
+  private async listen() {
+    const label = "init_" + this.label;
+    let stream: MediaStream | undefined;
+    let done = false;
+    this.peer.addOnData(raw => {
+      if (raw.label === label && raw.data === "done") {
+        done = true;
+        if (stream) {
+          console.log("start streaming");
+          this.init(stream);
         }
-      })());
+      }
+    }, label);
+    if (this.opt.get) {
+      stream = (await this.opt.get.catch(console.log)) as any;
+    }
+    if (done) {
+      this.init(stream);
+    }
+    if (stream) {
+      console.log("send done");
+      this.peer.send("done", label);
+    }
+  }
 
+  private async init(stream: MediaStream | undefined) {
+    const peer = this.peer;
     const rtc = new WebRTC({ stream });
     if (peer.isOffer) {
       rtc.makeOffer();
@@ -46,7 +66,7 @@ export default class Stream {
         if (raw.label === this.label + "_answer") {
           rtc.setSdp(JSON.parse(raw.data));
         }
-      }, this.label); //送信側受信側のdcチャネルを同期
+      }, this.label);
     } else {
       peer.addOnData(raw => {
         console.log("label", this.label);
@@ -56,7 +76,7 @@ export default class Stream {
             peer.send(JSON.stringify(sdp), this.label + "_answer");
           };
         }
-      }, this.label);　//送信側受信側のdcチャネルを同期
+      }, this.label);
     }
     rtc.addOnAddTrack(stream => {
       console.log({ stream });
