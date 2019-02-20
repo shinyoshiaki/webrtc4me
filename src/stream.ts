@@ -9,16 +9,19 @@ export enum MediaType {
 }
 
 interface Option {
-  stream?: MediaStream;
-  type?: MediaType;
+  stream: MediaStream;
+  type: MediaType;
+  label: string;
 }
 
 export default class Stream {
   onStream: (stream: MediaStream) => void;
-  opt: Option;
+  opt: Partial<Option>;
+  label: string;
   constructor(peer: WebRTC, opt: Partial<Option> = {}) {
     this.onStream = _ => {};
     this.opt = opt;
+    this.label = opt.label || "stream";
     this.init(peer);
   }
 
@@ -38,20 +41,20 @@ export default class Stream {
       setTimeout(() => {
         rtc.makeOffer();
         rtc.signal = sdp => {
-          peer.send(JSON.stringify(sdp), "test_offer");
+          peer.send(JSON.stringify(sdp), this.label + "_offer");
         };
         peer.addOnData(raw => {
-          if (raw.label === "test_answer") {
+          if (raw.label === this.label + "_answer") {
             rtc.setSdp(JSON.parse(raw.data));
           }
         });
       }, 500);
     } else {
       peer.addOnData(raw => {
-        if (raw.label === "test_offer") {
+        if (raw.label === this.label + "_offer") {
           rtc.setSdp(JSON.parse(raw.data));
           rtc.signal = sdp => {
-            peer.send(JSON.stringify(sdp), "test_answer");
+            peer.send(JSON.stringify(sdp), this.label + "_answer");
           };
         }
       });

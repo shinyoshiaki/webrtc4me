@@ -4,12 +4,14 @@ export declare enum MediaType {
     audio = 1
 }
 interface Option {
-    stream?: MediaStream;
-    type?: MediaType;
+    stream: MediaStream;
+    type: MediaType;
+    label: string;
 }
 export default class Stream {
     onStream: (stream: MediaStream) => void;
-    opt: Option;
+    opt: Partial<Option>;
+    label: string;
     constructor(peer: WebRTC, opt?: Partial<Option>);
     private init;
 }
