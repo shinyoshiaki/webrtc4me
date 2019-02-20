@@ -1,7 +1,3 @@
-interface option {
-    width: number;
-    height: number;
-}
-export declare function getLocalVideo(option?: Partial<option>): Promise<MediaStream>;
+export declare function getLocalVideo(option?: MediaTrackSettings): Promise<MediaStream>;
 export declare function getLocalAudio(): Promise<MediaStream>;
-export {};
+export declare function getLocalDesktop(option?: MediaTrackSettings): Promise<MediaStream>;
