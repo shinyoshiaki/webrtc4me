@@ -38,26 +38,25 @@ export default class Stream {
 
     const rtc = new WebRTC({ stream });
     if (peer.isOffer) {
-      setTimeout(() => {
-        rtc.makeOffer();
-        rtc.signal = sdp => {
-          peer.send(JSON.stringify(sdp), this.label + "_offer");
-        };
-        peer.addOnData(raw => {
-          if (raw.label === this.label + "_answer") {
-            rtc.setSdp(JSON.parse(raw.data));
-          }
-        });
-      }, 500);
+      rtc.makeOffer();
+      rtc.signal = sdp => {
+        peer.send(JSON.stringify(sdp), this.label + "_offer");
+      };
+      peer.addOnData(raw => {
+        if (raw.label === this.label + "_answer") {
+          rtc.setSdp(JSON.parse(raw.data));
+        }
+      }, this.label); //送信側受信側のdcチャネルを同期
     } else {
       peer.addOnData(raw => {
+        console.log("label", this.label);
         if (raw.label === this.label + "_offer") {
           rtc.setSdp(JSON.parse(raw.data));
           rtc.signal = sdp => {
             peer.send(JSON.stringify(sdp), this.label + "_answer");
           };
         }
-      });
+      }, this.label);　//送信側受信側のdcチャネルを同期
     }
     rtc.addOnAddTrack(stream => {
       console.log({ stream });

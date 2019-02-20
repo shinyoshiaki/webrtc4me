@@ -53,7 +53,7 @@ export function addEvent<T extends Event>(
       return gen;
     })();
   if (Object.keys(event).includes(tag)) {
-    console.error("include tag");
+    console.error("included tag");
   } else {
     event[tag] = func;
   }
