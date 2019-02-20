@@ -24,9 +24,8 @@ export function getLocalAudio() {
 }
 
 export function getLocalDesktop(option?: MediaTrackSettings) {
-  console.log("display");
   return new Promise<MediaStream>((resolve: (v: MediaStream) => void) => {
-    navigator
+    (navigator.mediaDevices as any)
       .getDisplayMedia({
         video: option || true
       })
