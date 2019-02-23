@@ -1,4 +1,4 @@
-import { addEvent, OnData, excuteEvent } from "..";
+import { addEvent, OnData, excuteEvent } from "../core";
 
 test("Event", () => {
   const event = {};

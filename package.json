@@ -33,6 +33,7 @@
   "dependencies": {
     "@types/simple-peer": "^6.1.5",
     "babel-polyfill": "^6.26.0",
+    "rxjs": "^6.4.0",
     "simple-peer": "^9.2.1",
     "wrtc": "^0.3.5"
   },
