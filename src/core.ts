@@ -4,6 +4,7 @@ import {
   RTCSessionDescription,
   RTCIceCandidate
 } from "wrtc";
+import { Subject } from "rxjs";
 
 export interface message {
   label: string;
@@ -18,61 +19,16 @@ interface option {
   trickle: boolean;
 }
 
-export interface OnData {
-  [key: string]: (raw: message) => void;
-}
-interface OnAddTrack {
-  [key: string]: (stream: MediaStream) => void;
-}
-
-type Event = OnData | OnAddTrack;
-
-export function excuteEvent(ev: Event, v?: any) {
-  Object.keys(ev).forEach(key => {
-    const func: any = ev[key];
-    if (v) {
-      func(v);
-    } else {
-      func();
-    }
-  });
-}
-
-export function addEvent<T extends Event>(
-  event: T,
-  func: T[keyof T],
-  _tag?: string
-) {
-  const tag =
-    _tag ||
-    (() => {
-      let gen = Math.random().toString();
-      while (Object.keys(event).includes(gen)) {
-        gen = Math.random().toString();
-      }
-      return gen;
-    })();
-  if (Object.keys(event).includes(tag)) {
-    console.error("included tag", tag);
-  } else {
-    event[tag] = func;
-  }
-}
-
 export default class WebRTC {
   rtc: RTCPeerConnection;
 
   signal: (sdp: object) => void;
   connect: () => void;
   disconnect: () => void;
-  private onData: OnData = {};
-  addOnData = (func: OnData[keyof OnData], tag?: string) => {
-    addEvent<OnData>(this.onData, func, tag);
-  };
-  private onAddTrack: OnAddTrack = {};
-  addOnAddTrack = (func: OnAddTrack[keyof OnData], tag?: string) => {
-    addEvent<OnAddTrack>(this.onAddTrack, func, tag);
-  };
+  private subjOnData = new Subject<message>();
+  onData = this.subjOnData.asObservable();
+  private subjOnAddTrack = new Subject<MediaStream>();
+  onAddTrack = this.subjOnAddTrack.asObservable();
 
   private dataChannels: { [key: string]: RTCDataChannel };
 
@@ -155,7 +111,7 @@ export default class WebRTC {
 
     peer.ontrack = evt => {
       const stream = evt.streams[0];
-      excuteEvent(this.onAddTrack, stream);
+      this.subjOnAddTrack.next(stream);
     };
 
     return peer;
@@ -200,7 +156,7 @@ export default class WebRTC {
     try {
       channel.onmessage = async event => {
         if (!event) return;
-        excuteEvent(this.onData, {
+        this.subjOnData.next({
           label: channel.label,
           data: event.data,
           nodeId: this.nodeId

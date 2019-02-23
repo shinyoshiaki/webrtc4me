@@ -60,8 +60,8 @@ export default class FileShare {
 
   constructor(private peer: WebRTC, private label?: string) {
     if (!label) label = "file";
-    console.log({ label });
-    peer.addOnData(raw => {
+
+    peer.onData.subscribe(raw => {
       const { label, data } = raw;
       if (label === this.label) {
         try {
@@ -89,7 +89,7 @@ export default class FileShare {
           } as Downloading);
         }
       }
-    }, label);
+    });
   }
 
   sendStart(name: string, size: number) {
