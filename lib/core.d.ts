@@ -1,3 +1,4 @@
+import Event from "./event";
 export interface message {
     label: string;
     data: any;
@@ -14,10 +15,8 @@ export default class WebRTC {
     signal: (sdp: object) => void;
     connect: () => void;
     disconnect: () => void;
-    private subjOnData;
-    onData: import("rxjs").Observable<message>;
-    private subjOnAddTrack;
-    onAddTrack: import("rxjs").Observable<MediaStream>;
+    onData: Event<message>;
+    onAddTrack: Event<MediaStream>;
     private dataChannels;
     nodeId: string;
     isConnected: boolean;

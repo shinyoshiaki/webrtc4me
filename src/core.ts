@@ -4,7 +4,7 @@ import {
   RTCSessionDescription,
   RTCIceCandidate
 } from "wrtc";
-import { Subject } from "rxjs";
+import Event from "./event";
 
 export interface message {
   label: string;
@@ -25,10 +25,8 @@ export default class WebRTC {
   signal: (sdp: object) => void;
   connect: () => void;
   disconnect: () => void;
-  private subjOnData = new Subject<message>();
-  onData = this.subjOnData.asObservable();
-  private subjOnAddTrack = new Subject<MediaStream>();
-  onAddTrack = this.subjOnAddTrack.asObservable();
+  onData = new Event<message>();
+  onAddTrack = new Event<MediaStream>();
 
   private dataChannels: { [key: string]: RTCDataChannel };
 
@@ -111,7 +109,7 @@ export default class WebRTC {
 
     peer.ontrack = evt => {
       const stream = evt.streams[0];
-      this.subjOnAddTrack.next(stream);
+      this.onAddTrack.excute(stream);
     };
 
     return peer;
@@ -156,13 +154,11 @@ export default class WebRTC {
     try {
       channel.onmessage = async event => {
         if (!event) return;
-        this.subjOnData.next({
+        this.onData.excute({
           label: channel.label,
           data: event.data,
           nodeId: this.nodeId
         });
-        if (channel.label === "webrtc") {
-        }
       };
     } catch (error) {}
     channel.onerror = err => {};
