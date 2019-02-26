@@ -22,11 +22,11 @@ interface Downloaded extends Action {
 declare type Actions = Downloading | Downloaded;
 export default class FileShare {
     private peer;
-    private label?;
+    label?: string | undefined;
     subject: Subject<Actions>;
     state: Observable<Actions>;
     private chunks;
-    private name;
+    name: string;
     private size;
     constructor(peer: WebRTC, label?: string | undefined);
     sendStart(name: string, size: number): void;

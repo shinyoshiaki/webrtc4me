@@ -1,6 +1,5 @@
 import WebRTC from "./core";
 import { Subject, Observable } from "rxjs";
-import { message } from "./interface";
 
 const chunkSize = 16000;
 
@@ -56,13 +55,13 @@ export default class FileShare {
   state = this.subject.asObservable();
 
   private chunks: ArrayBuffer[] = [];
-  private name: string = "";
+  public name: string = "";
   private size: number = 0;
 
-  constructor(private peer: WebRTC, private label?: string) {
+  constructor(private peer: WebRTC, public label?: string) {
     if (!label) label = "file";
-
-    peer.onData.subscribe((raw: message) => {
+    console.log({ label });
+    peer.onData.subscribe(raw => {
       const { label, data } = raw;
       if (label === this.label) {
         try {
@@ -78,6 +77,10 @@ export default class FileShare {
                 type: "downloaded",
                 payload: { chunks: this.chunks, name: this.name }
               } as Downloaded);
+              peer.send(
+                JSON.stringify({ state: "complete", name: this.name }),
+                this.label
+              );
               this.chunks = [];
               this.name = "";
               break;
@@ -94,6 +97,7 @@ export default class FileShare {
   }
 
   sendStart(name: string, size: number) {
+    this.name = name;
     this.peer.send(JSON.stringify({ state: "start", size, name }), this.label);
   }
 
