@@ -1,5 +1,6 @@
 import WebRTC from "./core";
 import { Subject, Observable } from "rxjs";
+import { message } from "./interface";
 
 const chunkSize = 16000;
 
@@ -61,7 +62,7 @@ export default class FileShare {
   constructor(private peer: WebRTC, private label?: string) {
     if (!label) label = "file";
 
-    peer.onData.subscribe(raw => {
+    peer.onData.subscribe((raw: message) => {
       const { label, data } = raw;
       if (label === this.label) {
         try {
