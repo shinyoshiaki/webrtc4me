@@ -37,10 +37,7 @@ export default class WebRTC {
   isMadeAnswer = false;
   negotiating = false;
 
-  opt: Partial<option>;
-
-  constructor(opt: Partial<option> = {}) {
-    this.opt = opt;
+  constructor(public opt: Partial<option> = {}) {
     this.dataChannels = {};
     this.nodeId = this.opt.nodeId || "peer";
 
