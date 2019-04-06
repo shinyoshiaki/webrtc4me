@@ -1,9 +1,9 @@
 require("babel-polyfill");
 
 import WebRTC from "./core";
-import Stream from "./stream";
-import FileShare from "./file";
-import * as Utill from "./utill";
+import Stream from "./modules/stream";
+import FileShare from "./modules/file";
+import * as Utill from "./lib/utill";
 
 export default WebRTC;
 

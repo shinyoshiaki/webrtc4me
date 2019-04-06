@@ -1,4 +1,4 @@
-import Event from "./event";
+import Event from "./lib/event";
 export interface message {
     label: string;
     data: any;

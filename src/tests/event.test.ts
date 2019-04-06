@@ -1,4 +1,4 @@
-import Event from "../event";
+import Event from "../lib/event";
 
 const testEvent = new Event<{ msg: string }>();
 

@@ -4,7 +4,7 @@ import {
   RTCSessionDescription,
   RTCIceCandidate
 } from "wrtc";
-import Event from "./event";
+import Event from "./lib/event";
 
 export interface message {
   label: string;

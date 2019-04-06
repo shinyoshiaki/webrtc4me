@@ -1,4 +1,4 @@
-import WebRTC from "./core";
+import WebRTC from "../core";
 import { Subject, Observable } from "rxjs";
 
 const chunkSize = 16000;
