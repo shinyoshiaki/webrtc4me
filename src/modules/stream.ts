@@ -36,10 +36,11 @@ export default class Stream {
     const label = "init_" + this.label;
     let stream: MediaStream | undefined;
 
-    this.peer.onData.subscribe(raw => {
+    const reg = this.peer.onData.subscribe(raw => {
       if (raw.label === label && raw.data === "done") {
         if (stream || !this.opt.get) {
           this.init(stream);
+          reg.unSubscribe();
         }
       }
     });

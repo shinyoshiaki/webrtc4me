@@ -37,6 +37,8 @@ export default class WebRTC {
   isMadeAnswer = false;
   negotiating = false;
 
+  remoteStream: MediaStream | undefined;
+
   constructor(public opt: Partial<option> = {}) {
     this.dataChannels = {};
     this.nodeId = this.opt.nodeId || "peer";
@@ -107,6 +109,7 @@ export default class WebRTC {
     peer.ontrack = evt => {
       const stream = evt.streams[0];
       this.onAddTrack.excute(stream);
+      this.remoteStream = stream;
     };
 
     return peer;
