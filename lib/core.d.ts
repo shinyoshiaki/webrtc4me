@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import Event from "./utill/event";
 export interface message {
     label: string;
@@ -23,18 +24,19 @@ export default class WebRTC {
     isConnected: boolean;
     isDisconnected: boolean;
     isOffer: boolean;
-    isMadeAnswer: boolean;
     remoteStream: MediaStream | undefined;
+    timeoutPing: NodeJS.Timeout | undefined;
     constructor(opt?: Partial<option>);
     private prepareNewConnection;
     hangUp(): void;
     makeOffer(): void;
+    private negotiation;
     private setAnswer;
     private makeAnswer;
     setSdp(sdp: any): Promise<void>;
     private createDatachannel;
     private dataChannelEvents;
     send(data: any, label?: string): void;
-    connecting(nodeId: string): void;
+    addTrack(track: MediaStreamTrack, stream: MediaStream): void;
 }
 export {};

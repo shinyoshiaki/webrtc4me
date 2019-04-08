@@ -34,13 +34,15 @@ export default class WebRTC {
   isConnected = false;
   isDisconnected = false;
   isOffer = false;
-  isMadeAnswer = false;
 
   remoteStream: MediaStream | undefined;
+  timeoutPing: NodeJS.Timeout | undefined;
 
   constructor(public opt: Partial<option> = {}) {
+    const { nodeId, stream } = opt;
+
     this.dataChannels = {};
-    this.nodeId = this.opt.nodeId || "peer";
+    this.nodeId = nodeId || "peer";
 
     this.connect = () => {};
     this.disconnect = () => {};
@@ -48,8 +50,7 @@ export default class WebRTC {
 
     this.rtc = this.prepareNewConnection();
 
-    if (opt.stream) {
-      const stream = opt.stream;
+    if (stream) {
       stream.getTracks().forEach(track => this.rtc.addTrack(track, stream));
     }
   }
@@ -78,14 +79,26 @@ export default class WebRTC {
     peer.oniceconnectionstatechange = () => {
       switch (peer.iceConnectionState) {
         case "failed":
-          this.hangUp();
           break;
         case "disconnected":
-          this.hangUp();
+          try {
+            this.timeoutPing = setTimeout(() => {
+              this.hangUp();
+            }, 5000);
+
+            console.log("ping");
+            this.send("ping", "live");
+          } catch (error) {
+            console.log({ error });
+          }
+
           break;
         case "connected":
+          console.log("connected");
+          if (this.timeoutPing) clearTimeout(this.timeoutPing);
           break;
         case "closed":
+          console.log("closed");
           break;
         case "completed":
           break;
@@ -93,13 +106,19 @@ export default class WebRTC {
     };
 
     peer.onicecandidate = evt => {
-      if (evt.candidate) {
-        if (trickle) {
-          this.signal({ type: "candidate", ice: evt.candidate });
+      if (this.isConnected) {
+        if (!evt.candidate) {
+          this.send(JSON.stringify(this.rtc.localDescription), "update");
         }
       } else {
-        if (!trickle && peer.localDescription) {
-          this.signal(peer.localDescription);
+        if (evt.candidate) {
+          if (trickle) {
+            this.signal({ type: "candidate", ice: evt.candidate });
+          }
+        } else {
+          if (!trickle && peer.localDescription) {
+            this.signal(peer.localDescription);
+          }
         }
       }
     };
@@ -116,6 +135,7 @@ export default class WebRTC {
   }
 
   hangUp() {
+    console.log("hangup");
     this.isDisconnected = true;
     this.isConnected = false;
     this.disconnect();
@@ -143,6 +163,22 @@ export default class WebRTC {
       if (trickle && local) {
         this.signal(local);
       }
+
+      this.negotiation();
+    };
+  }
+
+  private negotiation() {
+    this.rtc.onnegotiationneeded = async ev => {
+      if (!this.isConnected) return;
+
+      const options = {};
+      const sessionDescription = await this.rtc.createOffer(options).catch();
+      await this.rtc.setLocalDescription(sessionDescription).catch();
+      const local = this.rtc.localDescription;
+      if (local) {
+        this.send(JSON.stringify(local), "update");
+      }
     };
   }
 
@@ -157,28 +193,27 @@ export default class WebRTC {
   private async makeAnswer(offer: any) {
     const { trickle } = this.opt;
 
-    if (this.isMadeAnswer) return;
-    this.isMadeAnswer = true;
-
-    let result: void | string;
-
-    result = await this.rtc
+    await this.rtc
       .setRemoteDescription(new RTCSessionDescription(offer))
-      .catch(err => JSON.stringify(err) + "err");
-    if (typeof result === "string") return;
+      .catch(console.log);
 
     const answer = await this.rtc.createAnswer().catch(console.log);
-    if (!answer) return;
+    if (!answer) {
+      console.log("no answer");
+      return;
+    }
 
-    result = await this.rtc
-      .setLocalDescription(answer)
-      .catch(err => JSON.stringify(err) + "err");
-    if (typeof result === "string") return;
+    await this.rtc.setLocalDescription(answer).catch(console.log);
 
     const local = this.rtc.localDescription;
-    if (trickle && local) {
+
+    if (this.isConnected) {
+      this.send(JSON.stringify(local), "update");
+    } else if (trickle && local) {
       this.signal(local);
     }
+
+    this.negotiation();
   }
 
   async setSdp(sdp: any) {
@@ -198,34 +233,44 @@ export default class WebRTC {
   }
 
   private createDatachannel(label: string) {
-    try {
-      const dc = this.rtc.createDataChannel(label);
-      this.dataChannelEvents(dc);
-      this.dataChannels[label] = dc;
-    } catch (dce) {}
+    if (!Object.keys(this.dataChannels).includes(label)) {
+      try {
+        const dc = this.rtc.createDataChannel(label);
+        this.dataChannelEvents(dc);
+        this.dataChannels[label] = dc;
+      } catch (dce) {}
+    }
   }
 
   private dataChannelEvents(channel: RTCDataChannel) {
     channel.onopen = () => {
       if (!this.isConnected) {
-        this.connect();
         this.isConnected = true;
+        this.connect();
       }
     };
     try {
       channel.onmessage = async event => {
         if (!event) return;
-        this.onData.excute({
-          label: channel.label,
-          data: event.data,
-          nodeId: this.nodeId
-        });
+
+        if (channel.label === "update") {
+          console.log("update", { event });
+          const sdp = JSON.parse(event.data);
+          this.setSdp(sdp);
+        } else if (channel.label === "live") {
+          if (event.data === "ping") this.send("pong", "live");
+          else if (this.timeoutPing) clearTimeout(this.timeoutPing);
+        } else {
+          this.onData.excute({
+            label: channel.label,
+            data: event.data,
+            nodeId: this.nodeId
+          });
+        }
       };
     } catch (error) {}
     channel.onerror = err => {};
-    channel.onclose = () => {
-      this.hangUp();
-    };
+    channel.onclose = () => {};
   }
 
   send(data: any, label?: string) {
@@ -235,12 +280,10 @@ export default class WebRTC {
     }
     try {
       this.dataChannels[label].send(data);
-    } catch (error) {
-      this.hangUp();
-    }
+    } catch (error) {}
   }
 
-  connecting(nodeId: string) {
-    this.nodeId = nodeId;
+  addTrack(track: MediaStreamTrack, stream: MediaStream) {
+    this.rtc.addTrack(track, stream);
   }
 }
