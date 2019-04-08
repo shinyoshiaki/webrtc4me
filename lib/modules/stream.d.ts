@@ -1,5 +1,5 @@
 import WebRTC from "../core";
-import { getLocalAudio, getLocalDesktop, getLocalVideo } from "../lib/utill";
+import { getLocalAudio, getLocalDesktop, getLocalVideo } from "../utill/media";
 declare type Get = ReturnType<typeof getLocalAudio> | ReturnType<typeof getLocalDesktop> | ReturnType<typeof getLocalVideo> | undefined;
 export declare enum MediaType {
     video = 0,

@@ -1,4 +1,4 @@
-import Event from "./lib/event";
+import Event from "./utill/event";
 export interface message {
     label: string;
     data: any;
@@ -11,6 +11,7 @@ interface option {
     trickle: boolean;
 }
 export default class WebRTC {
+    opt: Partial<option>;
     rtc: RTCPeerConnection;
     signal: (sdp: object) => void;
     connect: () => void;
@@ -23,18 +24,16 @@ export default class WebRTC {
     isDisconnected: boolean;
     isOffer: boolean;
     isMadeAnswer: boolean;
-    negotiating: boolean;
-    opt: Partial<option>;
+    remoteStream: MediaStream | undefined;
     constructor(opt?: Partial<option>);
     private prepareNewConnection;
-    private hangUp;
+    hangUp(): void;
     makeOffer(): void;
-    private createDatachannel;
-    private dataChannelEvents;
-    private addStream;
     private setAnswer;
     private makeAnswer;
-    setSdp(sdp: any): void;
+    setSdp(sdp: any): Promise<void>;
+    private createDatachannel;
+    private dataChannelEvents;
     send(data: any, label?: string): void;
     connecting(nodeId: string): void;
 }

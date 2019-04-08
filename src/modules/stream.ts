@@ -1,7 +1,7 @@
 require("babel-polyfill");
 
 import WebRTC from "../core";
-import { getLocalAudio, getLocalDesktop, getLocalVideo } from "../lib/utill";
+import { getLocalAudio, getLocalDesktop, getLocalVideo } from "../utill/media";
 
 type Get =
   | ReturnType<typeof getLocalAudio>
@@ -34,25 +34,25 @@ export default class Stream {
 
   private async listen() {
     const label = "init_" + this.label;
-    let stream: MediaStream | undefined;
+
+    const { get, stream } = this.opt;
+    let localStream = stream;
+
+    if (localStream) {
+      this.onLocalStream(localStream);
+    } else if (get) {
+      localStream = (await get.catch(console.log)) as MediaStream;
+      this.onLocalStream(localStream);
+    }
 
     const reg = this.peer.onData.subscribe(raw => {
       if (raw.label === label && raw.data === "done") {
-        if (stream || !this.opt.get) {
-          this.init(stream);
+        if (!get) {
+          this.init(localStream);
           reg.unSubscribe();
         }
       }
     });
-
-    if (this.opt.get) {
-      stream = (await this.opt.get.catch(console.log)) as any;
-      this.onLocalStream(stream!);
-    }
-    if (this.opt.stream) {
-      stream = this.opt.stream;
-      this.onLocalStream(stream);
-    }
 
     this.peer.send("done", label);
   }
@@ -60,6 +60,7 @@ export default class Stream {
   private async init(stream: MediaStream | undefined) {
     if (this.initDone) return;
     this.initDone = true;
+
     const peer = this.peer;
     const rtc = new WebRTC({ stream });
     if (peer.isOffer) {

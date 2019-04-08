@@ -4,7 +4,7 @@ import {
   RTCSessionDescription,
   RTCIceCandidate
 } from "wrtc";
-import Event from "./lib/event";
+import Event from "./utill/event";
 
 export interface message {
   label: string;
@@ -35,7 +35,6 @@ export default class WebRTC {
   isDisconnected = false;
   isOffer = false;
   isMadeAnswer = false;
-  negotiating = false;
 
   remoteStream: MediaStream | undefined;
 
@@ -45,39 +44,35 @@ export default class WebRTC {
 
     this.connect = () => {};
     this.disconnect = () => {};
-    this.signal = sdp => {};
+    this.signal = _ => {};
 
     this.rtc = this.prepareNewConnection();
-    this.addStream();
+
+    if (opt.stream) {
+      const stream = opt.stream;
+      stream.getTracks().forEach(track => this.rtc.addTrack(track, stream));
+    }
   }
 
   private prepareNewConnection() {
-    let peer: RTCPeerConnection;
-    if (this.opt.nodeId) this.nodeId = this.opt.nodeId;
-    if (this.opt.disable_stun) {
-      peer = new RTCPeerConnection({
-        iceServers: []
-      });
-    } else {
-      peer = new RTCPeerConnection({
-        iceServers: [
-          {
-            urls: "stun:stun.l.google.com:19302"
-          }
-        ]
-      });
-    }
+    const { disable_stun, trickle } = this.opt;
 
-    peer.onicecandidate = evt => {
-      if (evt.candidate) {
-        if (this.opt.trickle) {
-          this.signal({ type: "candidate", ice: evt.candidate });
-        }
-      } else {
-        if (!this.opt.trickle && peer.localDescription) {
-          this.signal(peer.localDescription);
-        }
-      }
+    const peer: RTCPeerConnection = disable_stun
+      ? new RTCPeerConnection({
+          iceServers: []
+        })
+      : new RTCPeerConnection({
+          iceServers: [
+            {
+              urls: "stun:stun.l.google.com:19302"
+            }
+          ]
+        });
+
+    peer.ontrack = evt => {
+      const stream = evt.streams[0];
+      this.onAddTrack.excute(stream);
+      this.remoteStream = stream;
     };
 
     peer.oniceconnectionstatechange = () => {
@@ -89,12 +84,23 @@ export default class WebRTC {
           this.hangUp();
           break;
         case "connected":
-          this.negotiating = false;
           break;
         case "closed":
           break;
         case "completed":
           break;
+      }
+    };
+
+    peer.onicecandidate = evt => {
+      if (evt.candidate) {
+        if (trickle) {
+          this.signal({ type: "candidate", ice: evt.candidate });
+        }
+      } else {
+        if (!trickle && peer.localDescription) {
+          this.signal(peer.localDescription);
+        }
       }
     };
 
@@ -106,34 +112,89 @@ export default class WebRTC {
 
     peer.onsignalingstatechange = e => {};
 
-    peer.ontrack = evt => {
-      const stream = evt.streams[0];
-      this.onAddTrack.excute(stream);
-      this.remoteStream = stream;
-    };
-
     return peer;
   }
 
-  private hangUp() {
+  hangUp() {
     this.isDisconnected = true;
     this.isConnected = false;
     this.disconnect();
   }
 
   makeOffer() {
+    this.isOffer = true;
+    const { trickle } = this.opt;
+    this.createDatachannel("datachannel");
+
     this.rtc.onnegotiationneeded = async () => {
-      if (this.negotiating) return;
-      this.negotiating = true;
-      const offer = await this.rtc.createOffer().catch(console.log);
-      if (!offer) return;
-      await this.rtc.setLocalDescription(offer).catch(console.log);
-      if (this.opt.trickle && this.rtc.localDescription) {
-        this.signal(this.rtc.localDescription);
+      const sdp = await this.rtc.createOffer().catch(console.log);
+
+      if (!sdp) return;
+
+      const result = await this.rtc
+        .setLocalDescription(sdp)
+        .catch(err => JSON.stringify(err) + "err");
+      if (typeof result === "string") {
+        return;
+      }
+
+      const local = this.rtc.localDescription;
+
+      if (trickle && local) {
+        this.signal(local);
       }
     };
-    this.isOffer = true;
-    this.createDatachannel("datachannel");
+  }
+
+  private async setAnswer(sdp: any) {
+    if (this.isOffer) {
+      await this.rtc
+        .setRemoteDescription(new RTCSessionDescription(sdp))
+        .catch(console.log);
+    }
+  }
+
+  private async makeAnswer(offer: any) {
+    const { trickle } = this.opt;
+
+    if (this.isMadeAnswer) return;
+    this.isMadeAnswer = true;
+
+    let result: void | string;
+
+    result = await this.rtc
+      .setRemoteDescription(new RTCSessionDescription(offer))
+      .catch(err => JSON.stringify(err) + "err");
+    if (typeof result === "string") return;
+
+    const answer = await this.rtc.createAnswer().catch(console.log);
+    if (!answer) return;
+
+    result = await this.rtc
+      .setLocalDescription(answer)
+      .catch(err => JSON.stringify(err) + "err");
+    if (typeof result === "string") return;
+
+    const local = this.rtc.localDescription;
+    if (trickle && local) {
+      this.signal(local);
+    }
+  }
+
+  async setSdp(sdp: any) {
+    switch (sdp.type) {
+      case "offer":
+        this.makeAnswer(sdp);
+        break;
+      case "answer":
+        this.setAnswer(sdp);
+        break;
+      case "candidate":
+        await this.rtc
+          .addIceCandidate(new RTCIceCandidate(sdp.ice))
+          .catch(console.log);
+        break;
+    }
   }
 
   private createDatachannel(label: string) {
@@ -165,50 +226,6 @@ export default class WebRTC {
     channel.onclose = () => {
       this.hangUp();
     };
-  }
-
-  private addStream() {
-    if (this.opt.stream) {
-      const stream = this.opt.stream;
-      stream.getTracks().forEach(track => this.rtc.addTrack(track, stream));
-    }
-  }
-
-  private async setAnswer(sdp: any) {
-    await this.rtc
-      .setRemoteDescription(new RTCSessionDescription(sdp))
-      .catch(console.log);
-  }
-
-  private async makeAnswer(sdp: any) {
-    if (this.isMadeAnswer) return;
-    this.isMadeAnswer = true;
-
-    await this.rtc
-      .setRemoteDescription(new RTCSessionDescription(sdp))
-      .catch(console.log);
-
-    const answer = await this.rtc.createAnswer().catch(console.log);
-    if (!answer) return;
-    await this.rtc.setLocalDescription(answer).catch(console.log);
-    const localDescription = this.rtc.localDescription;
-    if (this.opt.trickle && localDescription) {
-      this.signal(localDescription);
-    }
-  }
-
-  setSdp(sdp: any) {
-    switch (sdp.type) {
-      case "offer":
-        this.makeAnswer(sdp);
-        break;
-      case "answer":
-        this.setAnswer(sdp);
-        break;
-      case "candidate":
-        this.rtc.addIceCandidate(new RTCIceCandidate(sdp.ice));
-        break;
-    }
   }
 
   send(data: any, label?: string) {
