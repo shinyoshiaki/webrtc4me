@@ -30,6 +30,7 @@ export default class WebRTC {
     private prepareNewConnection;
     hangUp(): void;
     makeOffer(): void;
+    negotiating: boolean;
     private negotiation;
     private setAnswer;
     private makeAnswer;
