@@ -1,17 +1,11 @@
-declare type EventFunc<T> = (data: T, id: number) => void;
-interface IEvent<T> {
-    stack: {
-        func: EventFunc<T>;
-        id: number;
-    }[];
-    index: number;
-}
+declare type EventFunc<T> = (data: T) => void;
 export default class Event<T> {
-    event: IEvent<T>;
+    private event;
     constructor();
-    excute(data: T): void;
+    excute(data?: T): void;
     subscribe(func: EventFunc<T>): {
         unSubscribe: () => void;
     };
+    once(func: EventFunc<T>): void;
 }
 export {};

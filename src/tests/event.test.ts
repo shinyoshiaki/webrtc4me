@@ -4,12 +4,10 @@ const testEvent = new Event<{ msg: string }>();
 
 test("event", () => {
   const { unSubscribe } = testEvent.subscribe(data => {
-    console.log(data);
     expect(data.msg).toBe("1");
   });
 
   testEvent.subscribe(data => {
-    console.log(data);
     expect(data.msg).toBe("1");
   });
 
@@ -18,4 +16,10 @@ test("event", () => {
   expect((testEvent as any).event.stack.length).toBe(2);
   unSubscribe();
   expect((testEvent as any).event.stack.length).toBe(1);
+
+  testEvent.once(() => {
+    expect((testEvent as any).event.stack.length).toBe(1);
+  });
+  expect((testEvent as any).event.stack.length).toBe(2);
+  testEvent.excute({ msg: "1" });
 });

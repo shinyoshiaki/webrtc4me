@@ -8,15 +8,16 @@ export interface message {
 interface option {
     disable_stun: boolean;
     stream: MediaStream;
+    track: MediaStreamTrack;
     nodeId: string;
     trickle: boolean;
 }
 export default class WebRTC {
     opt: Partial<option>;
     rtc: RTCPeerConnection;
-    signal: (sdp: object) => void;
-    connect: () => void;
-    disconnect: () => void;
+    onSignal: Event<any>;
+    onConnect: Event<{}>;
+    onDisconnect: Event<{}>;
     onData: Event<message>;
     onAddTrack: Event<MediaStream>;
     private dataChannels;

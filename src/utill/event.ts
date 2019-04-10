@@ -35,7 +35,9 @@ export default class Event<T> {
   }
 
   once(func: EventFunc<T>) {
-    const off = this.subscribe(func);
-    off.unSubscribe();
+    const off = this.subscribe(data => {
+      off.unSubscribe();
+      func(data);
+    });
   }
 }
