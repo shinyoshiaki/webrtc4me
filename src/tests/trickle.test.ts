@@ -4,24 +4,24 @@ const peerAnswer = new WebRTC({ nodeId: "answer", trickle: true });
 
 test("trickle", () => {
   peerOffer.makeOffer();
-  peerOffer.signal = (sdp: any) => {
+  peerOffer.onSignal.once((sdp: any) => {
     peerAnswer.setSdp(sdp);
-  };
-  peerAnswer.signal = (sdp: any) => {
+  });
+  peerAnswer.onSignal.once((sdp: any) => {
     peerOffer.setSdp(sdp);
-  };
+  });
 
-  peerOffer.connect = () => {
+  peerOffer.onConnect.once(() => {
     peerOffer.onData.subscribe(raw => {
       expect(raw.data).toBe("answer");
     });
     peerOffer.send("offer");
-  };
+  });
 
-  peerAnswer.connect = () => {
+  peerAnswer.onConnect.once(() => {
     peerAnswer.onData.subscribe(raw => {
       expect(raw.data).toBe("offer");
     });
     peerAnswer.send("answer");
-  };
+  });
 });

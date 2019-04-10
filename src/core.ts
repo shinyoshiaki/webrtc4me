@@ -4,6 +4,7 @@ import {
   RTCSessionDescription,
   RTCIceCandidate
 } from "wrtc";
+
 import Event from "./utill/event";
 
 export interface message {
@@ -15,6 +16,7 @@ export interface message {
 interface option {
   disable_stun: boolean;
   stream: MediaStream;
+  track: MediaStreamTrack;
   nodeId: string;
   trickle: boolean;
 }
@@ -22,9 +24,9 @@ interface option {
 export default class WebRTC {
   rtc: RTCPeerConnection;
 
-  signal: (sdp: object) => void;
-  connect: () => void;
-  disconnect: () => void;
+  onSignal = new Event<any>();
+  onConnect = new Event();
+  onDisconnect = new Event();
   onData = new Event<message>();
   onAddTrack = new Event<MediaStream>();
 
@@ -39,19 +41,17 @@ export default class WebRTC {
   timeoutPing: NodeJS.Timeout | undefined;
 
   constructor(public opt: Partial<option> = {}) {
-    const { nodeId, stream } = opt;
+    const { nodeId, stream, track } = opt;
 
     this.dataChannels = {};
     this.nodeId = nodeId || "peer";
-
-    this.connect = () => {};
-    this.disconnect = () => {};
-    this.signal = _ => {};
 
     this.rtc = this.prepareNewConnection();
 
     if (stream) {
       stream.getTracks().forEach(track => this.rtc.addTrack(track, stream));
+    } else if (track) {
+      this.rtc.addTrack(track);
     }
   }
 
@@ -106,11 +106,11 @@ export default class WebRTC {
       if (!this.isConnected) {
         if (evt.candidate) {
           if (trickle) {
-            this.signal({ type: "candidate", ice: evt.candidate });
+            this.onSignal.excute({ type: "candidate", ice: evt.candidate });
           }
         } else {
           if (!trickle && peer.localDescription) {
-            this.signal(peer.localDescription);
+            this.onSignal.excute(peer.localDescription);
           }
         }
       }
@@ -133,7 +133,7 @@ export default class WebRTC {
     console.log("hangup");
     this.isDisconnected = true;
     this.isConnected = false;
-    this.disconnect();
+    this.onDisconnect.excute();
   }
 
   makeOffer() {
@@ -159,7 +159,7 @@ export default class WebRTC {
       const local = this.rtc.localDescription;
 
       if (trickle && local) {
-        this.signal(local);
+        this.onSignal.excute(local);
       }
 
       this.negotiation();
@@ -215,7 +215,7 @@ export default class WebRTC {
     if (this.isConnected) {
       this.send(JSON.stringify(local), "update");
     } else if (trickle && local) {
-      this.signal(local);
+      this.onSignal.excute(local);
     }
 
     this.negotiation();
@@ -252,7 +252,7 @@ export default class WebRTC {
       if (!this.isConnected) {
         console.log("connected", this.nodeId);
         this.isConnected = true;
-        this.connect();
+        this.onConnect.excute();
       }
     };
     try {

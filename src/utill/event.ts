@@ -1,4 +1,4 @@
-type EventFunc<T> = (data: T, id: number) => void;
+type EventFunc<T> = (data: T) => void;
 
 interface IEvent<T> {
   stack: { func: EventFunc<T>; id: number }[];
@@ -6,7 +6,7 @@ interface IEvent<T> {
 }
 
 export default class Event<T> {
-  event: IEvent<T>;
+  private event: IEvent<T>;
 
   constructor() {
     this.event = {
@@ -15,9 +15,10 @@ export default class Event<T> {
     };
   }
 
-  excute(data: T) {
+  excute(data?: T) {
     for (let item of this.event.stack) {
-      item.func(data, item.id);
+      if (data) item.func(data);
+      else item.func(undefined as any);
     }
   }
 
@@ -31,5 +32,10 @@ export default class Event<T> {
       );
     };
     return { unSubscribe };
+  }
+
+  once(func: EventFunc<T>) {
+    const off = this.subscribe(func);
+    off.unSubscribe();
   }
 }
