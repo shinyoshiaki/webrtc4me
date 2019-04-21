@@ -24,7 +24,7 @@
     "@babel/preset-env": "^7.2.0",
     "@babel/preset-typescript": "^7.1.0",
     "@types/jest": "^23.3.13",
-    "@types/node": "^10.11.7",
+    "@types/node": "^11.13.6",
     "@types/webrtc": "^0.0.23",
     "jest": "^23.6.0",
     "ts-jest": "^23.10.5",

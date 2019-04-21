@@ -7,5 +7,6 @@ export default class Event<T> {
         unSubscribe: () => void;
     };
     once(func: EventFunc<T>): void;
+    asPromise: (timelimit?: number | undefined) => Promise<T>;
 }
 export {};
