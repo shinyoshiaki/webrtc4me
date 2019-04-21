@@ -2874,6 +2874,7 @@
       "/home/shin/Documents/code/npm/webrtc4me/src/index.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/interface.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/sample/trickle.ts",
+      "/home/shin/Documents/code/npm/webrtc4me/src/sample/vanilla.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/tests/event.test.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/tests/trickle.test.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/tests/vanilla.test.ts",
@@ -2926,8 +2927,7 @@
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/index.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/MediaStream.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/RTCPeerConnection.d.ts",
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/index.d.ts",
-      "/home/shin/Documents/code/npm/webrtc4me/src/sample/vanilla.ts"
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/index.d.ts"
     ]
   },
   "version": "3.4.4"
