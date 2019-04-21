@@ -1,13 +1,12 @@
-require("babel-polyfill");
 import WebRTC from "../index";
 const peerOffer = new WebRTC({ disable_stun: true, nodeId: "offer" });
 const peerAnswer = new WebRTC({ disable_stun: true, nodeId: "answer" });
 
 (async () => {
   peerOffer.makeOffer();
-  const offer = await peerOffer.onSignal.asPromise().catch();
+  const offer = await peerOffer.onSignal.asPromise().catch(console.log);
   peerAnswer.setSdp(offer);
-  const answer = await peerAnswer.onSignal.asPromise().catch();
+  const answer = await peerAnswer.onSignal.asPromise().catch(console.log);
   peerOffer.setSdp(answer);
 
   peerOffer.onConnect.once(() => {

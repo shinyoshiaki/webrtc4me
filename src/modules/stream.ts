@@ -1,5 +1,3 @@
-require("babel-polyfill");
-
 import WebRTC from "../core";
 import { getLocalAudio, getLocalDesktop, getLocalVideo } from "../utill/media";
 import Event from "../utill/event";
