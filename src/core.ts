@@ -84,17 +84,16 @@ export default class WebRTC {
             this.timeoutPing = setTimeout(() => {
               this.hangUp();
             }, 2000);
-            console.log("ping");
+
             this.send("ping", "live");
           } catch (error) {
-            console.log({ error });
+            console.warn({ error });
           }
           break;
         case "connected":
           if (this.timeoutPing) clearTimeout(this.timeoutPing);
           break;
         case "closed":
-          console.log("closed");
           break;
         case "completed":
           break;
@@ -129,7 +128,6 @@ export default class WebRTC {
   }
 
   hangUp() {
-    console.log("hangup");
     this.isDisconnected = true;
     this.isConnected = false;
     this.onDisconnect.excute();
@@ -144,7 +142,7 @@ export default class WebRTC {
       if (this.negotiating || this.rtc.signalingState != "stable") return;
       this.negotiating = true;
 
-      const sdp = await this.rtc.createOffer().catch(console.log);
+      const sdp = await this.rtc.createOffer().catch(console.warn);
 
       if (!sdp) return;
 
@@ -190,7 +188,7 @@ export default class WebRTC {
     if (this.isOffer) {
       await this.rtc
         .setRemoteDescription(new RTCSessionDescription(sdp))
-        .catch(console.log);
+        .catch(console.warn);
     }
   }
 
@@ -199,15 +197,15 @@ export default class WebRTC {
 
     await this.rtc
       .setRemoteDescription(new RTCSessionDescription(offer))
-      .catch(console.log);
+      .catch(console.warn);
 
-    const answer = await this.rtc.createAnswer().catch(console.log);
+    const answer = await this.rtc.createAnswer().catch(console.warn);
     if (!answer) {
-      console.log("no answer");
+      console.warn("no answer");
       return;
     }
 
-    await this.rtc.setLocalDescription(answer).catch(console.log);
+    await this.rtc.setLocalDescription(answer).catch(console.warn);
 
     const local = this.rtc.localDescription;
 
@@ -231,7 +229,7 @@ export default class WebRTC {
       case "candidate":
         await this.rtc
           .addIceCandidate(new RTCIceCandidate(sdp.ice))
-          .catch(console.log);
+          .catch(console.warn);
         break;
     }
   }
@@ -249,7 +247,6 @@ export default class WebRTC {
   private dataChannelEvents(channel: RTCDataChannel) {
     channel.onopen = () => {
       if (!this.isConnected) {
-        console.log("connected", this.nodeId);
         this.isConnected = true;
         this.onConnect.excute();
       }
@@ -289,5 +286,9 @@ export default class WebRTC {
 
   addTrack(track: MediaStreamTrack, stream: MediaStream) {
     this.rtc.addTrack(track, stream);
+  }
+
+  disconnect() {
+    this.rtc.close();
   }
 }

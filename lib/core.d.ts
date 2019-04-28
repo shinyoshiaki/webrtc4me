@@ -40,5 +40,6 @@ export default class WebRTC {
     private dataChannelEvents;
     send(data: any, label?: string): void;
     addTrack(track: MediaStreamTrack, stream: MediaStream): void;
+    disconnect(): void;
 }
 export {};
