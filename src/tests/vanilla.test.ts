@@ -4,19 +4,17 @@ const peerAnswer = new WebRTC({ disable_stun: true, nodeId: "answer" });
 
 test("vanilla", async () => {
   const test = () =>
-    new Promise(resolve => {
+    new Promise(async resolve => {
       let count = 0;
       const end = () => {
         count++;
         if (count === 2) resolve();
       };
       peerOffer.makeOffer();
-      peerOffer.onSignal.once((sdp: any) => {
-        peerAnswer.setSdp(sdp);
-      });
-      peerAnswer.onSignal.once((sdp: any) => {
-        peerOffer.setSdp(sdp);
-      });
+      const offer = await peerOffer.onSignal.asPromise();
+      peerAnswer.setSdp(offer);
+      const answer = await peerAnswer.onSignal.asPromise();
+      peerOffer.setSdp(answer);
 
       peerOffer.onConnect.once(() => {
         peerOffer.onData.subscribe(raw => {

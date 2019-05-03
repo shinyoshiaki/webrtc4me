@@ -269,19 +269,24 @@ export default class WebRTC {
           });
         }
       };
-    } catch (error) {}
-    channel.onerror = err => {};
-    channel.onclose = () => {};
+    } catch (error) {
+      console.warn(error);
+    }
+    channel.onerror = err => console.warn(err);
+    channel.onclose = () => console.warn("close");
   }
 
-  send(data: any, label?: string) {
+  async send(data: any, label?: string) {
     label = label || "datachannel";
     if (!Object.keys(this.dataChannels).includes(label)) {
       this.createDatachannel(label);
     }
     try {
+      await new Promise(r => setTimeout(r, 0));
       this.dataChannels[label].send(data);
-    } catch (error) {}
+    } catch (error) {
+      console.warn(error);
+    }
   }
 
   addTrack(track: MediaStreamTrack, stream: MediaStream) {
