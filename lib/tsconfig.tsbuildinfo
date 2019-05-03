@@ -142,8 +142,8 @@
         "signature": "bdfe6b6da9074bca4507176d543852de37a7387af9fb594a735b1b6b38a5abe4"
       },
       "/home/shin/Documents/code/npm/webrtc4me/src/core.ts": {
-        "version": "dc0df2594e40bd9511c91a392e945bffaf6387b0cec5c1339cf0469ceba91461",
-        "signature": "3fd9bb9ad5905bccdee300550962b4c26e3d31b41145d8eec02a92bc82c1d978"
+        "version": "d32929c1a5f3bb9dcc1c305647219b428d61bc943281b61c8893f1831d5cf9a7",
+        "signature": "ccdfae58ce62d259b746034a5f8f6896be0a6f576b0f4d8635ed058f4b04b252"
       },
       "/home/shin/Documents/code/npm/webrtc4me/src/utill/media.ts": {
         "version": "97d5580582ef198d6ba3cbb2fe730a1c1d643429c1d1ab3b9a2fc3454e7bc161",
@@ -430,7 +430,7 @@
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "/home/shin/Documents/code/npm/webrtc4me/src/tests/vanilla.test.ts": {
-        "version": "8ab9779392066060c75e51a149813c096c0d99f361fb1ccd2a09edd6824e7703",
+        "version": "14458decb22b14c38e14e48d743ee518813562a90be5a77596dc07ba214a31cd",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "/home/shin/Documents/code/npm/webrtc4me/src/typings/index.d.ts": {

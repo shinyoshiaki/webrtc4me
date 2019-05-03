@@ -234,55 +234,58 @@ export default class WebRTC {
     }
   }
 
-  private createDatachannel(label: string) {
+  private async createDatachannel(label: string) {
     if (!Object.keys(this.dataChannels).includes(label)) {
       try {
         const dc = this.rtc.createDataChannel(label);
-        this.dataChannelEvents(dc);
         this.dataChannels[label] = dc;
+        await this.dataChannelEvents(dc);
       } catch (dce) {}
     }
   }
 
   private dataChannelEvents(channel: RTCDataChannel) {
-    channel.onopen = () => {
-      if (!this.isConnected) {
-        this.isConnected = true;
-        this.onConnect.excute();
-      }
-    };
-    try {
+    return new Promise(resolve => {
+      channel.onopen = () => {
+        if (!this.isConnected) {
+          this.isConnected = true;
+          this.onConnect.excute();
+        }
+        resolve();
+      };
+
       channel.onmessage = async event => {
         if (!event) return;
-
-        if (channel.label === "update") {
-          const sdp = JSON.parse(event.data);
-          this.setSdp(sdp);
-        } else if (channel.label === "live") {
-          if (event.data === "ping") this.send("pong", "live");
-          else if (this.timeoutPing) clearTimeout(this.timeoutPing);
-        } else {
-          this.onData.excute({
-            label: channel.label,
-            data: event.data,
-            nodeId: this.nodeId
-          });
+        try {
+          if (channel.label === "update") {
+            const sdp = JSON.parse(event.data);
+            this.setSdp(sdp);
+          } else if (channel.label === "live") {
+            if (event.data === "ping") this.send("pong", "live");
+            else if (this.timeoutPing) clearTimeout(this.timeoutPing);
+          } else {
+            this.onData.excute({
+              label: channel.label,
+              data: event.data,
+              nodeId: this.nodeId
+            });
+          }
+        } catch (error) {
+          console.warn(error);
         }
       };
-    } catch (error) {
-      console.warn(error);
-    }
-    channel.onerror = err => console.warn(err);
-    channel.onclose = () => console.warn("close");
+
+      channel.onerror = err => console.warn(err);
+      channel.onclose = () => console.warn("close", this.nodeId);
+    });
   }
 
   async send(data: any, label?: string) {
     label = label || "datachannel";
     if (!Object.keys(this.dataChannels).includes(label)) {
-      this.createDatachannel(label);
+      await this.createDatachannel(label);
     }
     try {
-      await new Promise(r => setTimeout(r, 0));
       this.dataChannels[label].send(data);
     } catch (error) {
       console.warn(error);
@@ -293,7 +296,28 @@ export default class WebRTC {
     this.rtc.addTrack(track, stream);
   }
 
-  disconnect() {
-    this.rtc.close();
+  async disconnect() {
+    const { rtc, dataChannels } = this;
+
+    for (let key in dataChannels) {
+      const channel = dataChannels[key];
+      channel.onmessage = null;
+      channel.onopen = null;
+      channel.onclose = null;
+      channel.onerror = null;
+      channel.close();
+    }
+    this.dataChannels = null as any;
+
+    rtc.oniceconnectionstatechange = null;
+    rtc.onicegatheringstatechange = null;
+    rtc.onsignalingstatechange = null;
+    rtc.onicecandidate = null;
+    rtc.ontrack = null;
+    rtc.ondatachannel = null;
+    rtc.close();
+    this.rtc = null as any;
+
+    await new Promise(r => setTimeout(r, 1000 * 30));
   }
 }

@@ -10,6 +10,7 @@ test("vanilla", async () => {
         count++;
         if (count === 2) resolve();
       };
+
       peerOffer.makeOffer();
       const offer = await peerOffer.onSignal.asPromise();
       peerAnswer.setSdp(offer);
