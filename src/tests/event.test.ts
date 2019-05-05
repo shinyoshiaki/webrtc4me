@@ -1,4 +1,4 @@
-import Event from "../utill/event";
+import Event from "rx.mini";
 
 describe("event", () => {
   test("subscribe", () => {

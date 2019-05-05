@@ -1,6 +1,6 @@
 import WebRTC from "../core";
 import { getLocalAudio, getLocalDesktop, getLocalVideo } from "../utill/media";
-import Event from "../utill/event";
+import Event from "rx.mini";
 declare type Get = ReturnType<typeof getLocalAudio> | ReturnType<typeof getLocalDesktop> | ReturnType<typeof getLocalVideo> | undefined;
 export declare enum MediaType {
     video = 0,

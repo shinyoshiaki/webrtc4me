@@ -4,7 +4,7 @@ import {
   RTCIceCandidate
 } from "wrtc";
 
-import Event from "./utill/event";
+import Event from "rx.mini";
 
 export interface message {
   label: string;
