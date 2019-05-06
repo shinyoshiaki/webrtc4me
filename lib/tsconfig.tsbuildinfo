@@ -426,7 +426,7 @@
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "/home/shin/Documents/code/npm/webrtc4me/src/tests/trickle.test.ts": {
-        "version": "5cb1bf44631cddf203732b1344f0b1a3bb78031170c94a4afe7b3707f83714e6",
+        "version": "0c1e744874b569be8c09798db67e0fb681cca8694645976940970320df3d020e",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "/home/shin/Documents/code/npm/webrtc4me/src/tests/vanilla.test.ts": {
@@ -2810,6 +2810,7 @@
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/typescript/lib/lib.esnext.bigint.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/tslib/tslib.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
+      "/home/shin/Documents/code/npm/webrtc4me/src/core.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/utill/media.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/modules/stream.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
@@ -2880,7 +2881,6 @@
       "/home/shin/Documents/code/npm/webrtc4me/src/sample/trickle.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/sample/vanilla.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/tests/event.test.ts",
-      "/home/shin/Documents/code/npm/webrtc4me/src/tests/trickle.test.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/tests/vanilla.test.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/typings/index.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
@@ -2932,7 +2932,7 @@
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/MediaStream.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/RTCPeerConnection.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/index.d.ts",
-      "/home/shin/Documents/code/npm/webrtc4me/src/core.ts"
+      "/home/shin/Documents/code/npm/webrtc4me/src/tests/trickle.test.ts"
     ]
   },
   "version": "3.4.4"

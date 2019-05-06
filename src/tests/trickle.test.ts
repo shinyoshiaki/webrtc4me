@@ -12,10 +12,10 @@ test("trickle", async () => {
       };
 
       peerOffer.makeOffer();
-      peerOffer.onSignal.once((sdp: any) => {
+      peerOffer.onSignal.subscribe((sdp: any) => {
         peerAnswer.setSdp(sdp);
       });
-      peerAnswer.onSignal.once((sdp: any) => {
+      peerAnswer.onSignal.subscribe((sdp: any) => {
         peerOffer.setSdp(sdp);
       });
 
