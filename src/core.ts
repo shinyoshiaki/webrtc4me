@@ -240,7 +240,9 @@ export default class WebRTC {
         const dc = this.rtc.createDataChannel(label);
         this.dataChannels[label] = dc;
         await this.dataChannelEvents(dc);
-      } catch (dce) {}
+      } catch (dce) {
+        console.error(dce);
+      }
     }
   }
 
@@ -283,7 +285,13 @@ export default class WebRTC {
   async send(data: any, label?: string) {
     label = label || "datachannel";
     if (!Object.keys(this.dataChannels).includes(label)) {
-      await this.createDatachannel(label);
+      try {
+        if (window) {
+          await this.createDatachannel(label);
+        }
+      } catch (_) {
+        this.createDatachannel(label);
+      }
     }
     try {
       this.dataChannels[label].send(data);
