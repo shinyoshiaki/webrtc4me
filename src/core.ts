@@ -6,6 +6,11 @@ import {
 
 import Event from "rx.mini";
 
+const injectableProcess = typeof process !== "undefined" ? process : undefined;
+
+const injectableNavigator =
+  typeof window !== "undefined" ? window.navigator : undefined;
+
 export interface message {
   label: string;
   data: any;
@@ -286,8 +291,10 @@ export default class WebRTC {
     label = label || "datachannel";
     if (!Object.keys(this.dataChannels).includes(label)) {
       try {
-        if (window) {
+        if (injectableNavigator!.platform) {
           await this.createDatachannel(label);
+        } else {
+          this.createDatachannel(label);
         }
       } catch (_) {
         this.createDatachannel(label);
