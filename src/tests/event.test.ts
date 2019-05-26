@@ -11,7 +11,7 @@ describe("event", () => {
       expect(data.msg).toBe("1");
     });
 
-    testEvent.excute({ msg: "1" });
+    testEvent.execute({ msg: "1" });
 
     expect((testEvent as any).event.stack.length).toBe(2);
     unSubscribe();
@@ -21,13 +21,13 @@ describe("event", () => {
       expect((testEvent as any).event.stack.length).toBe(1);
     });
     expect((testEvent as any).event.stack.length).toBe(2);
-    testEvent.excute({ msg: "1" });
+    testEvent.execute({ msg: "1" });
   });
 
   test("aspromise", async () => {
     const testEvent = new Event<number>();
     setTimeout(() => {
-      testEvent.excute(1);
+      testEvent.execute(1);
     }, 0);
     const res = await testEvent.asPromise();
     expect(res).toBe(1);

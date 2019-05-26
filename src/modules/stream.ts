@@ -44,7 +44,7 @@ export default class Stream {
     } else {
       if (get) {
         localStream = (await get.catch(console.log)) as MediaStream;
-        this.onLocalStream.excute(localStream);
+        this.onLocalStream.execute(localStream);
       }
 
       this.peer.onData.once(raw => {
@@ -91,7 +91,7 @@ export default class Stream {
       });
     }
     newPeer.onAddTrack.once(stream => {
-      this.onStream.excute(stream);
+      this.onStream.execute(stream);
     });
   }
 }

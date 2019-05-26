@@ -9,10 +9,11 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
+    "update": "rm -rf lib && npm run build",
     "type": "tsc --noEmit",
     "test": "jest",
     "publish": "npm publish --access=public",
-    "deploy": "npm run type && npm run test && npm run build"
+    "deploy": "npm run type && npm run test && npm run update"
   },
   "devDependencies": {
     "@types/jest": "^23.3.13",
