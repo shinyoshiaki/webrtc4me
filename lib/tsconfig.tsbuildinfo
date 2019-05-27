@@ -142,11 +142,11 @@
         "signature": "09f8aa2eef5b19a9c591877efbdd8bd8f072886910a490a72aefcf6362453348"
       },
       "/home/shin/Documents/code/npm/webrtc4me/src/core.ts": {
-        "version": "083c8f22fe4032d3902f2898d08fb8ae7825a739a3e4102d67f34796e3aad967",
+        "version": "895baa06b65ea12c04b54f770ccfce8cd98e68117182c69e0697def2df4d584f",
         "signature": "bbb2f8281e0f93fc16d238fd2d7bdb497ba63005ab64a779f51639db24af0540"
       },
       "/home/shin/Documents/code/npm/webrtc4me/src/utill/media.ts": {
-        "version": "97d5580582ef198d6ba3cbb2fe730a1c1d643429c1d1ab3b9a2fc3454e7bc161",
+        "version": "9f77ed1f1523c5c29f7fd653ddb73b739d8838b23d47c699f626cb81a1352979",
         "signature": "bad0e84fa5368261050f0e166ab7acffd5d53263ad73787b236d67c870d8e570"
       },
       "/home/shin/Documents/code/npm/webrtc4me/src/modules/stream.ts": {
@@ -658,6 +658,7 @@
       "inlineSources": true,
       "noUnusedLocals": false,
       "skipLibCheck": true,
+      "jsx": 1,
       "configFilePath": "/home/shin/Documents/code/npm/webrtc4me/tsconfig.json"
     },
     "referencedMap": {

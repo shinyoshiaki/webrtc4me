@@ -1,0 +1,43 @@
+{
+  "name": "wrtc-pg",
+  "version": "0.1.1",
+  "private": true,
+  "homepage": "./",
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "@types/jest": "^23.3.13",
+    "@types/node": "^10.12.18",
+    "@types/react": "^16.7.20",
+    "@types/react-dom": "^16.0.11",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-scripts": "^2.1.3",
+    "sha1": "^1.1.1",
+    "socket.io-client": "^2.2.0",
+    "typescript": "^3.4.2",
+    "wrtc": "^0.3.7"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "NODE_ENV=production react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@types/sha1": "^1.1.1",
+    "@types/socket.io-client": "^1.4.32",
+    "babel-loader": "^8.0.5",
+    "babel-polyfill": "^6.26.0",
+    "react-app-rewired": "^2.1.3",
+    "react-dev-utils": "^9.0.1"
+  }
+}
