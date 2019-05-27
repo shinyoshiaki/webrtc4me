@@ -1,4 +1,4 @@
-import WebRTC from "../w4me";
+import WebRTC from "../../../lib";
 import { getLocalVideo } from "../../../lib/utill/media";
 
 export { getLocalVideo };

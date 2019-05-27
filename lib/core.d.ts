@@ -32,7 +32,7 @@ export default class WebRTC {
     hangUp(): void;
     makeOffer(): void;
     negotiating: boolean;
-    private negotiation;
+    private negotiationSetting;
     private setAnswer;
     private makeAnswer;
     setSdp(sdp: any): Promise<void>;

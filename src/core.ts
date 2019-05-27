@@ -146,12 +146,8 @@ export default class WebRTC {
 
       if (!sdp) return;
 
-      const result = await this.rtc
-        .setLocalDescription(sdp)
-        .catch(err => JSON.stringify(err) + "err");
-      if (typeof result === "string") {
-        return;
-      }
+      const result = await this.rtc.setLocalDescription(sdp).catch(() => "err");
+      if (result) return;
 
       const local = this.rtc.localDescription;
 
@@ -159,63 +155,57 @@ export default class WebRTC {
         this.onSignal.execute(local);
       }
 
-      this.negotiation();
+      this.negotiationSetting();
     };
   }
 
   negotiating = false;
-  private negotiation() {
+  private negotiationSetting() {
     this.rtc.onnegotiationneeded = async () => {
       if (!this.isConnected) return;
+      if (this.negotiating || this.rtc.signalingState != "stable") return;
 
-      try {
-        if (this.negotiating || this.rtc.signalingState != "stable") return;
-        this.negotiating = true;
-        const options = {};
-        const sessionDescription = await this.rtc.createOffer(options).catch();
-        await this.rtc.setLocalDescription(sessionDescription).catch();
-        const local = this.rtc.localDescription;
-        if (local) {
-          this.send(JSON.stringify(local), "update");
-        }
-      } finally {
-        this.negotiating = false;
-      }
+      this.negotiating = true;
+
+      const offer = await this.rtc.createOffer({}).catch(console.warn);
+      if (!offer) return;
+
+      const err = await this.rtc.setLocalDescription(offer).catch(() => "err");
+      if (err) return;
+
+      const local = this.rtc.localDescription;
+      if (local) this.send(JSON.stringify(local), "update");
+
+      this.negotiating = false;
     };
   }
 
   private async setAnswer(sdp: any) {
-    if (this.isOffer) {
-      await this.rtc
-        .setRemoteDescription(new RTCSessionDescription(sdp))
-        .catch(console.warn);
-    }
+    await this.rtc
+      .setRemoteDescription(new RTCSessionDescription(sdp))
+      .catch(console.warn);
   }
 
   private async makeAnswer(offer: any) {
     const { trickle } = this.opt;
 
-    await this.rtc
+    const err = await this.rtc
       .setRemoteDescription(new RTCSessionDescription(offer))
-      .catch(console.warn);
+      .catch(() => "err");
+    if (err) return;
 
     const answer = await this.rtc.createAnswer().catch(console.warn);
-    if (!answer) {
-      console.warn("no answer");
-      return;
-    }
+    if (!answer) return;
 
     await this.rtc.setLocalDescription(answer).catch(console.warn);
 
     const local = this.rtc.localDescription;
+    if (!local) return;
 
-    if (this.isConnected) {
-      this.send(JSON.stringify(local), "update");
-    } else if (trickle && local) {
-      this.onSignal.execute(local);
-    }
+    if (this.isConnected) this.send(JSON.stringify(local), "update");
+    else if (trickle) this.onSignal.execute(local);
 
-    this.negotiation();
+    this.negotiationSetting();
   }
 
   async setSdp(sdp: any) {
