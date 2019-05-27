@@ -1,5 +1,5 @@
 import client from "socket.io-client";
-import WebRTC from "../../../lib";
+import WebRTC from "../lib";
 
 const url =
   process.env.NODE_ENV === "production"
@@ -8,7 +8,11 @@ const url =
 
 const socket = client.connect(url);
 
+// create is answer
+
 export function create(roomId: string, trickle: boolean) {
+  console.log("crate is answer");
+
   return new Promise<WebRTC>(resolve => {
     const rtc = new WebRTC({ nodeId: "answer", trickle });
     socket.emit("create", { roomId });
@@ -33,6 +37,8 @@ export function create(roomId: string, trickle: boolean) {
 }
 
 export function join(roomId: string, trickle: boolean) {
+  console.log("join is offer");
+
   return new Promise<WebRTC>(resolve => {
     const rtc = new WebRTC({ nodeId: "offer", trickle });
     socket.emit("join", { roomId });

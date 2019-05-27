@@ -1,8 +1,8 @@
 import React, { FunctionComponent, useState, useRef, useEffect } from "react";
 import { create, join } from "./webrtc/signaling";
 import { TextField } from "@material-ui/core";
-import WebRTC from "../../lib";
-import { getLocalVideo } from "../../lib/utill/media";
+import WebRTC from "./lib";
+import { getLocalVideo } from "./lib";
 
 const App: FunctionComponent = () => {
   const [roomId, setRoomId] = useState("");
@@ -21,17 +21,19 @@ const App: FunctionComponent = () => {
   }, [rtc]);
 
   const loadStream = async (peer: WebRTC) => {
+    const local = await getLocalVideo();
     peer.onAddTrack.subscribe(stream => {
       if (videoRef) {
         videoRef.current.srcObject = stream;
       }
+
       if (!peer.isOffer) {
-        peer.addTrack(stream.getVideoTracks()[0], stream);
+        peer.addTrack(local.getVideoTracks()[0], local);
       }
     });
-    const stream = await getLocalVideo();
+
     if (peer.isOffer) {
-      peer.addTrack(stream.getVideoTracks()[0], stream);
+      peer.addTrack(local.getVideoTracks()[0], local);
     }
   };
 
