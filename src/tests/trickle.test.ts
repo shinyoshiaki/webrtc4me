@@ -1,15 +1,12 @@
 import WebRTC from "../index";
+import { Count } from "../utill/testtools";
 const peerOffer = new WebRTC({ nodeId: "offer", trickle: true });
 const peerAnswer = new WebRTC({ nodeId: "answer", trickle: true });
 
 test("trickle", async () => {
   const test = () =>
     new Promise(resolve => {
-      let count = 0;
-      const end = () => {
-        count++;
-        if (count === 2) resolve();
-      };
+      const count = Count(2, resolve);
 
       peerOffer.makeOffer();
       peerOffer.onSignal.subscribe((sdp: any) => {
@@ -22,7 +19,7 @@ test("trickle", async () => {
       peerOffer.onConnect.once(() => {
         peerOffer.onData.subscribe(raw => {
           expect(raw.data).toBe("answer");
-          end();
+          count();
         });
         peerOffer.send("offer");
       });
@@ -30,7 +27,7 @@ test("trickle", async () => {
       peerAnswer.onConnect.once(() => {
         peerAnswer.onData.subscribe(raw => {
           expect(raw.data).toBe("offer");
-          end();
+          count();
         });
         peerAnswer.send("answer");
       });

@@ -1,15 +1,12 @@
 import WebRTC from "../index";
+import { Count } from "../utill/testtools";
 const peerOffer = new WebRTC({ disable_stun: true, nodeId: "offer" });
 const peerAnswer = new WebRTC({ disable_stun: true, nodeId: "answer" });
 
 test("vanilla", async () => {
   const test = () =>
     new Promise(async resolve => {
-      let count = 0;
-      const end = () => {
-        count++;
-        if (count === 2) resolve();
-      };
+      const count = Count(2, resolve);
 
       peerOffer.makeOffer();
       const offer = await peerOffer.onSignal.asPromise();
@@ -20,7 +17,7 @@ test("vanilla", async () => {
       peerOffer.onConnect.once(() => {
         peerOffer.onData.subscribe(raw => {
           expect(raw.data).toBe("answer");
-          end();
+          count();
         });
         peerOffer.send("offer");
       });
@@ -28,7 +25,7 @@ test("vanilla", async () => {
       peerAnswer.onConnect.once(() => {
         peerAnswer.onData.subscribe(raw => {
           expect(raw.data).toBe("offer");
-          end();
+          count();
         });
         peerAnswer.send("answer");
       });

@@ -11,6 +11,7 @@
     "build": "tsc",
     "update": "rm -rf lib && npm run build",
     "example": "cd example && npm run build",
+    "client": "cd example && npm run start",
     "type": "tsc --noEmit",
     "test": "jest",
     "publish": "npm publish --access=public",

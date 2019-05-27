@@ -25,14 +25,13 @@ const App: FunctionComponent = () => {
       if (videoRef) {
         videoRef.current.srcObject = stream;
       }
+      if (!peer.isOffer) {
+        peer.addTrack(stream.getVideoTracks()[0], stream);
+      }
     });
     const stream = await getLocalVideo();
     if (peer.isOffer) {
       peer.addTrack(stream.getVideoTracks()[0], stream);
-    } else {
-      setTimeout(() => {
-        peer.addTrack(stream.getVideoTracks()[0], stream);
-      }, 2000);
     }
   };
 

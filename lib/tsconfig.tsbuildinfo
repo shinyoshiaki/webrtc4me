@@ -413,24 +413,20 @@
         "version": "1896d7820c353e5ae886f82215852cb9f92f7e7574c2d7c2b91a55bf8c7059d5",
         "signature": "63bed51102f51ac9f858edbe9a31c5842cadb466dc9454be689039cf54d9359d"
       },
-      "/home/shin/Documents/code/npm/webrtc4me/src/sample/trickle.ts": {
-        "version": "e98819c0e1514983188403c05053a56be8025d9c66e79b2ed79f1c56bbfbde2d",
-        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
-      },
-      "/home/shin/Documents/code/npm/webrtc4me/src/sample/vanilla.ts": {
-        "version": "1edd11c9e298a1be715af6c67967f1698819bbf055e0b679dafce5aafa87820f",
-        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
-      },
       "/home/shin/Documents/code/npm/webrtc4me/src/tests/event.test.ts": {
         "version": "8a780044e0c6d2168d49adcb87df139978b34481d2f395c93d430797fd591a35",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
+      "/home/shin/Documents/code/npm/webrtc4me/src/utill/testtools.ts": {
+        "version": "5b8e990e3ea2a510e0b2086c211f6770627b00fca23005dd0270aa7ff47647a0",
+        "signature": "229f0de1e6470424c9aec14ab33a3ae2b39cb0a4abf25b11350ada1e9e2f7110"
+      },
       "/home/shin/Documents/code/npm/webrtc4me/src/tests/trickle.test.ts": {
-        "version": "0c1e744874b569be8c09798db67e0fb681cca8694645976940970320df3d020e",
+        "version": "89d26bda361978f476a2b0353bcc615b43c523331ddee8ebc0f5fe22973c76d7",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "/home/shin/Documents/code/npm/webrtc4me/src/tests/vanilla.test.ts": {
-        "version": "14458decb22b14c38e14e48d743ee518813562a90be5a77596dc07ba214a31cd",
+        "version": "d843950f4cd9a84861e8f6355f6f342eb55767c5ded16b1644473dff8ac4f4c8",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "/home/shin/Documents/code/npm/webrtc4me/src/typings/index.d.ts": {
@@ -1371,32 +1367,27 @@
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/home/shin/Documents/code/npm/webrtc4me/src/sample/trickle.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/index.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/src/sample/vanilla.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/index.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "/home/shin/Documents/code/npm/webrtc4me/src/tests/event.test.ts": [
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "/home/shin/Documents/code/npm/webrtc4me/src/utill/testtools.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/home/shin/Documents/code/npm/webrtc4me/src/tests/trickle.test.ts": [
         "/home/shin/Documents/code/npm/webrtc4me/src/index.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/utill/testtools.ts",
         "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/shin/Documents/code/npm/webrtc4me/src/tests/vanilla.test.ts": [
         "/home/shin/Documents/code/npm/webrtc4me/src/index.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/utill/testtools.ts",
         "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
@@ -2879,9 +2870,8 @@
       "/home/shin/Documents/code/npm/webrtc4me/src/modules/file.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/index.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/interface.ts",
-      "/home/shin/Documents/code/npm/webrtc4me/src/sample/trickle.ts",
-      "/home/shin/Documents/code/npm/webrtc4me/src/sample/vanilla.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/tests/event.test.ts",
+      "/home/shin/Documents/code/npm/webrtc4me/src/utill/testtools.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/tests/trickle.test.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/tests/vanilla.test.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/typings/index.d.ts",
