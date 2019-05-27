@@ -1,6 +1,5 @@
 export function getLocalVideo(option?: MediaTrackSettings) {
   return new Promise<MediaStream>((resolve: (v: MediaStream) => void) => {
-    navigator.getUserMedia = navigator.getUserMedia;
     navigator.mediaDevices
       .getUserMedia({
         audio: true,
@@ -14,7 +13,6 @@ export function getLocalVideo(option?: MediaTrackSettings) {
 
 export function getLocalAudio() {
   return new Promise<MediaStream>((resolve: (v: MediaStream) => void) => {
-    navigator.getUserMedia = navigator.getUserMedia;
     navigator.mediaDevices
       .getUserMedia({ audio: true, video: false })
       .then(stream => {

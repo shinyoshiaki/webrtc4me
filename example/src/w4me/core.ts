@@ -1,11 +1,9 @@
-require("babel-polyfill");
 import {
   RTCPeerConnection,
   RTCSessionDescription,
   RTCIceCandidate
 } from "wrtc";
-
-import Event from "./utill/event";
+import Event from "rx.mini";
 
 export interface message {
   label: string;
@@ -16,19 +14,18 @@ export interface message {
 interface option {
   disable_stun: boolean;
   stream: MediaStream;
-  track: MediaStreamTrack;
   nodeId: string;
   trickle: boolean;
 }
 
 export default class WebRTC {
-  rtc: RTCPeerConnection;
+  private rtc: RTCPeerConnection;
 
-  onSignal = new Event<any>();
-  onConnect = new Event();
-  onDisconnect = new Event();
   onData = new Event<message>();
   onAddTrack = new Event<MediaStream>();
+  onSignal = new Event<any>();
+  onConnect = new Event<undefined>();
+  onDisconnect = new Event<undefined>();
 
   private dataChannels: { [key: string]: RTCDataChannel };
 
@@ -38,10 +35,9 @@ export default class WebRTC {
   isOffer = false;
 
   remoteStream: MediaStream | undefined;
-  timeoutPing: NodeJS.Timeout | undefined;
 
   constructor(public opt: Partial<option> = {}) {
-    const { nodeId, stream, track } = opt;
+    const { nodeId, stream } = opt;
 
     this.dataChannels = {};
     this.nodeId = nodeId || "peer";
@@ -50,8 +46,6 @@ export default class WebRTC {
 
     if (stream) {
       stream.getTracks().forEach(track => this.rtc.addTrack(track, stream));
-    } else if (track) {
-      this.rtc.addTrack(track);
     }
   }
 
@@ -72,7 +66,7 @@ export default class WebRTC {
 
     peer.ontrack = evt => {
       const stream = evt.streams[0];
-      this.onAddTrack.excute(stream);
+      this.onAddTrack.execute(stream);
       this.remoteStream = stream;
     };
 
@@ -81,21 +75,10 @@ export default class WebRTC {
         case "failed":
           break;
         case "disconnected":
-          try {
-            this.timeoutPing = setTimeout(() => {
-              this.hangUp();
-            }, 2000);
-            console.log("ping");
-            this.send("ping", "live");
-          } catch (error) {
-            console.log({ error });
-          }
           break;
         case "connected":
-          if (this.timeoutPing) clearTimeout(this.timeoutPing);
           break;
         case "closed":
-          console.log("closed");
           break;
         case "completed":
           break;
@@ -103,14 +86,18 @@ export default class WebRTC {
     };
 
     peer.onicecandidate = evt => {
-      if (!this.isConnected) {
+      if (this.isConnected) {
+        if (!evt.candidate) {
+          this.send(JSON.stringify(this.rtc.localDescription), "update");
+        }
+      } else {
         if (evt.candidate) {
           if (trickle) {
-            this.onSignal.excute({ type: "candidate", ice: evt.candidate });
+            this.onSignal.execute({ type: "candidate", ice: evt.candidate });
           }
         } else {
           if (!trickle && peer.localDescription) {
-            this.onSignal.excute(peer.localDescription);
+            this.onSignal.execute(peer.localDescription);
           }
         }
       }
@@ -122,18 +109,9 @@ export default class WebRTC {
       this.dataChannelEvents(dataChannel);
     };
 
-    peer.onsignalingstatechange = e => {
-      this.negotiating = peer.signalingState != "stable";
-    };
+    peer.onsignalingstatechange = e => {};
 
     return peer;
-  }
-
-  hangUp() {
-    console.log("hangup");
-    this.isDisconnected = true;
-    this.isConnected = false;
-    this.onDisconnect.excute();
   }
 
   makeOffer() {
@@ -142,9 +120,6 @@ export default class WebRTC {
     this.createDatachannel("datachannel");
 
     this.rtc.onnegotiationneeded = async () => {
-      if (this.negotiating || this.rtc.signalingState != "stable") return;
-      this.negotiating = true;
-
       const sdp = await this.rtc.createOffer().catch(console.log);
 
       if (!sdp) return;
@@ -159,35 +134,31 @@ export default class WebRTC {
       const local = this.rtc.localDescription;
 
       if (trickle && local) {
-        this.onSignal.excute(local);
+        this.onSignal.execute(local);
       }
 
       this.negotiation();
     };
   }
 
-  negotiating = false;
   private negotiation() {
-    this.rtc.onnegotiationneeded = async () => {
+    this.rtc.onnegotiationneeded = async ev => {
       if (!this.isConnected) return;
 
-      try {
-        if (this.negotiating || this.rtc.signalingState != "stable") return;
-        this.negotiating = true;
-        const options = {};
-        const sessionDescription = await this.rtc.createOffer(options).catch();
-        await this.rtc.setLocalDescription(sessionDescription).catch();
-        const local = this.rtc.localDescription;
-        if (local) {
-          this.send(JSON.stringify(local), "update");
-        }
-      } finally {
-        this.negotiating = false;
+      console.log("negotiation", { ev });
+
+      const options = {};
+      const sessionDescription = await this.rtc.createOffer(options).catch();
+      await this.rtc.setLocalDescription(sessionDescription).catch();
+      const local = this.rtc.localDescription;
+      if (local) {
+        this.send(JSON.stringify(local), "update");
       }
     };
   }
 
   private async setAnswer(sdp: any) {
+    console.log("setanswer", { sdp });
     if (this.isOffer) {
       await this.rtc
         .setRemoteDescription(new RTCSessionDescription(sdp))
@@ -215,7 +186,7 @@ export default class WebRTC {
     if (this.isConnected) {
       this.send(JSON.stringify(local), "update");
     } else if (trickle && local) {
-      this.onSignal.excute(local);
+      this.onSignal.execute(local);
     }
 
     this.negotiation();
@@ -238,21 +209,18 @@ export default class WebRTC {
   }
 
   private createDatachannel(label: string) {
-    if (!Object.keys(this.dataChannels).includes(label)) {
-      try {
-        const dc = this.rtc.createDataChannel(label);
-        this.dataChannelEvents(dc);
-        this.dataChannels[label] = dc;
-      } catch (dce) {}
-    }
+    try {
+      const dc = this.rtc.createDataChannel(label);
+      this.dataChannelEvents(dc);
+      this.dataChannels[label] = dc;
+    } catch (dce) {}
   }
 
   private dataChannelEvents(channel: RTCDataChannel) {
     channel.onopen = () => {
       if (!this.isConnected) {
-        console.log("connected", this.nodeId);
         this.isConnected = true;
-        this.onConnect.excute();
+        this.onConnect.execute();
       }
     };
     try {
@@ -260,18 +228,16 @@ export default class WebRTC {
         if (!event) return;
 
         if (channel.label === "update") {
+          console.log("update", { event });
           const sdp = JSON.parse(event.data);
           this.setSdp(sdp);
-        } else if (channel.label === "live") {
-          if (event.data === "ping") this.send("pong", "live");
-          else if (this.timeoutPing) clearTimeout(this.timeoutPing);
-        } else {
-          this.onData.excute({
-            label: channel.label,
-            data: event.data,
-            nodeId: this.nodeId
-          });
         }
+
+        this.onData.execute({
+          label: channel.label,
+          data: event.data,
+          nodeId: this.nodeId
+        });
       };
     } catch (error) {}
     channel.onerror = err => {};
@@ -280,6 +246,7 @@ export default class WebRTC {
 
   send(data: any, label?: string) {
     label = label || "datachannel";
+    console.log("senddc", { data, label });
     if (!Object.keys(this.dataChannels).includes(label)) {
       this.createDatachannel(label);
     }

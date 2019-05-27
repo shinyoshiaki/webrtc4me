@@ -1,13 +1,12 @@
-require("babel-polyfill");
 import WebRTC from "../index";
 const peerOffer = new WebRTC({ nodeId: "offer", trickle: true });
 const peerAnswer = new WebRTC({ nodeId: "answer", trickle: true });
 
 peerOffer.makeOffer();
-peerOffer.onSignal.once((sdp: any) => {
+peerOffer.onSignal.subscribe((sdp: any) => {
   peerAnswer.setSdp(sdp);
 });
-peerAnswer.onSignal.once((sdp: any) => {
+peerAnswer.onSignal.subscribe((sdp: any) => {
   peerOffer.setSdp(sdp);
 });
 
