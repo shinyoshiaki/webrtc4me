@@ -1,8 +1,8 @@
 import React, { FunctionComponent, useState, useRef, useEffect } from "react";
 import { create, join } from "./webrtc/signaling";
 import { TextField } from "@material-ui/core";
-import WebRTC from "./w4me";
-import { getLocalVideo } from "./w4me/utill/media";
+import WebRTC from "../../lib";
+import { getLocalVideo } from "../../lib/utill/media";
 
 const App: FunctionComponent = () => {
   const [roomId, setRoomId] = useState("");

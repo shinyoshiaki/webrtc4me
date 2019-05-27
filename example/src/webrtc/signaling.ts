@@ -1,5 +1,5 @@
 import client from "socket.io-client";
-import WebRTC from "../w4me";
+import WebRTC from "../../../lib";
 
 const url =
   process.env.NODE_ENV === "production"
