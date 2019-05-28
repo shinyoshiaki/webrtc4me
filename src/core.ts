@@ -4,7 +4,7 @@ import {
   RTCIceCandidate
 } from "wrtc";
 
-import Event from "rx.mini";
+import { Pack } from "rx.mini";
 
 export interface message {
   label: string;
@@ -23,11 +23,14 @@ interface option {
 export default class WebRTC {
   rtc: RTCPeerConnection;
 
-  onSignal = new Event<any>();
-  onConnect = new Event();
-  onDisconnect = new Event();
-  onData = new Event<message>();
-  onAddTrack = new Event<MediaStream>();
+  private pack = Pack();
+  private event = this.pack.event;
+
+  onSignal = this.event<any>();
+  onConnect = this.event();
+  onDisconnect = this.event();
+  onData = this.event<message>();
+  onAddTrack = this.event<MediaStream>();
 
   private dataChannels: { [key: string]: RTCDataChannel };
 
@@ -288,7 +291,7 @@ export default class WebRTC {
     this.rtc.addTrack(track, stream);
   }
 
-  async disconnect() {
+  disconnect() {
     const { rtc, dataChannels } = this;
 
     for (let key in dataChannels) {
@@ -310,6 +313,6 @@ export default class WebRTC {
     rtc.close();
     this.rtc = null as any;
 
-    await new Promise(r => setTimeout(r, 1000 * 30));
+    this.pack.finishAll();
   }
 }

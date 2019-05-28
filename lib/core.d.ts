@@ -1,5 +1,4 @@
 /// <reference types="node" />
-import Event from "rx.mini";
 export interface message {
     label: string;
     data: any;
@@ -15,11 +14,13 @@ interface option {
 export default class WebRTC {
     opt: Partial<option>;
     rtc: RTCPeerConnection;
-    onSignal: Event<any>;
-    onConnect: Event<{}>;
-    onDisconnect: Event<{}>;
-    onData: Event<message>;
-    onAddTrack: Event<MediaStream>;
+    private pack;
+    private event;
+    onSignal: import("rx.mini").default<any>;
+    onConnect: import("rx.mini").default<{}>;
+    onDisconnect: import("rx.mini").default<{}>;
+    onData: import("rx.mini").default<message>;
+    onAddTrack: import("rx.mini").default<MediaStream>;
     private dataChannels;
     nodeId: string;
     isConnected: boolean;
@@ -40,6 +41,6 @@ export default class WebRTC {
     private dataChannelEvents;
     send(data: any, label?: string): Promise<void>;
     addTrack(track: MediaStreamTrack, stream: MediaStream): void;
-    disconnect(): Promise<void>;
+    disconnect(): void;
 }
 export {};

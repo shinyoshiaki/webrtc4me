@@ -11,9 +11,9 @@
     "build": "tsc",
     "update": "rm -rf lib && npm run build",
     "example": "cd example && npm run build",
-    "client": "cd example && npm run start",
+    "client": "yarn build && cd example && npm run start",
     "type": "tsc --noEmit",
-    "test": "jest",
+    "test": "npm run type && jest",
     "publish": "npm publish --access=public",
     "deploy": "npm run type && npm run test && npm run update && npm run example"
   },
