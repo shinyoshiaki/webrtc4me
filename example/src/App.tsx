@@ -1,8 +1,6 @@
 import React, { FunctionComponent, useState, useRef, useEffect } from "react";
 import { create, join } from "./webrtc/signaling";
-import { TextField } from "@material-ui/core";
-import WebRTC from "./lib";
-import { getLocalVideo } from "./lib";
+import WebRTC, { getLocalVideo } from "../../src";
 
 const App: FunctionComponent = () => {
   const [roomId, setRoomId] = useState("");
@@ -96,8 +94,7 @@ const App: FunctionComponent = () => {
         style={{ width: "100%", height: "100%" }}
       />
       <p>datachannel</p>
-      <TextField
-        multiline
+      <input
         value={text}
         onChange={e => {
           setText(e.target.value);
