@@ -18,7 +18,7 @@ export function getSliceArrayBuffer(blob: Blob): Observable<any> {
   r.onload = e => {
     const chunk = (e.target as any).result;
     currentChunk++;
-    if (currentChunk < chunks) {
+    if (currentChunk < chunks + 1) {
       loadNext();
       subject.next(chunk);
     } else {
