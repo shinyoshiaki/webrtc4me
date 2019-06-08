@@ -1,5 +1,6 @@
 import WebRTC from "../core";
 import { Subject, Observable } from "rxjs";
+import Event from "rx.mini";
 
 const chunkSize = 16000;
 
@@ -33,34 +34,30 @@ export function getSliceArrayBuffer(blob: Blob): Observable<any> {
   return state;
 }
 
-interface Action {
-  type: string;
-  payload: any;
-}
+const Downloading = (now: number, size: number) => {
+  return {
+    type: "downloading" as const,
+    payload: { now, size }
+  };
+};
 
-interface Downloading extends Action {
-  type: "downloading";
-  payload: { now: number; size: number };
-}
+const Downloaded = (chunks: ArrayBuffer[], name: string) => {
+  return {
+    type: "downloaded" as const,
+    payload: { chunks, name }
+  };
+};
 
-interface Downloaded extends Action {
-  type: "downloaded";
-  payload: { chunks: ArrayBuffer[]; name: string };
-}
-
-type Actions = Downloading | Downloaded;
+type Actions = ReturnType<typeof Downloading> | ReturnType<typeof Downloaded>;
 
 export default class FileShare {
-  subject = new Subject<Actions>();
-  state = this.subject.asObservable();
-
   private chunks: ArrayBuffer[] = [];
-  public name: string = "";
+  private name: string = "";
   private size: number = 0;
+  event = new Event<Actions>();
 
-  constructor(private peer: WebRTC, public label?: string) {
+  constructor(private peer: WebRTC, private label?: string) {
     if (!label) label = "file";
-    console.log({ label });
     peer.onData.subscribe(raw => {
       const { label, data } = raw;
       if (label === this.label) {
@@ -73,10 +70,7 @@ export default class FileShare {
               this.size = obj.size;
               break;
             case "end":
-              this.subject.next({
-                type: "downloaded",
-                payload: { chunks: this.chunks, name: this.name }
-              } as Downloaded);
+              this.event.execute(Downloaded(this.chunks, this.name));
               peer.send(
                 JSON.stringify({ state: "complete", name: this.name }),
                 this.label
@@ -87,25 +81,22 @@ export default class FileShare {
           }
         } catch (error) {
           this.chunks.push(data);
-          this.subject.next({
-            type: "downloading",
-            payload: { now: this.chunks.length * chunkSize, size: this.size }
-          } as Downloading);
+          this.event.execute(Downloading(this.chunks.length, this.size));
         }
       }
     });
   }
 
-  sendStart(name: string, size: number) {
+  private sendStart(name: string, size: number) {
     this.name = name;
     this.peer.send(JSON.stringify({ state: "start", size, name }), this.label);
   }
 
-  sendChunk(chunk: ArrayBuffer) {
+  private sendChunk(chunk: ArrayBuffer) {
     this.peer.send(chunk, this.label);
   }
 
-  sendEnd() {
+  private sendEnd() {
     this.peer.send(JSON.stringify({ state: "end" }), this.label);
   }
 
