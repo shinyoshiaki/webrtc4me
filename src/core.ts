@@ -40,7 +40,7 @@ export default class WebRTC {
   isOffer = false;
 
   remoteStream: MediaStream | undefined;
-  timeoutPing: NodeJS.Timeout | undefined;
+  timeoutPing: any | undefined;
 
   constructor(public opt: Partial<option> = {}) {
     const { nodeId, stream, track } = opt;
@@ -134,6 +134,7 @@ export default class WebRTC {
     this.isDisconnected = true;
     this.isConnected = false;
     this.onDisconnect.execute();
+    this.disconnect();
   }
 
   makeOffer() {
@@ -291,7 +292,7 @@ export default class WebRTC {
     this.rtc.addTrack(track, stream);
   }
 
-  disconnect() {
+  private disconnect() {
     const { rtc, dataChannels } = this;
 
     for (let key in dataChannels) {
