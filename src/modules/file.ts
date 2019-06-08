@@ -52,11 +52,11 @@ type Actions = ReturnType<typeof Downloading> | ReturnType<typeof Downloaded>;
 
 export default class FileShare {
   private chunks: ArrayBuffer[] = [];
-  public name: string = "";
+  private name: string = "";
   private size: number = 0;
   event = new Event<Actions>();
 
-  constructor(private peer: WebRTC, public label?: string) {
+  constructor(private peer: WebRTC, private label?: string) {
     if (!label) label = "file";
     peer.onData.subscribe(raw => {
       const { label, data } = raw;

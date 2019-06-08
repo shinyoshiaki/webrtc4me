@@ -1,8 +1,9 @@
-import React, { FunctionComponent, useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, FC } from "react";
 import { create, join } from "./webrtc/signaling";
 import WebRTC, { getLocalVideo } from "../../src";
+import FileShareExample from "./components/fileshare";
 
-const App: FunctionComponent = () => {
+const App: FC = () => {
   const [roomId, setRoomId] = useState("");
   const [roomLabel, setRoomLabel] = useState("");
   const [trickle, setTrickle] = useState(false);
@@ -91,7 +92,7 @@ const App: FunctionComponent = () => {
       <video
         ref={videoRef}
         autoPlay={true}
-        style={{ width: "100%", height: "100%" }}
+        style={{ width: "50%", maxHeight: "50%" }}
       />
       <p>datachannel</p>
       <input
@@ -102,6 +103,9 @@ const App: FunctionComponent = () => {
         }}
         style={{ width: "40vw" }}
       />
+      <div style={{ marginTop: 50 }}>
+        <FileShareExample peer={rtc} />
+      </div>
     </div>
   );
 };

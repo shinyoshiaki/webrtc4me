@@ -1,4 +1,3 @@
-/// <reference types="node" />
 export interface message {
     label: string;
     data: any;
@@ -27,7 +26,7 @@ export default class WebRTC {
     isDisconnected: boolean;
     isOffer: boolean;
     remoteStream: MediaStream | undefined;
-    timeoutPing: NodeJS.Timeout | undefined;
+    timeoutPing: any | undefined;
     constructor(opt?: Partial<option>);
     private prepareNewConnection;
     hangUp(): void;
@@ -41,6 +40,6 @@ export default class WebRTC {
     private dataChannelEvents;
     send(data: any, label?: string): Promise<void>;
     addTrack(track: MediaStreamTrack, stream: MediaStream): void;
-    disconnect(): void;
+    private disconnect;
 }
 export {};
