@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, FC } from "react";
 import { create, join } from "./webrtc/signaling";
 import WebRTC, { getLocalVideo } from "../../src";
 import FileShareExample from "./components/fileshare";
+import NewFileApi from "./components/newfileapi";
 
 const App: FC = () => {
   const [roomId, setRoomId] = useState("");
@@ -92,7 +93,7 @@ const App: FC = () => {
       <video
         ref={videoRef}
         autoPlay={true}
-        style={{ width: "50%", maxHeight: "50%" }}
+        style={{ width: "300", height: "400" }}
       />
       <p>datachannel</p>
       <input
@@ -106,6 +107,7 @@ const App: FC = () => {
       <div style={{ marginTop: 50 }}>
         <FileShareExample peer={rtc} />
       </div>
+      {rtc && <NewFileApi peer={rtc} />}
     </div>
   );
 };

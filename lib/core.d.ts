@@ -1,3 +1,5 @@
+/// <reference types="node" />
+import { Services } from "./services";
 export interface message {
     label: string;
     data: any;
@@ -27,6 +29,7 @@ export default class WebRTC {
     isOffer: boolean;
     remoteStream: MediaStream | undefined;
     timeoutPing: any | undefined;
+    services: Services;
     constructor(opt?: Partial<option>);
     private prepareNewConnection;
     hangUp(): void;
@@ -38,7 +41,7 @@ export default class WebRTC {
     setSdp(sdp: any): Promise<void>;
     private createDatachannel;
     private dataChannelEvents;
-    send(data: any, label?: string): Promise<void>;
+    send(data: string | ArrayBuffer | Buffer, label?: string): Promise<void>;
     addTrack(track: MediaStreamTrack, stream: MediaStream): void;
     private disconnect;
 }

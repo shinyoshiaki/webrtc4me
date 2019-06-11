@@ -1,4 +1,5 @@
 import WebRTC from "../../core";
+import { mergeArraybuffer, sliceArraybuffer } from "../../utill/arraybuffer";
 
 export default class ArrayBufferService {
   label = "w4me_file";
@@ -12,12 +13,13 @@ export default class ArrayBufferService {
         const data = msg.data;
         if (typeof data === "string") {
           const ab = mergeArraybuffer(this.memory);
-          this.memory = [];
+          console.log("finish", this.memory, msg.data);
           peer.onData.execute({
-            label: this.origin,
+            label: msg.data,
             data: ab,
             nodeId: peer.nodeId
           });
+          this.memory = [];
         } else {
           this.memory.push(data);
         }
@@ -27,11 +29,12 @@ export default class ArrayBufferService {
 
   async send(ab: ArrayBuffer, origin: string, rtc: RTCDataChannel) {
     this.origin = origin;
+    console.log(this.origin, origin);
     const chunks = sliceArraybuffer(ab, 16000);
     for (let chunk of chunks) {
       await new Promise(r => setTimeout(r));
       rtc.send(chunk);
     }
-    rtc.send("finish");
+    rtc.send(origin);
   }
 }
