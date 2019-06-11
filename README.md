@@ -8,7 +8,7 @@ Support multi label datachannel and media stream.
 
 # How to use?
 
-look ```src/tests/```
+look ```src/tests/```  ```example/```
 
 # example 
 https://shinyoshiaki.github.io/webrtc4me/example/build/
