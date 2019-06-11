@@ -1,6 +1,6 @@
 {
   "name": "webrtc4me",
-  "version": "0.5.12",
+  "version": "0.5.13",
   "main": "lib/index.js",
   "files": [
     "lib",

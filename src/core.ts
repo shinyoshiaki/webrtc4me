@@ -5,6 +5,7 @@ import {
 } from "wrtc";
 
 import { Pack } from "rx.mini";
+import SetupServices, { Services } from "./services";
 
 export interface message {
   label: string;
@@ -35,6 +36,7 @@ export default class WebRTC {
   private dataChannels: { [key: string]: RTCDataChannel };
 
   nodeId: string;
+
   isConnected = false;
   isDisconnected = false;
   isOffer = false;
@@ -42,8 +44,11 @@ export default class WebRTC {
   remoteStream: MediaStream | undefined;
   timeoutPing: any | undefined;
 
+  services = SetupServices();
+
   constructor(public opt: Partial<option> = {}) {
     const { nodeId, stream, track } = opt;
+    const { arrayBufferService } = this.services;
 
     this.dataChannels = {};
     this.nodeId = nodeId || "peer";
@@ -55,6 +60,8 @@ export default class WebRTC {
     } else if (track) {
       this.rtc.addTrack(track);
     }
+
+    arrayBufferService.listen(this);
   }
 
   private prepareNewConnection() {
@@ -276,13 +283,27 @@ export default class WebRTC {
     });
   }
 
-  async send(data: any, label?: string) {
+  async send(data: string | ArrayBuffer | Buffer, label?: string) {
+    const { arrayBufferService } = this.services;
     label = label || "datachannel";
     if (!Object.keys(this.dataChannels).includes(label)) {
       await this.createDatachannel(label);
     }
     try {
-      this.dataChannels[label].send(data);
+      if (typeof data === "string") {
+        this.dataChannels[label].send(data);
+      } else {
+        if (data.byteLength > 16000) {
+          await this.createDatachannel(arrayBufferService.label);
+          await arrayBufferService.send(
+            data,
+            label,
+            this.dataChannels[arrayBufferService.label]
+          );
+        } else {
+          this.dataChannels[label].send(data);
+        }
+      }
     } catch (error) {
       console.warn(error);
     }
