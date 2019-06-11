@@ -149,9 +149,21 @@
         "version": "e4bc2dafb2de79f55af775943a0f70bfb30951d0a597a1883710f231bb99ddde",
         "signature": "e4bc2dafb2de79f55af775943a0f70bfb30951d0a597a1883710f231bb99ddde"
       },
+      "/home/shin/Documents/code/npm/webrtc4me/src/utill/arraybuffer.ts": {
+        "version": "f72c57daf6130a6c1ec5a1eb1c83a3193fb91be855729537d7807a78497db477",
+        "signature": "06552b7026b071f455401fccf674ab21b92e27c392416658dca71a0c67386410"
+      },
+      "/home/shin/Documents/code/npm/webrtc4me/src/services/arraybuffer/index.ts": {
+        "version": "5148852c9e6d45b387a2303a229070cad6a5c6c66c6f41bea0435cfd08ebedf8",
+        "signature": "e8d8a5d68644c563724836f1430ec805887d5db0baa46fe319e72528482a76d9"
+      },
+      "/home/shin/Documents/code/npm/webrtc4me/src/services/index.ts": {
+        "version": "a566560b6490c8093c7f3ea59a81d502e7c55c143cd52b04fc7d63e11866b26a",
+        "signature": "cdd7caaaf194fbc5917f26d90701758e14f27e7fd41de27b543f3d52c71d6bad"
+      },
       "/home/shin/Documents/code/npm/webrtc4me/src/core.ts": {
-        "version": "aa812c582b119c0abefe0a033ab954556369b15f2f5ceea26a605fb87f86a85b",
-        "signature": "76373252901887f29e1628a9d0014842f4ef11cb3820398ff261ab621c51f130"
+        "version": "bde5e1d1141857c392937b4c5088d8adf1847ba64e781a58ee9c72c85663fd1a",
+        "signature": "708be0f4878c486258424bcda5b592715b4120e2d5140da1676544b70f4ae82a"
       },
       "/home/shin/Documents/code/npm/webrtc4me/src/utill/media.ts": {
         "version": "9f77ed1f1523c5c29f7fd653ddb73b739d8838b23d47c699f626cb81a1352979",
@@ -410,12 +422,12 @@
         "signature": "e02461dff44e297d1d5a0a83aa64d4f146c7d2c19fbe7cf004d911bbb09f8af9"
       },
       "/home/shin/Documents/code/npm/webrtc4me/src/modules/file.ts": {
-        "version": "0b27528d66d8ca2b82c2d1517b2647b84ab4d78addea5e520c662ad6ba707947",
+        "version": "63f83350b0f750f3503766bb046bee264c8e9c4ddc3a13824399154d58e1310a",
         "signature": "bcc026f1d053a84d00738008daf0773b4d3e278a958a64fefbbf97207791e7b7"
       },
       "/home/shin/Documents/code/npm/webrtc4me/src/index.ts": {
-        "version": "d425cc7ec6ac5f81c7952f9395d96979b99afb892d4ca1674f230897f87e5405",
-        "signature": "5ed027216dfb7d0d912dc63bc7674bfb17f6dd88948bfb0bf9b26fb3a9b579b0"
+        "version": "6ef20a57a755d678d3a5064868fdf9c5f4de0d171f093133df817163e9dee72c",
+        "signature": "2f4b5bed619faaa15c6a7d82a26e4f365d8074ee6a93d61c813c6ef23e05d266"
       },
       "/home/shin/Documents/code/npm/webrtc4me/src/interface.ts": {
         "version": "1896d7820c353e5ae886f82215852cb9f92f7e7574c2d7c2b91a55bf8c7059d5",
@@ -850,9 +862,28 @@
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "/home/shin/Documents/code/npm/webrtc4me/src/utill/arraybuffer.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/src/services/arraybuffer/index.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/core.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/utill/arraybuffer.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/src/services/index.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/services/arraybuffer/index.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/home/shin/Documents/code/npm/webrtc4me/src/core.ts": [
         "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/services/index.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1376,6 +1407,7 @@
         "/home/shin/Documents/code/npm/webrtc4me/src/modules/stream.ts",
         "/home/shin/Documents/code/npm/webrtc4me/src/modules/file.ts",
         "/home/shin/Documents/code/npm/webrtc4me/src/utill/media.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/utill/arraybuffer.ts",
         "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
@@ -1940,7 +1972,8 @@
         "/home/shin/Documents/code/npm/webrtc4me/src/core.ts",
         "/home/shin/Documents/code/npm/webrtc4me/src/modules/stream.ts",
         "/home/shin/Documents/code/npm/webrtc4me/src/modules/file.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/utill/media.ts"
+        "/home/shin/Documents/code/npm/webrtc4me/src/utill/media.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/utill/arraybuffer.ts"
       ],
       "/home/shin/Documents/code/npm/webrtc4me/src/modules/stream.ts": [
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
@@ -1948,7 +1981,14 @@
         "/home/shin/Documents/code/npm/webrtc4me/src/utill/media.ts"
       ],
       "/home/shin/Documents/code/npm/webrtc4me/src/core.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/index.d.ts"
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/services/index.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/src/services/arraybuffer/index.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/core.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/src/services/index.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/services/arraybuffer/index.ts"
       ],
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/pack/index.d.ts": [
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/core/index.d.ts",
@@ -2826,6 +2866,9 @@
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/core/index.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/pack/index.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
+      "/home/shin/Documents/code/npm/webrtc4me/src/utill/arraybuffer.ts",
+      "/home/shin/Documents/code/npm/webrtc4me/src/services/arraybuffer/index.ts",
+      "/home/shin/Documents/code/npm/webrtc4me/src/services/index.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/core.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/utill/media.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/modules/stream.ts",

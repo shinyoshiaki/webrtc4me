@@ -10,7 +10,7 @@ export function getSliceArrayBuffer(blob: Blob): Observable<any> {
 
   const r = new FileReader(),
     blobSlice = File.prototype.slice,
-    chunks = Math.ceil(blob.size / chunkSize);
+    chunknum = Math.ceil(blob.size / chunkSize);
   let currentChunk = 0;
   r.onerror = e => {
     subject.error(e);
@@ -18,7 +18,7 @@ export function getSliceArrayBuffer(blob: Blob): Observable<any> {
   r.onload = e => {
     const chunk = (e.target as any).result;
     currentChunk++;
-    if (currentChunk < chunks + 1) {
+    if (currentChunk <= chunknum) {
       loadNext();
       subject.next(chunk);
     } else {
@@ -105,9 +105,7 @@ export default class FileShare {
     getSliceArrayBuffer(blob).subscribe(
       chunk => this.sendChunk(chunk),
       () => {},
-      () => {
-        this.sendEnd();
-      }
+      () => this.sendEnd()
     );
   }
 }
