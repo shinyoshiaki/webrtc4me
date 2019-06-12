@@ -162,8 +162,8 @@
         "signature": "cdd7caaaf194fbc5917f26d90701758e14f27e7fd41de27b543f3d52c71d6bad"
       },
       "/home/shin/Documents/code/npm/webrtc4me/src/core.ts": {
-        "version": "bde5e1d1141857c392937b4c5088d8adf1847ba64e781a58ee9c72c85663fd1a",
-        "signature": "708be0f4878c486258424bcda5b592715b4120e2d5140da1676544b70f4ae82a"
+        "version": "8d8ab44a7e0bb53bbbb69afcab0551ac68c594b8868dc7dc597e6fa0ec4421a4",
+        "signature": "ef97ce84cee5f44c773888c12cd1ec8d0495ab9defb039b37801aefd576cac30"
       },
       "/home/shin/Documents/code/npm/webrtc4me/src/utill/media.ts": {
         "version": "9f77ed1f1523c5c29f7fd653ddb73b739d8838b23d47c699f626cb81a1352979",
@@ -1956,6 +1956,12 @@
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/pack/index.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/core/index.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/index.d.ts": [
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/core/index.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/pack/index.d.ts",
@@ -1963,41 +1969,453 @@
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/home/shin/Documents/code/npm/webrtc4me/src/modules/file.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/index.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/core.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/src/index.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/core.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/modules/stream.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/modules/file.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/utill/media.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/utill/arraybuffer.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/src/modules/stream.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/core.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/utill/media.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/src/core.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/services/index.ts"
-      ],
       "/home/shin/Documents/code/npm/webrtc4me/src/services/arraybuffer/index.ts": [
         "/home/shin/Documents/code/npm/webrtc4me/src/core.ts"
       ],
       "/home/shin/Documents/code/npm/webrtc4me/src/services/index.ts": [
         "/home/shin/Documents/code/npm/webrtc4me/src/services/arraybuffer/index.ts"
       ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/pack/index.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/core/index.d.ts",
+      "/home/shin/Documents/code/npm/webrtc4me/src/core.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/services/index.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/src/modules/stream.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/core.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/utill/media.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts": [
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts": [
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Operator.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/iif.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/throwError.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Operator.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/iif.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/throwError.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subject.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Operator.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/ConnectableObservable.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subject.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/operators/groupBy.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subject.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/symbol/observable.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/BehaviorSubject.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subject.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/ReplaySubject.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subject.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/AsyncSubject.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subject.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Scheduler.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/Action.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/Action.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Scheduler.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Scheduler.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/Action.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncAction.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncAction.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/Action.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsapScheduler.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncAction.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/asap.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsapScheduler.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/async.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/QueueScheduler.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/queue.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/QueueScheduler.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AnimationFrameScheduler.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncAction.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/animationFrame.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AnimationFrameScheduler.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/VirtualTimeScheduler.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncAction.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Notification.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/util/pipe.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/util/noop.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/util/identity.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/util/isObservable.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/util/ArgumentOutOfRangeError.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/util/EmptyError.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/util/ObjectUnsubscribedError.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/util/UnsubscriptionError.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/util/TimeoutError.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/bindCallback.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/bindNodeCallback.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/InnerSubscriber.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/OuterSubscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/OuterSubscriber.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/InnerSubscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/combineLatest.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/OuterSubscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Operator.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/InnerSubscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/concat.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/defer.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/empty.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/forkJoin.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/from.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/fromEvent.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/fromEventPattern.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/fromEvent.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/generate.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/interval.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/merge.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/never.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/of.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/onErrorResumeNext.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/pairs.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/race.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Operator.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/OuterSubscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/InnerSubscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/range.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/timer.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/using.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/zip.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Operator.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/config.d.ts": [
         "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
@@ -2060,435 +2478,17 @@
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/pairs.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      "/home/shin/Documents/code/npm/webrtc4me/src/modules/file.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/index.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/core.ts"
       ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/VirtualTimeScheduler.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncAction.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncAction.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/Action.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AnimationFrameScheduler.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncAction.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/animationFrame.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AnimationFrameScheduler.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsapScheduler.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncAction.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/asap.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsapScheduler.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Scheduler.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/Action.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncAction.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/QueueScheduler.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/queue.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/QueueScheduler.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/async.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/Action.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Scheduler.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Scheduler.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/scheduler/Action.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/AsyncSubject.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subject.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/ReplaySubject.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subject.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/BehaviorSubject.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subject.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/operators/groupBy.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subject.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/ConnectableObservable.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subject.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subject.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Operator.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Operator.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/iif.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/throwError.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/zip.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Operator.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/using.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/timer.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/range.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/race.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Operator.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/OuterSubscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/InnerSubscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/onErrorResumeNext.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/of.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/never.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/merge.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/interval.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/generate.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/fromEventPattern.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/fromEvent.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/fromEvent.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/from.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/forkJoin.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/empty.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/defer.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/concat.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/combineLatest.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/OuterSubscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Operator.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/InnerSubscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/bindNodeCallback.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/bindCallback.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/util/isObservable.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Notification.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/throwError.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/iif.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Observable.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/util/pipe.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Operator.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/OuterSubscriber.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/InnerSubscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/InnerSubscriber.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/OuterSubscriber.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/symbol/observable.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/util/noop.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/util/identity.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/util/ArgumentOutOfRangeError.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/util/EmptyError.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/util/ObjectUnsubscribedError.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/util/UnsubscriptionError.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/util/TimeoutError.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/config.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      "/home/shin/Documents/code/npm/webrtc4me/src/index.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/core.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/modules/stream.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/modules/file.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/utill/media.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/utill/arraybuffer.ts"
       ],
       "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts": [
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
@@ -2505,6 +2505,245 @@
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/assert.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/async_hooks.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/buffer.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/child_process.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/net.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/cluster.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/child_process.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/net.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/console.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/constants.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/crypto.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/dgram.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/net.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/dns.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/dns.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/domain.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/fs.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/url.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/http.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/url.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/net.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/http2.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/fs.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/net.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/tls.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/url.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/http.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/https.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/tls.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/http.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/url.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/inspector.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/module.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/net.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/dns.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/os.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/path.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/perf_hooks.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/async_hooks.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/process.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/punycode.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/querystring.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/readline.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/repl.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/readline.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/vm.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/string_decoder.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/timers.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/tls.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/crypto.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/dns.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/net.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/trace_events.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/tty.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/net.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/url.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/querystring.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/v8.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/vm.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/worker_threads.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/vm.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/zlib.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
@@ -2553,6 +2792,16 @@
         "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts"
+      ],
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/globals.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/globals.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/index.d.ts": [
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/base.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts",
@@ -2560,243 +2809,7 @@
         "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts"
       ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/async_hooks.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/perf_hooks.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/async_hooks.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/buffer.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/child_process.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/cluster.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/child_process.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/console.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/constants.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/crypto.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/tls.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/crypto.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/dns.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/https.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/tls.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/http.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/url.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/http2.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/fs.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/tls.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/url.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/http.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/dgram.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/dns.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/dns.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/net.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/dns.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/tty.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/http.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/url.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/domain.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/worker_threads.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/vm.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/zlib.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/v8.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/readline.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/repl.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/readline.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/vm.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/fs.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/url.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/inspector.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/module.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/os.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/path.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/process.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/punycode.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/querystring.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/url.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/querystring.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/string_decoder.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/timers.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/trace_events.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/index.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/RTCPeerConnection.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/MediaStream.d.ts",
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/MediaStream.d.ts": [
         "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
@@ -2807,22 +2820,9 @@
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/MediaStream.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/globals.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/globals.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts": [
-        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts"
-      ],
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/vm.d.ts": [
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/index.d.ts": [
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/RTCPeerConnection.d.ts",
+        "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/MediaStream.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/util.d.ts",
         "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
@@ -2867,11 +2867,7 @@
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/pack/index.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/utill/arraybuffer.ts",
-      "/home/shin/Documents/code/npm/webrtc4me/src/services/arraybuffer/index.ts",
-      "/home/shin/Documents/code/npm/webrtc4me/src/services/index.ts",
-      "/home/shin/Documents/code/npm/webrtc4me/src/core.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/utill/media.ts",
-      "/home/shin/Documents/code/npm/webrtc4me/src/modules/stream.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscription.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/types.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/Subscriber.d.ts",
@@ -2934,13 +2930,9 @@
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/observable/zip.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/internal/config.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/rxjs/index.d.ts",
-      "/home/shin/Documents/code/npm/webrtc4me/src/modules/file.ts",
-      "/home/shin/Documents/code/npm/webrtc4me/src/index.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/interface.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/tests/event.test.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/utill/testtools.ts",
-      "/home/shin/Documents/code/npm/webrtc4me/src/tests/trickle.test.ts",
-      "/home/shin/Documents/code/npm/webrtc4me/src/tests/vanilla.test.ts",
       "/home/shin/Documents/code/npm/webrtc4me/src/typings/wrtc.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/jest/index.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/globals.d.ts",
@@ -2989,7 +2981,15 @@
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/node/ts3.2/index.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/MediaStream.d.ts",
       "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/RTCPeerConnection.d.ts",
-      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/index.d.ts"
+      "/home/shin/Documents/code/npm/webrtc4me/node_modules/@types/webrtc/index.d.ts",
+      "/home/shin/Documents/code/npm/webrtc4me/src/services/arraybuffer/index.ts",
+      "/home/shin/Documents/code/npm/webrtc4me/src/services/index.ts",
+      "/home/shin/Documents/code/npm/webrtc4me/src/core.ts",
+      "/home/shin/Documents/code/npm/webrtc4me/src/modules/stream.ts",
+      "/home/shin/Documents/code/npm/webrtc4me/src/modules/file.ts",
+      "/home/shin/Documents/code/npm/webrtc4me/src/index.ts",
+      "/home/shin/Documents/code/npm/webrtc4me/src/tests/trickle.test.ts",
+      "/home/shin/Documents/code/npm/webrtc4me/src/tests/vanilla.test.ts"
     ]
   },
   "version": "3.4.4"

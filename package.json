@@ -1,6 +1,6 @@
 {
   "name": "webrtc4me",
-  "version": "0.5.13",
+  "version": "0.5.14",
   "main": "lib/index.js",
   "files": [
     "lib",
@@ -13,7 +13,7 @@
     "type": "tsc --noEmit",
     "test": "npm run type && jest",
     "publish": "npm publish --access=public",
-    "react:start": "yarn build && cd example && npm run start",
+    "react:start": "cd example && npm run start",
     "react:build": "cd example && npm run build",
     "deploy": "npm run test && npm run update && npm run react:build"
   },

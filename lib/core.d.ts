@@ -1,5 +1,4 @@
 /// <reference types="node" />
-import { Services } from "./services";
 export interface message {
     label: string;
     data: any;
@@ -29,7 +28,7 @@ export default class WebRTC {
     isOffer: boolean;
     remoteStream: MediaStream | undefined;
     timeoutPing: any | undefined;
-    services: Services;
+    services: import("./services").Services;
     constructor(opt?: Partial<option>);
     private prepareNewConnection;
     hangUp(): void;

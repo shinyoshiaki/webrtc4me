@@ -5,7 +5,7 @@ import {
 } from "wrtc";
 
 import { Pack } from "rx.mini";
-import SetupServices, { Services } from "./services";
+import SetupServices from "./services";
 
 export interface message {
   label: string;
