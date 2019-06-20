@@ -4,11 +4,11 @@ import {
   RTCIceCandidate
 } from "wrtc";
 
-import { Pack } from "rx.mini";
+import { Pack, Wait } from "rx.mini";
 import SetupServices from "./services";
 
 export interface message {
-  label: string;
+  label: string | "datachannel";
   data: any;
   nodeId: string;
 }
@@ -33,10 +33,11 @@ export default class WebRTC {
   onData = this.event<message>();
   onAddTrack = this.event<MediaStream>();
 
+  private wait4DC = new Wait<RTCDataChannel | undefined>();
+
   private dataChannels: { [key: string]: RTCDataChannel };
 
   nodeId: string;
-
   isConnected = false;
   isDisconnected = false;
   isOffer = false;
@@ -90,15 +91,16 @@ export default class WebRTC {
         case "failed":
           break;
         case "disconnected":
-          try {
-            this.timeoutPing = setTimeout(() => {
-              this.hangUp();
-            }, 2000);
+          if (this.rtc)
+            try {
+              this.timeoutPing = setTimeout(() => {
+                this.hangUp();
+              }, 2000);
 
-            this.send("ping", "live");
-          } catch (error) {
-            console.warn({ error });
-          }
+              this.send("ping", "live");
+            } catch (error) {
+              console.warn("disconnected", { error });
+            }
           break;
         case "connected":
           if (this.timeoutPing) clearTimeout(this.timeoutPing);
@@ -140,7 +142,7 @@ export default class WebRTC {
   hangUp() {
     this.isDisconnected = true;
     this.isConnected = false;
-    this.onDisconnect.execute();
+    this.onDisconnect.executeNull();
     this.disconnect();
   }
 
@@ -235,14 +237,34 @@ export default class WebRTC {
     }
   }
 
+  private isDCOpend = (label: string) => {
+    const dc = this.dataChannels[label];
+    if (dc) {
+      return dc.readyState === "open";
+    }
+    return false;
+  };
+
   private async createDatachannel(label: string) {
-    if (!Object.keys(this.dataChannels).includes(label)) {
+    const wait = async () => {
       try {
         const dc = this.rtc.createDataChannel(label);
-        this.dataChannels[label] = dc;
         await this.dataChannelEvents(dc);
+        if (dc.readyState === "open") return dc;
       } catch (dce) {
         console.error(dce);
+      }
+    };
+
+    if (!this.isDCOpend(label)) {
+      const { exist, result } = await this.wait4DC.create(label, wait);
+
+      if (exist) {
+        const res = await exist.asPromise().catch(() => {});
+        if (res) this.dataChannels[label] = res;
+      }
+      if (result) {
+        this.dataChannels[label] = result;
       }
     }
   }
@@ -252,7 +274,7 @@ export default class WebRTC {
       channel.onopen = () => {
         if (!this.isConnected) {
           this.isConnected = true;
-          this.onConnect.execute();
+          this.onConnect.executeNull();
         }
         resolve();
       };
@@ -268,7 +290,7 @@ export default class WebRTC {
             else if (this.timeoutPing) clearTimeout(this.timeoutPing);
           } else {
             this.onData.execute({
-              label: channel.label,
+              label: channel.label as string | "datachannel",
               data: event.data,
               nodeId: this.nodeId
             });
@@ -283,29 +305,44 @@ export default class WebRTC {
     });
   }
 
-  async send(data: string | ArrayBuffer | Buffer, label?: string) {
+  async send(data: string | ArrayBuffer | Buffer, label = "datachannel") {
     const { arrayBufferService } = this.services;
-    label = label || "datachannel";
-    if (!Object.keys(this.dataChannels).includes(label)) {
-      await this.createDatachannel(label);
-    }
-    try {
-      if (typeof data === "string") {
-        this.dataChannels[label].send(data);
-      } else {
-        if (data.byteLength > 16000) {
-          await this.createDatachannel(arrayBufferService.label);
-          await arrayBufferService.send(
-            data,
-            label,
-            this.dataChannels[arrayBufferService.label]
-          );
-        } else {
+    const sendData = async () => {
+      try {
+        if (typeof data === "string") {
+          const err = await this.createDatachannel(label).catch(() => "error");
+          if (err) return err;
           this.dataChannels[label].send(data);
+        } else {
+          if (data.byteLength > 16000) {
+            const err = await this.createDatachannel(
+              arrayBufferService.label
+            ).catch(() => "error");
+            if (err) return err;
+            arrayBufferService.send(
+              data,
+              label,
+              this.dataChannels[arrayBufferService.label]
+            );
+          } else {
+            const err = await this.createDatachannel(label).catch(
+              () => "error"
+            );
+            if (err) return err;
+            this.dataChannels[label].send(data);
+          }
         }
+      } catch (error) {
+        return "unhandle datachannel error";
       }
-    } catch (error) {
-      console.warn(error);
+    };
+
+    const err = await sendData();
+    if (err) {
+      console.warn("retry send data channel");
+      await new Promise(r => setTimeout(r, 10));
+      const error = await sendData();
+      console.warn("fail", error, (data as Buffer).length);
     }
   }
 
@@ -316,6 +353,8 @@ export default class WebRTC {
   private disconnect() {
     const { rtc, dataChannels } = this;
 
+    if (!rtc) return;
+
     for (let key in dataChannels) {
       const channel = dataChannels[key];
       channel.onmessage = null;
@@ -324,7 +363,7 @@ export default class WebRTC {
       channel.onerror = null;
       channel.close();
     }
-    this.dataChannels = null as any;
+    // this.dataChannels = null as any;
 
     rtc.oniceconnectionstatechange = null;
     rtc.onicegatheringstatechange = null;
