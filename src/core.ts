@@ -16,11 +16,11 @@ type Option = {
   wrtc: any;
 };
 
-let {
-  RTCPeerConnection,
-  RTCSessionDescription,
-  RTCIceCandidate
-} = window as any;
+// let {
+//   RTCPeerConnection,
+//   RTCSessionDescription,
+//   RTCIceCandidate
+// } = window as any;
 
 export default class WebRTC {
   rtc: RTCPeerConnection;
@@ -42,6 +42,7 @@ export default class WebRTC {
   isConnected = false;
   isDisconnected = false;
   isOffer = false;
+  negotiating = false;
 
   remoteStream: MediaStream | undefined;
   timeoutPing: any | undefined;
@@ -74,18 +75,15 @@ export default class WebRTC {
 
   private prepareNewConnection() {
     const { disable_stun, trickle } = this.opt;
-
-    const peer: RTCPeerConnection = disable_stun
-      ? new RTCPeerConnection({
-          iceServers: []
-        })
-      : new RTCPeerConnection({
-          iceServers: [
+    const peer = new RTCPeerConnection({
+      iceServers: disable_stun
+        ? []
+        : [
             {
               urls: "stun:stun.l.google.com:19302"
             }
           ]
-        });
+    }) as RTCPeerConnection;
 
     peer.ontrack = evt => {
       const stream = evt.streams[0];
@@ -166,8 +164,8 @@ export default class WebRTC {
 
       if (!sdp) return;
 
-      const result = await this.rtc.setLocalDescription(sdp).catch(() => "err");
-      if (result) return;
+      const err = await this.rtc.setLocalDescription(sdp).catch(() => "err");
+      if (err) return;
 
       const local = this.rtc.localDescription;
 
@@ -179,7 +177,6 @@ export default class WebRTC {
     };
   }
 
-  negotiating = false;
   private negotiationSetting() {
     this.rtc.onnegotiationneeded = async () => {
       if (!this.isConnected) return;
@@ -200,24 +197,27 @@ export default class WebRTC {
     };
   }
 
-  private async setAnswer(sdp: any) {
+  private async setAnswer(sdp: RTCSessionDescriptionInit) {
     await this.rtc
       .setRemoteDescription(new RTCSessionDescription(sdp))
       .catch(console.warn);
   }
 
-  private async makeAnswer(offer: any) {
+  private async makeAnswer(offer: RTCSessionDescriptionInit) {
     const { trickle } = this.opt;
 
-    const err = await this.rtc
-      .setRemoteDescription(new RTCSessionDescription(offer))
-      .catch(() => "err");
-    if (err) return;
+    {
+      const err = await this.rtc.setRemoteDescription(offer).catch(() => "err");
+      if (err) return;
+    }
 
     const answer = await this.rtc.createAnswer().catch(console.warn);
     if (!answer) return;
 
-    await this.rtc.setLocalDescription(answer).catch(console.warn);
+    {
+      const err = await this.rtc.setLocalDescription(answer).catch(() => "err");
+      if (err) return;
+    }
 
     const local = this.rtc.localDescription;
     if (!local) return;
@@ -246,10 +246,7 @@ export default class WebRTC {
 
   private isDCOpend = (label: string) => {
     const dc = this.dataChannels[label];
-    if (dc) {
-      return dc.readyState === "open";
-    }
-    return false;
+    return dc.readyState === "open";
   };
 
   private async createDatachannel(label: string) {
@@ -281,7 +278,7 @@ export default class WebRTC {
       channel.onopen = () => {
         if (!this.isConnected) {
           this.isConnected = true;
-          this.onConnect.executeNull();
+          this.onConnect.execute(null);
         }
         resolve();
       };
@@ -370,7 +367,6 @@ export default class WebRTC {
       channel.onerror = null;
       channel.close();
     }
-    // this.dataChannels = null as any;
 
     rtc.oniceconnectionstatechange = null;
     rtc.onicegatheringstatechange = null;
