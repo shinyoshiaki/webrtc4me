@@ -4,3 +4,4 @@ tsconfig.tsbuildinfo
 **/tsconfig.tsbuildinfo
 lib/tsconfig.tsbuildinfo
 build
+lib
