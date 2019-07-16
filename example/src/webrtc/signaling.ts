@@ -10,11 +10,11 @@ const socket = client.connect(url);
 
 // create is answer
 
-export function create(roomId: string, trickle: boolean) {
+export function create(roomId: string, trickle: boolean, stun: boolean) {
   console.log("crate is answer");
 
   return new Promise<WebRTC>(resolve => {
-    const rtc = new WebRTC({ nodeId: "answer", trickle });
+    const rtc = new WebRTC({ nodeId: "answer", trickle, disable_stun: !stun });
     socket.emit("create", { roomId });
     socket.on("sdp", (data: { sdp: string }) => {
       console.log({ data });
@@ -36,11 +36,11 @@ export function create(roomId: string, trickle: boolean) {
   });
 }
 
-export function join(roomId: string, trickle: boolean) {
+export function join(roomId: string, trickle: boolean, stun: boolean) {
   console.log("join is offer");
 
   return new Promise<WebRTC>(resolve => {
-    const rtc = new WebRTC({ nodeId: "offer", trickle });
+    const rtc = new WebRTC({ nodeId: "offer", trickle, disable_stun: !stun });
     socket.emit("join", { roomId });
     socket.on("join", () => {
       rtc.makeOffer();
