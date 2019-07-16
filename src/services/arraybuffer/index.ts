@@ -15,7 +15,7 @@ export default class ArrayBufferService {
           const ab = mergeArraybuffer(this.memory);
           console.log("finish", this.memory, msg.data);
           peer.onData.execute({
-            label: msg.data,
+            label: data,
             data: ab,
             nodeId: peer.nodeId
           });

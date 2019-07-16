@@ -2,6 +2,18 @@ import WebRTC from "../core";
 import { Subject, Observable } from "rxjs";
 import Event from "rx.mini";
 
+const Downloading = (now: number, size: number) => ({
+  type: "downloading" as const,
+  payload: { now, size }
+});
+
+const Downloaded = (chunks: ArrayBuffer[], name: string) => ({
+  type: "downloaded" as const,
+  payload: { chunks, name }
+});
+
+type Actions = ReturnType<typeof Downloading> | ReturnType<typeof Downloaded>;
+
 const chunkSize = 16000;
 
 export function getSliceArrayBuffer(blob: Blob): Observable<any> {
@@ -34,22 +46,6 @@ export function getSliceArrayBuffer(blob: Blob): Observable<any> {
   return state;
 }
 
-const Downloading = (now: number, size: number) => {
-  return {
-    type: "downloading" as const,
-    payload: { now, size }
-  };
-};
-
-const Downloaded = (chunks: ArrayBuffer[], name: string) => {
-  return {
-    type: "downloaded" as const,
-    payload: { chunks, name }
-  };
-};
-
-type Actions = ReturnType<typeof Downloading> | ReturnType<typeof Downloaded>;
-
 export default class FileShare {
   private chunks: ArrayBuffer[] = [];
   private name: string = "";
@@ -61,7 +57,7 @@ export default class FileShare {
     peer.onData.subscribe(raw => {
       const { label, data } = raw;
       if (label === this.label) {
-        try {
+        if (typeof data === "string") {
           const obj = JSON.parse(data);
           switch (obj.state) {
             case "start":
@@ -79,7 +75,7 @@ export default class FileShare {
               this.name = "";
               break;
           }
-        } catch (error) {
+        } else {
           this.chunks.push(data);
           this.event.execute(Downloading(this.chunks.length, this.size));
         }

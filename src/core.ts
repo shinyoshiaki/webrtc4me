@@ -3,7 +3,7 @@ import SetupServices from "./services";
 
 export type Message = {
   label: string | "datachannel";
-  data: any;
+  data: string | ArrayBuffer;
   nodeId: string;
 };
 
