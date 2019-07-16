@@ -1,25 +1,26 @@
 /// <reference types="node" />
-export interface message {
+export declare type Message = {
     label: string | "datachannel";
     data: any;
     nodeId: string;
-}
-interface option {
+};
+declare type Option = {
     disable_stun: boolean;
     stream: MediaStream;
     track: MediaStreamTrack;
     nodeId: string;
     trickle: boolean;
-}
+    wrtc: any;
+};
 export default class WebRTC {
-    opt: Partial<option>;
+    opt: Partial<Option>;
     rtc: RTCPeerConnection;
     private pack;
     private event;
     onSignal: import("rx.mini").default<any>;
-    onConnect: import("rx.mini").default<{}>;
-    onDisconnect: import("rx.mini").default<{}>;
-    onData: import("rx.mini").default<message>;
+    onConnect: import("rx.mini").default<unknown>;
+    onDisconnect: import("rx.mini").default<unknown>;
+    onData: import("rx.mini").default<Message>;
     onAddTrack: import("rx.mini").default<MediaStream>;
     private wait4DC;
     private dataChannels;
@@ -30,7 +31,7 @@ export default class WebRTC {
     remoteStream: MediaStream | undefined;
     timeoutPing: any | undefined;
     services: import("./services").Services;
-    constructor(opt?: Partial<option>);
+    constructor(opt?: Partial<Option>);
     private prepareNewConnection;
     hangUp(): void;
     makeOffer(): void;
