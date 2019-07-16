@@ -11,7 +11,7 @@
     "build": "tsc",
     "update": "rm -rf lib && npm run build",
     "type": "tsc --noEmit",
-    "test": "npm run type && jest",
+    "test": "npm run type && jest --forceExit",
     "publish": "npm publish --access=public",
     "react": "cd example && npm run start",
     "react:build": "cd example && npm run build",
