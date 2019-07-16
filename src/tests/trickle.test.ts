@@ -1,7 +1,8 @@
+import * as wrtc from "wrtc";
 import WebRTC from "../index";
 import { Count } from "../utill/testtools";
-const peerOffer = new WebRTC({ nodeId: "offer", trickle: true });
-const peerAnswer = new WebRTC({ nodeId: "answer", trickle: true });
+const peerOffer = new WebRTC({ nodeId: "offer", trickle: true, wrtc });
+const peerAnswer = new WebRTC({ nodeId: "answer", trickle: true, wrtc });
 
 test("trickle", async () => {
   const test = () =>

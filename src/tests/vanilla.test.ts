@@ -1,7 +1,8 @@
+import * as wrtc from "wrtc";
 import WebRTC from "../index";
 import { Count } from "../utill/testtools";
-const peerOffer = new WebRTC({ disable_stun: true, nodeId: "offer" });
-const peerAnswer = new WebRTC({ disable_stun: true, nodeId: "answer" });
+const peerOffer = new WebRTC({ disable_stun: true, nodeId: "offer", wrtc });
+const peerAnswer = new WebRTC({ disable_stun: true, nodeId: "answer", wrtc });
 
 test("vanilla", async () => {
   const test = () =>
