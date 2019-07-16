@@ -16,11 +16,11 @@ type Option = {
   wrtc: any;
 };
 
-// let {
-//   RTCPeerConnection,
-//   RTCSessionDescription,
-//   RTCIceCandidate
-// } = window as any;
+let {
+  RTCPeerConnection,
+  RTCSessionDescription,
+  RTCIceCandidate
+} = window as any;
 
 export default class WebRTC {
   rtc: RTCPeerConnection;
@@ -246,6 +246,7 @@ export default class WebRTC {
 
   private isDCOpend = (label: string) => {
     const dc = this.dataChannels[label];
+    if (!dc) return false;
     return dc.readyState === "open";
   };
 
@@ -310,6 +311,7 @@ export default class WebRTC {
   }
 
   async send(data: string | ArrayBuffer | Buffer, label = "datachannel") {
+    if (!this.rtc) return;
     const { arrayBufferService } = this.services;
     const sendData = async () => {
       try {
