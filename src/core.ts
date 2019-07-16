@@ -1,25 +1,26 @@
-import {
-  RTCPeerConnection,
-  RTCSessionDescription,
-  RTCIceCandidate
-} from "wrtc";
-
 import { Pack, Wait } from "rx.mini";
 import SetupServices from "./services";
 
-export interface message {
+export type Message = {
   label: string | "datachannel";
   data: any;
   nodeId: string;
-}
+};
 
-interface option {
+type Option = {
   disable_stun: boolean;
   stream: MediaStream;
   track: MediaStreamTrack;
   nodeId: string;
   trickle: boolean;
-}
+  wrtc: any;
+};
+
+let {
+  RTCPeerConnection,
+  RTCSessionDescription,
+  RTCIceCandidate
+} = window as any;
 
 export default class WebRTC {
   rtc: RTCPeerConnection;
@@ -30,7 +31,7 @@ export default class WebRTC {
   onSignal = this.event<any>();
   onConnect = this.event();
   onDisconnect = this.event();
-  onData = this.event<message>();
+  onData = this.event<Message>();
   onAddTrack = this.event<MediaStream>();
 
   private wait4DC = new Wait<RTCDataChannel | undefined>();
@@ -47,9 +48,15 @@ export default class WebRTC {
 
   services = SetupServices();
 
-  constructor(public opt: Partial<option> = {}) {
-    const { nodeId, stream, track } = opt;
+  constructor(public opt: Partial<Option> = {}) {
+    const { nodeId, stream, track, wrtc } = opt;
     const { arrayBufferService } = this.services;
+
+    if (wrtc) {
+      RTCPeerConnection = wrtc.RTCPeerConnection;
+      RTCSessionDescription = wrtc.RTCSessionDescription;
+      RTCIceCandidate = wrtc.RTCIceCandidate;
+    }
 
     this.dataChannels = {};
     this.nodeId = nodeId || "peer";

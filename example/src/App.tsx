@@ -3,13 +3,15 @@ import { create, join } from "./webrtc/signaling";
 import WebRTC, { getLocalVideo } from "../../src";
 import FileShareExample from "./components/fileshare";
 import NewFileApi from "./components/newfileapi";
+import RadioBox from "./components/radiobox";
 
 const App: FC = () => {
   const [roomId, setRoomId] = useState("");
   const [roomLabel, setRoomLabel] = useState("");
-  const [trickle, setTrickle] = useState(false);
-  const [rtc, setRTC] = useState<WebRTC | undefined>(undefined);
   const [text, setText] = useState("");
+  const [trickle, setTrickle] = useState(false);
+  const [stun, setstun] = useState(true);
+  const [rtc, setRTC] = useState<WebRTC | undefined>(undefined);
   const videoRef = useRef<any | undefined>(undefined);
 
   useEffect(() => {
@@ -41,20 +43,15 @@ const App: FC = () => {
     <div>
       <p>webrtc</p>
       <div>
-        trickle
+        trickle{trickle && " *"}
         <br />
-        <input
-          type="radio"
-          checked={!trickle}
-          onChange={() => setTrickle(!trickle)}
-        />
-        off
-        <input
-          type="radio"
-          checked={trickle}
-          onChange={() => setTrickle(!trickle)}
-        />
-        on
+        <RadioBox onChange={setTrickle} />
+      </div>
+      <br />
+      <div>
+        stun{stun && " *"}
+        <br />
+        <RadioBox onChange={setstun} initial={stun} />
       </div>
       <br />
       <input
@@ -69,7 +66,7 @@ const App: FC = () => {
           console.log("create");
           setRoomLabel("room:" + roomId + " create");
           setRoomId("");
-          const rtc = await create(roomId, trickle);
+          const rtc = await create(roomId, trickle, stun);
           setRTC(rtc);
           loadStream(rtc);
         }}
@@ -81,7 +78,7 @@ const App: FC = () => {
           console.log("join");
           setRoomLabel("room:" + roomId + " join");
           setRoomId("");
-          const rtc = await join(roomId, trickle);
+          const rtc = await join(roomId, trickle, stun);
           setRTC(rtc);
           loadStream(rtc);
         }}
