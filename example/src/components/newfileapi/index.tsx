@@ -4,10 +4,11 @@ import useFile from "../../hooks/useFile";
 
 const label = "example_file";
 
-const NewFileApi: FC<{ peer: WebRTC }> = ({ peer }) => {
+const NewFileApi: FC<{ peer?: WebRTC }> = ({ peer }) => {
   const [_, setFile, onSetFile] = useFile();
 
   useEffect(() => {
+    if (!peer) return;
     peer.onData.subscribe(msg => {
       console.log(msg);
       if (msg.label === label) {
@@ -19,7 +20,7 @@ const NewFileApi: FC<{ peer: WebRTC }> = ({ peer }) => {
         anchor.click();
       }
     });
-  }, []);
+  }, [peer]);
 
   onSetFile(async file => {
     const abs = await blob2Arraybuffer(file);

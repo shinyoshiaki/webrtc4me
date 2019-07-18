@@ -3,7 +3,7 @@ import SetupServices from "./services";
 
 export type Message = {
   label: string | "datachannel";
-  data: any;
+  data: string | ArrayBuffer;
   nodeId: string;
 };
 
@@ -149,7 +149,7 @@ export default class WebRTC {
   hangUp() {
     this.isDisconnected = true;
     this.isConnected = false;
-    this.onDisconnect.executeNull();
+    this.onDisconnect.execute(null);
     this.disconnect();
   }
 
@@ -281,7 +281,7 @@ export default class WebRTC {
       channel.onopen = () => {
         if (!this.isConnected) {
           this.isConnected = true;
-          this.onConnect.executeNull();
+          this.onConnect.execute(null);
         }
         resolve();
       };

@@ -76,14 +76,16 @@ export default class Stream {
         peer.send(JSON.stringify(sdp), this.label + "_offer");
       });
       peer.onData.once(raw => {
-        if (raw.label === this.label + "_answer") {
-          newPeer.setSdp(JSON.parse(raw.data));
+        const { label, data } = raw;
+        if (label === this.label + "_answer" && typeof data === "string") {
+          newPeer.setSdp(JSON.parse(data));
         }
       });
     } else {
       peer.onData.once(raw => {
-        if (raw.label === this.label + "_offer") {
-          newPeer.setSdp(JSON.parse(raw.data));
+        const { label, data } = raw;
+        if (label === this.label + "_offer" && typeof data === "string") {
+          newPeer.setSdp(JSON.parse(data));
           newPeer.onSignal.once(sdp => {
             peer.send(JSON.stringify(sdp), this.label + "_answer");
           });

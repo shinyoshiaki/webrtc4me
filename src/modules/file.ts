@@ -1,12 +1,22 @@
 import WebRTC from "../core";
-import { Subject, Observable } from "rxjs";
 import Event from "rx.mini";
+
+const Downloading = (now: number, size: number) => ({
+  type: "downloading" as const,
+  payload: { now, size }
+});
+
+const Downloaded = (chunks: ArrayBuffer[], name: string) => ({
+  type: "downloaded" as const,
+  payload: { chunks, name }
+});
+
+type Actions = ReturnType<typeof Downloading> | ReturnType<typeof Downloaded>;
 
 const chunkSize = 16000;
 
-export function getSliceArrayBuffer(blob: Blob): Observable<any> {
-  const subject = new Subject<Actions>();
-  const state = subject.asObservable();
+export function getSliceArrayBuffer(blob: Blob) {
+  const subject = new Event<ArrayBuffer>();
 
   const r = new FileReader(),
     blobSlice = File.prototype.slice,
@@ -20,7 +30,7 @@ export function getSliceArrayBuffer(blob: Blob): Observable<any> {
     currentChunk++;
     if (currentChunk <= chunknum) {
       loadNext();
-      subject.next(chunk);
+      subject.execute(chunk);
     } else {
       subject.complete();
     }
@@ -31,24 +41,9 @@ export function getSliceArrayBuffer(blob: Blob): Observable<any> {
     r.readAsArrayBuffer(blobSlice.call(blob, start, end));
   }
   loadNext();
-  return state;
+
+  return subject;
 }
-
-const Downloading = (now: number, size: number) => {
-  return {
-    type: "downloading" as const,
-    payload: { now, size }
-  };
-};
-
-const Downloaded = (chunks: ArrayBuffer[], name: string) => {
-  return {
-    type: "downloaded" as const,
-    payload: { chunks, name }
-  };
-};
-
-type Actions = ReturnType<typeof Downloading> | ReturnType<typeof Downloaded>;
 
 export default class FileShare {
   private chunks: ArrayBuffer[] = [];
@@ -61,7 +56,7 @@ export default class FileShare {
     peer.onData.subscribe(raw => {
       const { label, data } = raw;
       if (label === this.label) {
-        try {
+        if (typeof data === "string") {
           const obj = JSON.parse(data);
           switch (obj.state) {
             case "start":
@@ -79,9 +74,11 @@ export default class FileShare {
               this.name = "";
               break;
           }
-        } catch (error) {
+        } else {
           this.chunks.push(data);
-          this.event.execute(Downloading(this.chunks.length, this.size));
+          this.event.execute(
+            Downloading(this.chunks.length * chunkSize, this.size)
+          );
         }
       }
     });
@@ -104,8 +101,8 @@ export default class FileShare {
     this.sendStart(blob.name, blob.size);
     getSliceArrayBuffer(blob).subscribe(
       chunk => this.sendChunk(chunk),
-      () => {},
-      () => this.sendEnd()
+      () => this.sendEnd(),
+      () => {}
     );
   }
 }
