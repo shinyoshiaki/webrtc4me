@@ -76,7 +76,9 @@ export default class FileShare {
           }
         } else {
           this.chunks.push(data);
-          this.event.execute(Downloading(this.chunks.length, this.size));
+          this.event.execute(
+            Downloading(this.chunks.length * chunkSize, this.size)
+          );
         }
       }
     });
@@ -99,8 +101,8 @@ export default class FileShare {
     this.sendStart(blob.name, blob.size);
     getSliceArrayBuffer(blob).subscribe(
       chunk => this.sendChunk(chunk),
-      () => {},
-      () => this.sendEnd()
+      () => this.sendEnd(),
+      () => {}
     );
   }
 }

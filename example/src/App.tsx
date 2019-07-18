@@ -4,23 +4,15 @@ import WebRTC, { getLocalVideo } from "../../src";
 import FileShareExample from "./components/fileshare";
 import NewFileApi from "./components/newfileapi";
 import RadioBox from "./components/radiobox";
+import TextShare from "./components/textshare";
 
 const App: FC = () => {
   const [roomId, setRoomId] = useState("");
   const [roomLabel, setRoomLabel] = useState("");
-  const [text, setText] = useState("");
   const [trickle, setTrickle] = useState(false);
   const [stun, setstun] = useState(true);
   const [rtc, setRTC] = useState<WebRTC | undefined>(undefined);
   const videoRef = useRef<any | undefined>(undefined);
-
-  useEffect(() => {
-    if (rtc) {
-      rtc.onData.subscribe(raw => {
-        if (raw.label === "share") setText(raw.data);
-      });
-    }
-  }, [rtc]);
 
   const loadStream = async (peer: WebRTC) => {
     const local = await getLocalVideo();
@@ -92,19 +84,10 @@ const App: FC = () => {
         autoPlay={true}
         style={{ width: "300", height: "400" }}
       />
-      <p>datachannel</p>
-      <input
-        value={text}
-        onChange={e => {
-          setText(e.target.value);
-          if (rtc) rtc.send(e.target.value, "share");
-        }}
-        style={{ width: "40vw" }}
-      />
+      <TextShare peer={rtc} />
       <div style={{ marginTop: 50 }}>
         <FileShareExample peer={rtc} />
       </div>
-      {rtc && <NewFileApi peer={rtc} />}
     </div>
   );
 };

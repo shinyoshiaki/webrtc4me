@@ -1,9 +1,10 @@
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, useState } from "react";
 import useFile from "../../hooks/useFile";
 import WebRTC, { FileShare } from "../../../../src";
 
 const FileShareExample: FC<{ peer?: WebRTC }> = ({ peer }) => {
   const [_, setfile, onSetfile] = useFile();
+  const [progress, setprogress] = useState(0);
 
   useEffect(() => {
     if (peer) {
@@ -20,6 +21,12 @@ const FileShareExample: FC<{ peer?: WebRTC }> = ({ peer }) => {
             anchor.href = url;
             anchor.click();
             break;
+          case "downloading":
+            {
+              const { now, size } = action.payload;
+              setprogress((now / size) * 100);
+            }
+            break;
         }
       });
     }
@@ -34,7 +41,9 @@ const FileShareExample: FC<{ peer?: WebRTC }> = ({ peer }) => {
 
   return (
     <div>
+      <p>fileshare</p>
       <input type="file" onChange={setfile} />
+      <p>{progress}%</p>
     </div>
   );
 };
