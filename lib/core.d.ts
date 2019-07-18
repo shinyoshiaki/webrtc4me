@@ -1,7 +1,7 @@
 /// <reference types="node" />
 export declare type Message = {
     label: string | "datachannel";
-    data: any;
+    data: string | ArrayBuffer;
     nodeId: string;
 };
 declare type Option = {
@@ -28,6 +28,7 @@ export default class WebRTC {
     isConnected: boolean;
     isDisconnected: boolean;
     isOffer: boolean;
+    negotiating: boolean;
     remoteStream: MediaStream | undefined;
     timeoutPing: any | undefined;
     services: import("./services").Services;
@@ -35,7 +36,6 @@ export default class WebRTC {
     private prepareNewConnection;
     hangUp(): void;
     makeOffer(): void;
-    negotiating: boolean;
     private negotiationSetting;
     private setAnswer;
     private makeAnswer;

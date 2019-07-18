@@ -1,7 +1,5 @@
 import WebRTC from "../core";
-import { Observable } from "rxjs";
 import Event from "rx.mini";
-export declare function getSliceArrayBuffer(blob: Blob): Observable<any>;
 declare const Downloading: (now: number, size: number) => {
     type: "downloading";
     payload: {
@@ -17,6 +15,7 @@ declare const Downloaded: (chunks: ArrayBuffer[], name: string) => {
     };
 };
 declare type Actions = ReturnType<typeof Downloading> | ReturnType<typeof Downloaded>;
+export declare function getSliceArrayBuffer(blob: Blob): Event<ArrayBuffer>;
 export default class FileShare {
     private peer;
     private label?;
