@@ -28,8 +28,7 @@
     "wrtc": "^0.3.5"
   },
   "dependencies": {
-    "rx.mini": "^0.0.7",
-    "rxjs": "^6.4.0"
+    "rx.mini": "^0.1.0"
   },
   "jest": {
     "moduleFileExtensions": [

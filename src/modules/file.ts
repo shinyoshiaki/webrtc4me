@@ -1,5 +1,4 @@
 import WebRTC from "../core";
-import { Subject, Observable } from "rxjs";
 import Event from "rx.mini";
 
 const Downloading = (now: number, size: number) => ({
@@ -16,9 +15,8 @@ type Actions = ReturnType<typeof Downloading> | ReturnType<typeof Downloaded>;
 
 const chunkSize = 16000;
 
-export function getSliceArrayBuffer(blob: Blob): Observable<any> {
-  const subject = new Subject<Actions>();
-  const state = subject.asObservable();
+export function getSliceArrayBuffer(blob: Blob) {
+  const subject = new Event<ArrayBuffer>();
 
   const r = new FileReader(),
     blobSlice = File.prototype.slice,
@@ -32,7 +30,7 @@ export function getSliceArrayBuffer(blob: Blob): Observable<any> {
     currentChunk++;
     if (currentChunk <= chunknum) {
       loadNext();
-      subject.next(chunk);
+      subject.execute(chunk);
     } else {
       subject.complete();
     }
@@ -43,7 +41,8 @@ export function getSliceArrayBuffer(blob: Blob): Observable<any> {
     r.readAsArrayBuffer(blobSlice.call(blob, start, end));
   }
   loadNext();
-  return state;
+
+  return subject;
 }
 
 export default class FileShare {
