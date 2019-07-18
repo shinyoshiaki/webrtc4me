@@ -8,18 +8,13 @@ type Get =
   | ReturnType<typeof getLocalVideo>
   | undefined;
 
-export enum MediaType {
-  video,
-  audio
-}
-
-interface Option {
+type Option = {
   immidiate: boolean;
   get: Get;
   stream: MediaStream;
   track: MediaStreamTrack;
   label: string;
-}
+};
 
 export default class Stream {
   onStream = new Event<MediaStream>();

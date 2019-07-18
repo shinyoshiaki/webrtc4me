@@ -3,8 +3,8 @@ import WebRTC from "../../../src";
 
 const url =
   process.env.NODE_ENV === "production"
-    ? "https://aqueous-earth-75182.herokuapp.com/"
-    : "https://aqueous-earth-75182.herokuapp.com/";
+    ? "https://serene-anchorage-28732.herokuapp.com/"
+    : "https://serene-anchorage-28732.herokuapp.com/";
 
 const socket = client.connect(url);
 
