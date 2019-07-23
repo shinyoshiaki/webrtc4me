@@ -1,8 +1,7 @@
-import React, { useState, useRef, useEffect, FC } from "react";
+import React, { useState, useRef, FC } from "react";
 import { create, join } from "./webrtc/signaling";
 import WebRTC, { getLocalVideo } from "../../src";
 import FileShareExample from "./components/fileshare";
-import NewFileApi from "./components/newfileapi";
 import RadioBox from "./components/radiobox";
 import TextShare from "./components/textshare";
 
@@ -33,7 +32,7 @@ const App: FC = () => {
 
   return (
     <div>
-      <p>webrtc</p>
+      <p>webrtc{rtc && " connected"}</p>
       <div>
         trickle{trickle && " *"}
         <br />
