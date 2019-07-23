@@ -10,10 +10,10 @@ test("trickle", async () => {
       const count = Count(2, resolve);
 
       peerOffer.makeOffer();
-      peerOffer.onSignal.subscribe((sdp: any) => {
+      peerOffer.onSignal.subscribe(sdp => {
         peerAnswer.setSdp(sdp);
       });
-      peerAnswer.onSignal.subscribe((sdp: any) => {
+      peerAnswer.onSignal.subscribe(sdp => {
         peerOffer.setSdp(sdp);
       });
 

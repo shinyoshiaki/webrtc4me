@@ -7,6 +7,10 @@ export type Message = {
   nodeId: string;
 };
 
+export type Signal =
+  | RTCSessionDescription
+  | { type: "candidate"; ice: RTCIceCandidateInit };
+
 type Option = {
   disable_stun: boolean;
   stream: MediaStream;
@@ -28,7 +32,7 @@ export default class WebRTC {
   private pack = Pack();
   private event = this.pack.event;
 
-  onSignal = this.event<any>();
+  onSignal = this.event<Signal>();
   onConnect = this.event();
   onDisconnect = this.event();
   onData = this.event<Message>();
@@ -39,10 +43,11 @@ export default class WebRTC {
   private dataChannels: { [key: string]: RTCDataChannel };
 
   nodeId: string;
+
   isConnected = false;
   isDisconnected = false;
   isOffer = false;
-  negotiating = false;
+  isNegotiating = false;
 
   remoteStream: MediaStream | undefined;
   timeoutPing: any | undefined;
@@ -119,9 +124,13 @@ export default class WebRTC {
 
     peer.onicecandidate = evt => {
       if (!this.isConnected) {
-        if (evt.candidate) {
+        const ice = evt.candidate;
+        if (ice) {
           if (trickle) {
-            this.onSignal.execute({ type: "candidate", ice: evt.candidate });
+            this.onSignal.execute({
+              type: "candidate",
+              ice: JSON.parse(JSON.stringify(ice))
+            });
           }
         } else {
           if (!trickle && peer.localDescription) {
@@ -138,7 +147,7 @@ export default class WebRTC {
     };
 
     peer.onsignalingstatechange = e => {
-      this.negotiating = peer.signalingState != "stable";
+      this.isNegotiating = peer.signalingState != "stable";
     };
 
     return peer;
@@ -157,8 +166,8 @@ export default class WebRTC {
     this.createDatachannel("datachannel");
 
     this.rtc.onnegotiationneeded = async () => {
-      if (this.negotiating || this.rtc.signalingState != "stable") return;
-      this.negotiating = true;
+      if (this.isNegotiating || this.rtc.signalingState != "stable") return;
+      this.isNegotiating = true;
 
       const sdp = await this.rtc.createOffer().catch(console.warn);
 
@@ -180,9 +189,9 @@ export default class WebRTC {
   private negotiationSetting() {
     this.rtc.onnegotiationneeded = async () => {
       if (!this.isConnected) return;
-      if (this.negotiating || this.rtc.signalingState != "stable") return;
+      if (this.isNegotiating || this.rtc.signalingState != "stable") return;
 
-      this.negotiating = true;
+      this.isNegotiating = true;
 
       const offer = await this.rtc.createOffer({}).catch(console.warn);
       if (!offer) return;
@@ -193,7 +202,7 @@ export default class WebRTC {
       const local = this.rtc.localDescription;
       if (local) this.send(JSON.stringify(local), "update");
 
-      this.negotiating = false;
+      this.isNegotiating = false;
     };
   }
 
@@ -228,7 +237,7 @@ export default class WebRTC {
     this.negotiationSetting();
   }
 
-  async setSdp(sdp: any) {
+  async setSdp(sdp: Signal) {
     switch (sdp.type) {
       case "offer":
         this.makeAnswer(sdp);
@@ -346,7 +355,7 @@ export default class WebRTC {
     const err = await sendData();
     if (err) {
       console.warn("retry send data channel");
-      await new Promise(r => setTimeout(r, 10));
+      await new Promise(r => setTimeout(r, 0));
       const error = await sendData();
       console.warn("fail", error, (data as Buffer).length);
     }
