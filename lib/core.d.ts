@@ -22,8 +22,8 @@ export default class WebRTC {
     private pack;
     private event;
     onSignal: import("rx.mini").default<Signal>;
-    onConnect: import("rx.mini").default<unknown>;
-    onDisconnect: import("rx.mini").default<unknown>;
+    onConnect: import("rx.mini").default<undefined>;
+    onDisconnect: import("rx.mini").default<undefined>;
     onData: import("rx.mini").default<Message>;
     onAddTrack: import("rx.mini").default<MediaStream>;
     private wait4DC;
