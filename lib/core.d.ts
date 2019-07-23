@@ -4,6 +4,10 @@ export declare type Message = {
     data: string | ArrayBuffer;
     nodeId: string;
 };
+export declare type Signal = RTCSessionDescription | {
+    type: "candidate";
+    ice: RTCIceCandidateInit;
+};
 declare type Option = {
     disable_stun: boolean;
     stream: MediaStream;
@@ -17,7 +21,7 @@ export default class WebRTC {
     rtc: RTCPeerConnection;
     private pack;
     private event;
-    onSignal: import("rx.mini").default<any>;
+    onSignal: import("rx.mini").default<Signal>;
     onConnect: import("rx.mini").default<unknown>;
     onDisconnect: import("rx.mini").default<unknown>;
     onData: import("rx.mini").default<Message>;
@@ -28,7 +32,7 @@ export default class WebRTC {
     isConnected: boolean;
     isDisconnected: boolean;
     isOffer: boolean;
-    negotiating: boolean;
+    isNegotiating: boolean;
     remoteStream: MediaStream | undefined;
     timeoutPing: any | undefined;
     services: import("./services").Services;
@@ -39,7 +43,7 @@ export default class WebRTC {
     private negotiationSetting;
     private setAnswer;
     private makeAnswer;
-    setSdp(sdp: any): Promise<void>;
+    setSdp(sdp: Signal): Promise<void>;
     private isDCOpend;
     private createDatachannel;
     private dataChannelEvents;
