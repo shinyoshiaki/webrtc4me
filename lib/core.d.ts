@@ -4,9 +4,10 @@ export declare type Message = {
     data: string | ArrayBuffer;
     nodeId: string;
 };
-export declare type Signal = RTCSessionDescription | {
-    type: "candidate";
-    ice: RTCIceCandidateInit;
+export declare type Signal = {
+    type: "candidate" | "offer" | "answer" | "pranswer" | "rollback";
+    ice?: RTCIceCandidateInit;
+    sdp?: string;
 };
 declare type Option = {
     disable_stun: boolean;
