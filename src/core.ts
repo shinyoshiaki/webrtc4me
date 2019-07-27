@@ -7,9 +7,11 @@ export type Message = {
   nodeId: string;
 };
 
-export type Signal =
-  | RTCSessionDescription
-  | { type: "candidate"; ice: RTCIceCandidateInit };
+export type Signal = {
+  type: "candidate" | "offer" | "answer" | "pranswer" | "rollback";
+  ice?: RTCIceCandidateInit;
+  sdp?: string;
+};
 
 type Option = {
   disable_stun: boolean;
@@ -206,17 +208,19 @@ export default class WebRTC {
     };
   }
 
-  private async setAnswer(sdp: RTCSessionDescriptionInit) {
+  private async setAnswer(sdp: Signal) {
     await this.rtc
       .setRemoteDescription(new RTCSessionDescription(sdp))
       .catch(console.warn);
   }
 
-  private async makeAnswer(offer: RTCSessionDescriptionInit) {
+  private async makeAnswer(offer: Signal) {
     const { trickle } = this.opt;
 
     {
-      const err = await this.rtc.setRemoteDescription(offer).catch(() => "err");
+      const err = await this.rtc
+        .setRemoteDescription(new RTCSessionDescription(offer))
+        .catch(() => "err");
       if (err) return;
     }
 
