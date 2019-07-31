@@ -1,30 +1,21 @@
-import React, { FC, useEffect } from "react";
-import WebRTC, { blob2Arraybuffer } from "../../../../src";
+import React, { FC, useEffect, useRef } from "react";
+import WebRTC, { SendFile } from "../../../../src";
 import useFile from "../../hooks/useFile";
 
-const label = "example_file";
-
 const NewFileApi: FC<{ peer?: WebRTC }> = ({ peer }) => {
+  const stateRef = useRef({ sendfile: undefined as undefined | SendFile });
   const [_, setFile, onSetFile] = useFile();
 
   useEffect(() => {
     if (!peer) return;
-    peer.onData.subscribe(msg => {
-      console.log(msg);
-      if (msg.label === label) {
-        const blob = new Blob([msg.data as ArrayBuffer]);
-        const url = window.URL.createObjectURL(blob);
-        const anchor = document.createElement("a");
-        anchor.download = "some.png";
-        anchor.href = url;
-        anchor.click();
-      }
-    });
+    const state = stateRef.current;
+    state.sendfile = new SendFile(peer);
+    stateRef.current = state;
   }, [peer]);
 
   onSetFile(async file => {
-    const abs = await blob2Arraybuffer(file);
-    peer.send(abs, label);
+    const { sendfile } = stateRef.current;
+    sendfile.send(file);
   });
 
   return (
