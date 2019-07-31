@@ -4,6 +4,7 @@ import WebRTC, { getLocalVideo } from "../../src";
 import FileShareExample from "./components/fileshare";
 import RadioBox from "./components/radiobox";
 import TextShare from "./components/textshare";
+import NewFileApi from "./components/newfileapi";
 
 const App: FC = () => {
   const [roomId, setRoomId] = useState("");
@@ -86,6 +87,7 @@ const App: FC = () => {
       <TextShare peer={rtc} />
       <div style={{ marginTop: 50 }}>
         <FileShareExample peer={rtc} />
+        <NewFileApi peer={rtc} />
       </div>
     </div>
   );
