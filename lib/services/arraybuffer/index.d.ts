@@ -4,5 +4,5 @@ export default class ArrayBufferService {
     private origin;
     private memory;
     listen(peer: WebRTC): void;
-    send(ab: ArrayBuffer, origin: string, rtc: RTCDataChannel): Promise<void>;
+    send: (ab: ArrayBuffer, origin: string, dc: RTCDataChannel, pc: RTCPeerConnection) => Promise<void>;
 }
