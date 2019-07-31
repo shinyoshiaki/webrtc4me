@@ -22,11 +22,13 @@ type Option = {
   wrtc: any;
 };
 
-let {
-  RTCPeerConnection,
-  RTCSessionDescription,
-  RTCIceCandidate
-} = window as any;
+let { RTCPeerConnection, RTCSessionDescription, RTCIceCandidate } = (() => {
+  try {
+    return window;
+  } catch (error) {
+    return {} as any;
+  }
+})();
 
 export default class WebRTC {
   rtc: RTCPeerConnection;
@@ -376,20 +378,21 @@ export default class WebRTC {
 
     for (let key in dataChannels) {
       const channel = dataChannels[key];
-      channel.onmessage = null;
-      channel.onopen = null;
-      channel.onclose = null;
-      channel.onerror = null;
+      channel.onmessage = null as any;
+      channel.onopen = null as any;
+      channel.onclose = null as any;
+      channel.onerror = null as any;
       channel.close();
     }
 
-    rtc.oniceconnectionstatechange = null;
-    rtc.onicegatheringstatechange = null;
-    rtc.onsignalingstatechange = null;
-    rtc.onicecandidate = null;
-    rtc.ontrack = null;
-    rtc.ondatachannel = null;
+    rtc.oniceconnectionstatechange = null as any;
+    rtc.onicegatheringstatechange = null as any;
+    rtc.onsignalingstatechange = null as any;
+    rtc.onicecandidate = null as any;
+    rtc.ontrack = null as any;
+    rtc.ondatachannel = null as any;
     rtc.close();
+
     this.rtc = null as any;
 
     this.pack.finishAll();
