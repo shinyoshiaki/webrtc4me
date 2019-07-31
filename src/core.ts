@@ -105,16 +105,16 @@ export default class WebRTC {
         case "failed":
           break;
         case "disconnected":
-          if (this.rtc)
+          if (this.rtc) {
+            this.timeoutPing = setTimeout(() => {
+              this.hangUp();
+            }, 1000);
             try {
-              this.timeoutPing = setTimeout(() => {
-                this.hangUp();
-              }, 2000);
-
               this.send("ping", "live");
             } catch (error) {
               console.warn("disconnected", { error });
             }
+          }
           break;
         case "connected":
           if (this.timeoutPing) clearTimeout(this.timeoutPing);
@@ -343,7 +343,8 @@ export default class WebRTC {
             arrayBufferService.send(
               data,
               label,
-              this.dataChannels[arrayBufferService.label]
+              this.dataChannels[arrayBufferService.label],
+              this.rtc
             );
           } else {
             const err = await this.createDatachannel(label).catch(
@@ -361,7 +362,7 @@ export default class WebRTC {
     const err = await sendData();
     if (err) {
       console.warn("retry send data channel");
-      await new Promise(r => setTimeout(r, 0));
+      await new Promise(r => setTimeout(r));
       const error = await sendData();
       console.warn("fail", error, (data as Buffer).length);
     }
