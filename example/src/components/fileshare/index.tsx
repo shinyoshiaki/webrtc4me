@@ -24,7 +24,7 @@ const FileShareExample: FC<{ peer?: WebRTC }> = ({ peer }) => {
           case "downloading":
             {
               const { now, size } = action.payload;
-              setprogress(parseInt(`${(now / size) * 100}`));
+              setprogress((now / size) * 100);
             }
             break;
         }
