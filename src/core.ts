@@ -343,8 +343,7 @@ export default class WebRTC {
             arrayBufferService.send(
               data,
               label,
-              this.dataChannels[arrayBufferService.label],
-              this.rtc
+              this.dataChannels[arrayBufferService.label]
             );
           } else {
             const err = await this.createDatachannel(label).catch(
