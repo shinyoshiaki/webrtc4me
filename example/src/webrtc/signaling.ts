@@ -30,9 +30,6 @@ export function create(roomId: string, trickle: boolean, stun: boolean) {
       onSignal.unSubscribe();
       resolve(rtc);
     });
-    rtc.onData.subscribe(message => {
-      console.log({ message });
-    });
   });
 }
 
