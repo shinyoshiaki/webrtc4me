@@ -30,6 +30,7 @@
     "wrtc": "^0.4.1"
   },
   "dependencies": {
+    "@msgpack/msgpack": "^1.6.0",
     "rx.mini": "^0.1.0"
   },
   "jest": {

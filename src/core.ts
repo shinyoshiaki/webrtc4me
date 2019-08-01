@@ -332,7 +332,10 @@ export default class WebRTC {
       try {
         if (typeof data === "string") {
           const err = await this.createDatachannel(label).catch(() => "error");
-          if (err) return err;
+          if (err) {
+            console.warn({ err });
+            return err;
+          }
           this.dataChannels[label].send(data);
         } else {
           if (data.byteLength > 16000) {
@@ -344,7 +347,7 @@ export default class WebRTC {
               data,
               label,
               this.dataChannels[arrayBufferService.label],
-              this.rtc
+              this
             );
           } else {
             const err = await this.createDatachannel(label).catch(
