@@ -27,6 +27,7 @@ export default class WebRTC {
     onDisconnect: import("rx.mini").default<undefined>;
     onData: import("rx.mini").default<Message>;
     onAddTrack: import("rx.mini").default<MediaStream>;
+    onOpenDC: import("rx.mini").default<RTCDataChannel>;
     private wait4DC;
     private dataChannels;
     nodeId: string;
@@ -35,8 +36,8 @@ export default class WebRTC {
     isOffer: boolean;
     isNegotiating: boolean;
     remoteStream: MediaStream | undefined;
-    timeoutPing: any | undefined;
-    services: import("./services").Services;
+    private timeoutPing;
+    private arrayBufferService;
     constructor(opt?: Partial<Option>);
     private prepareNewConnection;
     hangUp(): void;

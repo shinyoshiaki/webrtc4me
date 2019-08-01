@@ -1,8 +1,13 @@
 import WebRTC from "../../core";
 export default class ArrayBufferService {
-    label: string;
-    private origin;
+    private peer;
+    private label;
     private memory;
-    listen(peer: WebRTC): void;
-    send(ab: ArrayBuffer, origin: string, rtc: RTCDataChannel): Promise<void>;
+    private onData;
+    constructor(peer: WebRTC);
+    listen: () => Promise<void>;
+    send: (ab: ArrayBuffer, label: string) => Promise<void>;
+    private job;
+    private rpc;
+    private createDC;
 }
