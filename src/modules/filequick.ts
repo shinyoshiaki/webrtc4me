@@ -7,12 +7,9 @@ export default class SendFile {
 
   constructor(private peer: WebRTC) {
     const { unSubscribe } = peer.onData.subscribe(({ label, data }) => {
-      console.log("file quick", label, data);
       if (label === this.label) {
         if (typeof data === "string") {
-          console.log({ data });
           if (this.blob) {
-            console.log("dl");
             const url = window.URL.createObjectURL(this.blob);
             const anchor = document.createElement("a");
             anchor.download = data;

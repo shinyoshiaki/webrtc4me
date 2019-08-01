@@ -1,5 +1,5 @@
 import { Pack, Wait } from "rx.mini";
-import SetupServices from "./services";
+import ArrayBufferService from "./services/arraybuffer";
 
 export type Message = {
   label: string | "datachannel";
@@ -41,6 +41,7 @@ export default class WebRTC {
   onDisconnect = this.event<undefined>();
   onData = this.event<Message>();
   onAddTrack = this.event<MediaStream>();
+  onOpenDC = this.event<RTCDataChannel>();
 
   private wait4DC = new Wait<RTCDataChannel | undefined>();
 
@@ -54,13 +55,12 @@ export default class WebRTC {
   isNegotiating = false;
 
   remoteStream: MediaStream | undefined;
-  timeoutPing: any | undefined;
+  private timeoutPing: any | undefined;
 
-  services = SetupServices();
+  private arrayBufferService = new ArrayBufferService(this);
 
   constructor(public opt: Partial<Option> = {}) {
     const { nodeId, stream, track, wrtc } = opt;
-    const { arrayBufferService } = this.services;
 
     if (wrtc) {
       RTCPeerConnection = wrtc.RTCPeerConnection;
@@ -78,8 +78,6 @@ export default class WebRTC {
     } else if (track) {
       this.rtc.addTrack(track);
     }
-
-    arrayBufferService.listen(this);
   }
 
   private prepareNewConnection() {
@@ -148,6 +146,7 @@ export default class WebRTC {
       const dataChannel = evt.channel;
       this.dataChannels[dataChannel.label] = dataChannel;
       this.dataChannelEvents(dataChannel);
+      this.onOpenDC.execute(dataChannel);
     };
 
     peer.onsignalingstatechange = e => {
@@ -327,24 +326,19 @@ export default class WebRTC {
 
   async send(data: string | ArrayBuffer | Buffer, label = "datachannel") {
     if (!this.rtc) return;
-    const { arrayBufferService } = this.services;
+    const { arrayBufferService } = this;
     const sendData = async () => {
       try {
         if (typeof data === "string") {
           const err = await this.createDatachannel(label).catch(() => "error");
-          if (err) return err;
+          if (err) {
+            console.warn({ err });
+            return err;
+          }
           this.dataChannels[label].send(data);
         } else {
           if (data.byteLength > 16000) {
-            const err = await this.createDatachannel(
-              arrayBufferService.label
-            ).catch(() => "error");
-            if (err) return err;
-            arrayBufferService.send(
-              data,
-              label,
-              this.dataChannels[arrayBufferService.label]
-            );
+            await arrayBufferService.send(data, label);
           } else {
             const err = await this.createDatachannel(label).catch(
               () => "error"
