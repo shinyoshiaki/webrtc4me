@@ -16,7 +16,7 @@ export function create(roomId: string, trickle: boolean, stun: boolean) {
   return new Promise<WebRTC>(resolve => {
     const rtc = new WebRTC({ nodeId: "answer", trickle, disable_stun: !stun });
     socket.emit("create", { roomId });
-    socket.on("sdp", (data: { sdp: string }) => {
+    socket.on("sdp", (data: { sdp: any }) => {
       console.log({ data });
       rtc.setSdp(data.sdp);
     });
@@ -45,7 +45,7 @@ export function join(roomId: string, trickle: boolean, stun: boolean) {
     socket.on("join", () => {
       rtc.makeOffer();
     });
-    socket.on("sdp", (data: { sdp: string }) => {
+    socket.on("sdp", (data: { sdp: any }) => {
       console.log({ data });
       rtc.setSdp(data.sdp);
     });
