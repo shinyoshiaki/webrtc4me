@@ -1,14 +1,4 @@
 /// <reference types="node" />
-export declare type Message = {
-    label: string | "datachannel";
-    data: string | ArrayBuffer;
-    nodeId: string;
-};
-export declare type Signal = {
-    type: "candidate" | "offer" | "answer" | "pranswer" | "rollback";
-    ice?: RTCIceCandidateInit;
-    sdp?: string;
-};
 declare type Option = {
     disable_stun: boolean;
     stream: MediaStream;
@@ -54,4 +44,16 @@ export default class WebRTC {
     addTrack(track: MediaStreamTrack, stream: MediaStream): void;
     private disconnect;
 }
+declare type DataType = "string" | "ArrayBuffer" | "object";
+export declare type Message = {
+    label: string | "datachannel";
+    data: string | ArrayBuffer | object;
+    dataType: DataType;
+    nodeId: string;
+};
+export declare type Signal = {
+    type: "candidate" | "offer" | "answer" | "pranswer" | "rollback";
+    ice?: RTCIceCandidateInit;
+    sdp?: string;
+};
 export {};
