@@ -6,24 +6,22 @@ export default class SendFile {
   private blob?: Blob;
 
   constructor(private peer: WebRTC) {
-    const { unSubscribe } = peer.onData.subscribe(
-      ({ label, data, dataType }) => {
-        if (label === this.label) {
-          if (dataType === "string") {
-            if (this.blob) {
-              const url = window.URL.createObjectURL(this.blob);
-              const anchor = document.createElement("a");
-              anchor.download = data as any;
-              anchor.href = url;
-              anchor.click();
-            }
-          } else if (dataType === "ArrayBuffer") {
-            this.blob = new Blob([data as any]);
-            peer.send("ready", this.label);
+    const { unSubscribe } = peer.onData.subscribe(({ label, data }) => {
+      if (label === this.label) {
+        if (typeof data === "string") {
+          if (this.blob) {
+            const url = window.URL.createObjectURL(this.blob);
+            const anchor = document.createElement("a");
+            anchor.download = data;
+            anchor.href = url;
+            anchor.click();
           }
+        } else {
+          this.blob = new Blob([data]);
+          peer.send("ready", this.label);
         }
       }
-    );
+    });
     peer.onDisconnect.once(unSubscribe);
   }
 

@@ -11,10 +11,11 @@ export default class FileShare {
 
   constructor(private peer: WebRTC, private label?: string) {
     if (!label) label = "file";
-    peer.onData.subscribe(({ label, data, dataType }) => {
+    peer.onData.subscribe(raw => {
+      const { label, data } = raw;
       if (label === this.label) {
-        if (dataType === "string") {
-          const obj = JSON.parse(data as any);
+        if (typeof data === "string") {
+          const obj = JSON.parse(data);
           switch (obj.state) {
             case "start":
               this.chunks = [];
@@ -31,8 +32,8 @@ export default class FileShare {
               this.name = "";
               break;
           }
-        } else if (dataType === "ArrayBuffer") {
-          this.chunks.push(data as any);
+        } else {
+          this.chunks.push(data);
           this.event.execute(
             Downloading(this.chunks.length * chunkSize, this.size)
           );
