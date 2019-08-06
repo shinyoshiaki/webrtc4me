@@ -42,7 +42,7 @@ export default class WebRTC {
     private prepareNewConnection;
     hangUp(): void;
     makeOffer(): void;
-    private negotiationSetting;
+    private updateNegotiation;
     private setAnswer;
     private makeAnswer;
     setSdp(sdp: Signal): Promise<void>;
@@ -50,6 +50,7 @@ export default class WebRTC {
     private createDatachannel;
     private dataChannelEvents;
     send(data: string | ArrayBuffer | Buffer, label?: string): Promise<void>;
+    sendJson(payload: object, label?: string): Promise<string | undefined>;
     addTrack(track: MediaStreamTrack, stream: MediaStream): void;
     private disconnect;
 }
