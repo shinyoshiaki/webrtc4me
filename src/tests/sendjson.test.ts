@@ -12,8 +12,6 @@ test("send json", async () => {
 
   peerOffer.sendJson({ msg: "hello" });
   const msg = await peerAnswer.onData.asPromise();
-  expect(msg.dataType).toBe("object");
-
   const data: { msg: string } = msg.data as any;
   expect(data).toEqual({ msg: "hello" });
 

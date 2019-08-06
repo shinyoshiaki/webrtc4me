@@ -1,6 +1,18 @@
 import { Pack, Wait } from "rx.mini";
 import ArrayBufferService from "./services/arraybuffer";
 
+export type Message = {
+  label: string | "datachannel";
+  data: string | ArrayBuffer;
+  nodeId: string;
+};
+
+export type Signal = {
+  type: "candidate" | "offer" | "answer" | "pranswer" | "rollback";
+  ice?: RTCIceCandidateInit;
+  sdp?: string;
+};
+
 type Option = {
   disable_stun: boolean;
   stream: MediaStream;
@@ -300,25 +312,19 @@ export default class WebRTC {
             if (data === "ping") this.send("pong", "live");
             else if (this.timeoutPing) clearTimeout(this.timeoutPing);
           } else {
-            let dataType: DataType = "string";
-
             if (typeof data === "string") {
               try {
                 const check = JSON.parse(data);
                 if (check.it87nc247 === "json") {
-                  dataType = "object";
                   data = check.payload;
                 }
               } catch (error) {}
-            } else {
-              dataType = "ArrayBuffer";
             }
 
             this.onData.execute({
               label: channel.label as string | "datachannel",
               data,
-              nodeId: this.nodeId,
-              dataType
+              nodeId: this.nodeId
             });
           }
         } catch (error) {
@@ -410,18 +416,3 @@ export default class WebRTC {
     this.pack.finishAll();
   }
 }
-
-type DataType = "string" | "ArrayBuffer" | "object";
-
-export type Message = {
-  label: string | "datachannel";
-  data: string | ArrayBuffer | object;
-  dataType: DataType;
-  nodeId: string;
-};
-
-export type Signal = {
-  type: "candidate" | "offer" | "answer" | "pranswer" | "rollback";
-  ice?: RTCIceCandidateInit;
-  sdp?: string;
-};
