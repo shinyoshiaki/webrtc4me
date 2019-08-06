@@ -32,4 +32,6 @@ test("vanilla", async () => {
       });
     });
   await test();
+  peerAnswer.hangUp();
+  peerOffer.hangUp();
 });

@@ -34,4 +34,6 @@ test("trickle", async () => {
       });
     });
   await test();
+  peerAnswer.hangUp();
+  peerOffer.hangUp();
 });

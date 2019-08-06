@@ -24,8 +24,7 @@ export default class ArrayBufferService {
       }
     });
 
-    this.onData.subscribe(ev => {
-      const { data } = ev;
+    const { unSubscribe } = this.onData.subscribe(({ data }) => {
       if (typeof data === "string") {
         const { type, payload } = JSON.parse(data);
         switch (type) {
@@ -43,6 +42,8 @@ export default class ArrayBufferService {
         this.memory.push(data);
       }
     });
+
+    peer.onDisconnect.once(unSubscribe);
   };
 
   send = async (ab: ArrayBuffer, label: string) => {

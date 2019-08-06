@@ -45,7 +45,7 @@ export default class WebRTC {
 
   private wait4DC = new Wait<RTCDataChannel | undefined>();
 
-  private dataChannels: { [key: string]: RTCDataChannel };
+  private dataChannels: { [key: string]: RTCDataChannel } = {};
 
   nodeId: string;
 
@@ -68,7 +68,6 @@ export default class WebRTC {
       RTCIceCandidate = wrtc.RTCIceCandidate;
     }
 
-    this.dataChannels = {};
     this.nodeId = nodeId || "peer";
 
     this.rtc = this.prepareNewConnection();
@@ -124,14 +123,13 @@ export default class WebRTC {
       }
     };
 
-    peer.onicecandidate = evt => {
+    peer.onicecandidate = ({ candidate }) => {
       if (!this.isConnected) {
-        const ice = evt.candidate;
-        if (ice) {
+        if (candidate) {
           if (trickle) {
             this.onSignal.execute({
               type: "candidate",
-              ice: JSON.parse(JSON.stringify(ice))
+              ice: JSON.parse(JSON.stringify(candidate))
             });
           }
         } else {
@@ -142,14 +140,13 @@ export default class WebRTC {
       }
     };
 
-    peer.ondatachannel = evt => {
-      const dataChannel = evt.channel;
-      this.dataChannels[dataChannel.label] = dataChannel;
-      this.dataChannelEvents(dataChannel);
-      this.onOpenDC.execute(dataChannel);
+    peer.ondatachannel = ({ channel }) => {
+      this.dataChannels[channel.label] = channel;
+      this.dataChannelEvents(channel);
+      this.onOpenDC.execute(channel);
     };
 
-    peer.onsignalingstatechange = e => {
+    peer.onsignalingstatechange = () => {
       this.isNegotiating = peer.signalingState != "stable";
     };
 
@@ -166,14 +163,18 @@ export default class WebRTC {
   makeOffer() {
     this.isOffer = true;
     const { trickle } = this.opt;
+
     this.createDatachannel("datachannel");
 
     this.rtc.onnegotiationneeded = async () => {
-      if (this.isNegotiating || this.rtc.signalingState != "stable") return;
+      if (this.isNegotiating || this.rtc.signalingState != "stable") {
+        console.warn("already negotiating");
+        return;
+      }
+
       this.isNegotiating = true;
 
       const sdp = await this.rtc.createOffer().catch(console.warn);
-
       if (!sdp) return;
 
       const err = await this.rtc.setLocalDescription(sdp).catch(() => "err");
@@ -185,21 +186,24 @@ export default class WebRTC {
         this.onSignal.execute(local);
       }
 
-      this.negotiationSetting();
+      this.updateNegotiation();
     };
   }
 
-  private negotiationSetting() {
+  private updateNegotiation() {
     this.rtc.onnegotiationneeded = async () => {
       if (!this.isConnected) return;
-      if (this.isNegotiating || this.rtc.signalingState != "stable") return;
+      if (this.isNegotiating || this.rtc.signalingState != "stable") {
+        console.warn("already negotiating");
+        return;
+      }
 
       this.isNegotiating = true;
 
-      const offer = await this.rtc.createOffer({}).catch(console.warn);
-      if (!offer) return;
+      const sdp = await this.rtc.createOffer().catch(console.warn);
+      if (!sdp) return;
 
-      const err = await this.rtc.setLocalDescription(offer).catch(() => "err");
+      const err = await this.rtc.setLocalDescription(sdp).catch(() => "err");
       if (err) return;
 
       const local = this.rtc.localDescription;
@@ -222,30 +226,31 @@ export default class WebRTC {
       const err = await this.rtc
         .setRemoteDescription(new RTCSessionDescription(offer))
         .catch(() => "err");
-      if (err) return;
+      if (err) return err;
     }
 
     const answer = await this.rtc.createAnswer().catch(console.warn);
-    if (!answer) return;
+    if (!answer) return "err";
 
     {
       const err = await this.rtc.setLocalDescription(answer).catch(() => "err");
-      if (err) return;
+      if (err) return err;
     }
 
     const local = this.rtc.localDescription;
-    if (!local) return;
+    if (!local) return "err";
 
     if (this.isConnected) this.send(JSON.stringify(local), "update");
     else if (trickle) this.onSignal.execute(local);
 
-    this.negotiationSetting();
+    this.updateNegotiation();
   }
 
   async setSdp(sdp: Signal) {
     switch (sdp.type) {
       case "offer":
-        this.makeAnswer(sdp);
+        const err = await this.makeAnswer(sdp);
+        err && console.warn(err);
         break;
       case "answer":
         this.setAnswer(sdp);
@@ -288,8 +293,8 @@ export default class WebRTC {
     }
   }
 
-  private dataChannelEvents(channel: RTCDataChannel) {
-    return new Promise(resolve => {
+  private dataChannelEvents = (channel: RTCDataChannel) =>
+    new Promise(resolve => {
       channel.onopen = () => {
         if (!this.isConnected) {
           this.isConnected = true;
@@ -298,19 +303,27 @@ export default class WebRTC {
         resolve();
       };
 
-      channel.onmessage = async event => {
-        if (!event) return;
+      channel.onmessage = async ({ data }) => {
         try {
           if (channel.label === "update") {
-            const sdp = JSON.parse(event.data);
+            const sdp = JSON.parse(data);
             this.setSdp(sdp);
           } else if (channel.label === "live") {
-            if (event.data === "ping") this.send("pong", "live");
+            if (data === "ping") this.send("pong", "live");
             else if (this.timeoutPing) clearTimeout(this.timeoutPing);
           } else {
+            if (typeof data === "string") {
+              try {
+                const check = JSON.parse(data);
+                if (check.it87nc247 === "json") {
+                  data = check.payload;
+                }
+              } catch (error) {}
+            }
+
             this.onData.execute({
               label: channel.label as string | "datachannel",
-              data: event.data,
+              data,
               nodeId: this.nodeId
             });
           }
@@ -320,9 +333,8 @@ export default class WebRTC {
       };
 
       channel.onerror = err => console.warn(err);
-      channel.onclose = () => {};
+      channel.onclose = () => delete this.dataChannels[channel.label];
     });
-  }
 
   async send(data: string | ArrayBuffer | Buffer, label = "datachannel") {
     if (!this.rtc) return;
@@ -357,8 +369,20 @@ export default class WebRTC {
       console.warn("retry send data channel");
       await new Promise(r => setTimeout(r));
       const error = await sendData();
-      console.warn("fail", error, (data as Buffer).length);
+      console.warn("fail", error);
     }
+  }
+
+  async sendJson(payload: object, label = "datachannel") {
+    if (!this.rtc) return;
+    const err = await this.createDatachannel(label).catch(() => "error");
+    if (err) {
+      console.warn({ err });
+      return err;
+    }
+    this.dataChannels[label].send(
+      JSON.stringify({ it87nc247: "json", payload })
+    );
   }
 
   addTrack(track: MediaStreamTrack, stream: MediaStream) {
