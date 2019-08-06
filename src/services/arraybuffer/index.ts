@@ -33,7 +33,8 @@ export default class ArrayBufferService {
             peer.onData.execute({
               label: payload,
               data: ab,
-              nodeId: peer.nodeId
+              nodeId: peer.nodeId,
+              dataType: "ArrayBuffer"
             });
             this.memory = [];
           }
