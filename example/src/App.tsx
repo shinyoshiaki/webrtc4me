@@ -14,7 +14,7 @@ const App: FC = () => {
   const [roomId, setRoomId, clear] = useInput();
   const [roomLabel, setRoomLabel] = useState("");
   const [trickle, setTrickle] = useState(false);
-  const [stun, setstun] = useState(false);
+  const [stun, setstun] = useState(true);
   const [rtc, setRTC] = useState<WebRTC | undefined>(undefined);
   const event = useRef({ stream: new Event<MediaStream>() });
 
