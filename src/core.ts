@@ -383,6 +383,14 @@ export default class WebRTC {
     this.rtc.addTrack(track, stream);
   }
 
+  addStream(stream: MediaStream) {
+    try {
+      this.rtc.addTrack(stream.getVideoTracks()[0], stream);
+    } catch (error) {
+      console.warn(error);
+    }
+  }
+
   private disconnect() {
     const { rtc, dataChannels } = this;
 
