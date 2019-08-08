@@ -42,6 +42,7 @@ export default class WebRTC {
     send(data: string | ArrayBuffer | Buffer, label?: string): Promise<void>;
     sendJson(payload: object, label?: string): Promise<string | undefined>;
     addTrack(track: MediaStreamTrack, stream: MediaStream): void;
+    addStream(stream: MediaStream): void;
     private disconnect;
 }
 declare type DataType = "string" | "ArrayBuffer" | "object";
