@@ -3466,6 +3466,11 @@ ts-node@^8.3.0:
     source-map-support "^0.5.6"
     yn "^3.0.0"
 
+ts-toolbelt@^3.2.24:
+  version "3.2.24"
+  resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-3.2.24.tgz#948fab52fab0f169bd0047e56f924760f8e6179a"
+  integrity sha512-bBzpseWAp/db3JFbneBA0aG7xxC4iRLzeqyKKr0ee1l0XHNcTi7LtypmENWnPkqPOiUcm061mlcC+S1SgfYkkw==
+
 tslib@^1.9.3:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"

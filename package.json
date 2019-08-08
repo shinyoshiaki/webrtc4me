@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "@msgpack/msgpack": "^1.6.0",
-    "rx.mini": "^0.1.0"
+    "rx.mini": "^0.1.0",
+    "ts-toolbelt": "^3.2.24"
   },
   "jest": {
     "moduleFileExtensions": [
