@@ -3,6 +3,10 @@
 # NPM
 https://www.npmjs.com/package/webrtc4me
 
+`yarn add webrtc4me`  
+or  
+`npm i webrtc4me --save`  
+
 # What is this?
 
 This is a webrtc wrapper library for browser and node.js.  
