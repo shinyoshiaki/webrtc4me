@@ -195,7 +195,10 @@ export default class WebRTC {
       if (err) return;
 
       const local = this.rtc.localDescription;
-      if (local) this.send(JSON.stringify(local), "update");
+      if (local) {
+        console.log({ local });
+        this.send(JSON.stringify(local), "update");
+      }
 
       this.isNegotiating = false;
     };
