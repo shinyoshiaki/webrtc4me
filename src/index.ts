@@ -4,6 +4,7 @@ import FileShare from "./modules/file";
 import { getLocalVideo } from "./utill/media";
 import { blob2Arraybuffer } from "./utill/arraybuffer";
 import SendFile from "./modules/filequick";
+import Signaling from "./modules/signaling";
 
 export default WebRTC;
 
@@ -14,5 +15,6 @@ export {
   blob2Arraybuffer,
   Signal,
   Message,
-  SendFile
+  SendFile,
+  Signaling
 };
