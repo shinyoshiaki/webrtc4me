@@ -1,4 +1,5 @@
 import { Pack, Wait } from "rx.mini";
+
 import ArrayBufferService from "./services/arraybuffer";
 
 type Option = {
@@ -196,7 +197,6 @@ export default class WebRTC {
 
       const local = this.rtc.localDescription;
       if (local) {
-        console.log({ local });
         this.send(JSON.stringify(local), "update");
       }
 

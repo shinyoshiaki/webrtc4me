@@ -1,6 +1,7 @@
-import WebRTC from "../../core";
-import { sliceArraybuffer, mergeArraybuffer } from "../../utill/arraybuffer";
+import { mergeArraybuffer, sliceArraybuffer } from "../../utill/arraybuffer";
+
 import Event from "rx.mini";
+import WebRTC from "../../core";
 
 export default class ArrayBufferService {
   private label = "wrtc4me_abservice";
@@ -64,12 +65,11 @@ export default class ArrayBufferService {
         continue;
       }
       const chunk = chunks[i];
-      console.log({ i }, chunk);
       try {
         dc.send(chunk);
         i++;
       } catch (error) {
-        console.log({ error });
+        console.warn({ error });
       }
     }
   };
@@ -81,7 +81,7 @@ export default class ArrayBufferService {
     try {
       dc.send(JSON.stringify(msg));
     } catch (error) {
-      console.log({ error });
+      console.warn({ error });
     }
   };
 
