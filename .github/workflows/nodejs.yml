@@ -24,6 +24,7 @@ jobs:
 
       - name: build
         run: |
+          yarn install
           yarn deploy
 
       - name: build_react
