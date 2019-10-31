@@ -37,8 +37,8 @@ jobs:
 
       - name: ready_deploy
         run: |
-          mkdir publish
-          mv * ./publish
+          mkdir deploy
+          mv * ./deploy
 
       - name: deploy
         uses: peaceiris/actions-gh-pages@v2.5.0
