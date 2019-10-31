@@ -25,7 +25,8 @@ jobs:
       - name: build
         run: |
           yarn install
-          yarn deploy
+          yarn test
+          yarn update
 
       - name: build_react
         run: |
