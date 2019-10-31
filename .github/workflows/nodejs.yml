@@ -39,6 +39,7 @@ jobs:
         run: |
           mkdir deploy
           shopt -s extglob
+          shopt -s dotglob
           mv !(deploy) deploy
 
       - name: deploy
