@@ -1,7 +1,7 @@
-import { mergeArraybuffer, sliceArraybuffer } from "../../utill/arraybuffer";
+import { mergeArraybuffer, sliceArraybuffer } from "../utill/arraybuffer";
 
 import Event from "rx.mini";
-import WebRTC from "../../core";
+import WebRTC from "../core";
 
 export default class ArrayBufferService {
   private label = "wrtc4me_abservice";
