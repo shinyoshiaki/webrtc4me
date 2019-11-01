@@ -1,7 +1,3 @@
-dist
 node_modules
 tsconfig.tsbuildinfo
 **/tsconfig.tsbuildinfo
-lib/tsconfig.tsbuildinfo
-build
-lib
