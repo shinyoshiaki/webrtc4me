@@ -1,0 +1,53 @@
+{
+  "name": "webrtc4me",
+  "version": "0.5.15",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "update": "rm -rf lib && npm run build",
+    "type": "tsc --noEmit",
+    "test": "npm run type && jest --forceExit",
+    "publish": "npm publish --access=public",
+    "react": "cd example && npm run start",
+    "react:build": "cd example && npm run build",
+    "deploy": "npm run test && npm run update && npm run react:build",
+    "ts-node-test": "ts-node --project ./tsconfig.json ./src/tests/tsnode.ts"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.13",
+    "@types/node": "^11.13.6",
+    "@types/webrtc": "^0.0.23",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "ts-node": "^8.3.0",
+    "tslib": "^1.9.3",
+    "typescript": "^3.4.4",
+    "wrtc": "^0.4.1"
+  },
+  "dependencies": {
+    "rx.mini": "^0.1.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "**/*.test.ts"
+    ]
+  }
+}
