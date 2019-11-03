@@ -38,6 +38,10 @@ jobs:
       - name: ready_deploy
         run: |
           mkdir deploy
+          shopt -s dotglob
+          mv .gitignore deploy
+          mv .github deploy
+          mv package.json deploy
           mv example/build deploy/page
           mv lib deploy
           mv README.md deploy
