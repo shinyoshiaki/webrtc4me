@@ -38,6 +38,7 @@ jobs:
       - name: ready_deploy
         run: |
           mkdir deploy
+          mv src deploy
           mv lib deploy
           mv example/build deploy/page
           mv package.json deploy            
