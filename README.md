@@ -13,8 +13,8 @@ look `src/tests/`  `example/`
 ## vanilla ice
 
 ```typescript
-  const peerOffer = new WebRTC({ nodeId: "offer" });
-  const peerAnswer = new WebRTC({ nodeId: "answer" });
+  const peerOffer = new WebRTC();
+  const peerAnswer = new WebRTC();
 
   peerOffer.makeOffer();
   const offer = await peerOffer.onSignal.asPromise();
@@ -31,8 +31,8 @@ look `src/tests/`  `example/`
 ## trickle ice
 
 ```typescript
-    const peerOffer = new WebRTC({ nodeId: "offer", trickle: true });
-    const peerAnswer = new WebRTC({ nodeId: "answer", trickle: true });
+    const peerOffer = new WebRTC({ trickle: true });
+    const peerAnswer = new WebRTC({ trickle: true });
       
 
     peerOffer.makeOffer();
