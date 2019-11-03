@@ -37,13 +37,10 @@ jobs:
 
       - name: ready_deploy
         run: |
-          mkdir deploy
-          mv package.json deploy            
+          mkdir deploy          
           mv README.md deploy
-          mv tsconfig.json deploy
-          mv src deploy
           mv lib deploy
-          mv example/build deploy/page          
+          mv example/build deploy/page
           shopt -s dotglob
           mv .gitignore deploy
           mv .github deploy
