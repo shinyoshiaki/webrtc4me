@@ -38,13 +38,13 @@ jobs:
       - name: ready_deploy
         run: |
           mkdir deploy
+          mv lib deploy
+          mv example/build deploy/page
+          mv package.json deploy            
+          mv README.md deploy
           shopt -s dotglob
           mv .gitignore deploy
           mv .github deploy
-          mv package.json deploy
-          mv example/build deploy/page
-          mv lib deploy
-          mv README.md deploy
 
       - name: deploy
         uses: peaceiris/actions-gh-pages@v2.5.0
