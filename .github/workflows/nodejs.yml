@@ -38,7 +38,7 @@ jobs:
       - name: ready_deploy
         run: |
           mkdir deploy
-          mv example/build deploy
+          mv example/build deploy/page
           mv lib deploy
           mv README.md deploy
 
