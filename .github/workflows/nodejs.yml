@@ -26,7 +26,7 @@ jobs:
         run: |
           yarn install
           yarn test
-          yarn update
+          yarn build
 
       - name: build_react
         run: |
@@ -38,11 +38,12 @@ jobs:
       - name: ready_deploy
         run: |
           mkdir deploy
-          mv src deploy
-          mv lib deploy
-          mv example/build deploy/page
           mv package.json deploy            
           mv README.md deploy
+          mv tsconfig.json deploy
+          mv src deploy
+          mv lib deploy
+          mv example/build deploy/page          
           shopt -s dotglob
           mv .gitignore deploy
           mv .github deploy
