@@ -1,423 +1,427 @@
 {
   "program": {
     "fileInfos": {
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es5.d.ts": {
-        "version": "1f753cee573dea40df8a9dc873fef5566957b19ad513874f6643d8dfb14842d0",
-        "signature": "1f753cee573dea40df8a9dc873fef5566957b19ad513874f6643d8dfb14842d0"
+      "../node_modules/typescript/lib/lib.es5.d.ts": {
+        "version": "ff5688d6b2fcfef06842a395d7ff4d5730d45b724d4c48913118c889829052a1",
+        "signature": "ff5688d6b2fcfef06842a395d7ff4d5730d45b724d4c48913118c889829052a1"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.d.ts": {
+      "../node_modules/typescript/lib/lib.es2015.d.ts": {
         "version": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96",
         "signature": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2016.d.ts": {
+      "../node_modules/typescript/lib/lib.es2016.d.ts": {
         "version": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1",
         "signature": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.d.ts": {
+      "../node_modules/typescript/lib/lib.es2017.d.ts": {
         "version": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743",
         "signature": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.d.ts": {
-        "version": "2edd3ddf436ef8e12df876dcae4ecd6a8748577944c477bf4b20d5596e0c9843",
-        "signature": "2edd3ddf436ef8e12df876dcae4ecd6a8748577944c477bf4b20d5596e0c9843"
+      "../node_modules/typescript/lib/lib.es2018.d.ts": {
+        "version": "9c67dcc7ca897b61f58d57d487bc9f07950546e5ac8701cbc41a8a4fec48b091",
+        "signature": "9c67dcc7ca897b61f58d57d487bc9f07950546e5ac8701cbc41a8a4fec48b091"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.d.ts": {
+      "../node_modules/typescript/lib/lib.es2019.d.ts": {
         "version": "0fc0f68d3f4d94aa65fab955592e4a9f2066e6f8ee2f66fcc45adf4037fc167b",
         "signature": "0fc0f68d3f4d94aa65fab955592e4a9f2066e6f8ee2f66fcc45adf4037fc167b"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.esnext.d.ts": {
+      "../node_modules/typescript/lib/lib.esnext.d.ts": {
         "version": "1c05c805f62c1c06a60b7812cd8de2dff7a5bda2218ce5edda5d9d298b1c48e1",
         "signature": "1c05c805f62c1c06a60b7812cd8de2dff7a5bda2218ce5edda5d9d298b1c48e1"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.dom.d.ts": {
-        "version": "973df4e41aea3780ce77073777d37dd5896f684124f4c42409f3a832133837a4",
-        "signature": "973df4e41aea3780ce77073777d37dd5896f684124f4c42409f3a832133837a4"
+      "../node_modules/typescript/lib/lib.dom.d.ts": {
+        "version": "2d53f3741e5a4f78a90f623387d71a1cc809bb258f10cdaec034b67cbf71022f",
+        "signature": "2d53f3741e5a4f78a90f623387d71a1cc809bb258f10cdaec034b67cbf71022f"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.scripthost.d.ts": {
+      "../node_modules/typescript/lib/lib.scripthost.d.ts": {
         "version": "b9faa17292f17d2ad75e34fac77dd63a6403af1dba02d39cd0cbb9ffdf3de8b9",
         "signature": "b9faa17292f17d2ad75e34fac77dd63a6403af1dba02d39cd0cbb9ffdf3de8b9"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.core.d.ts": {
-        "version": "2a0390a665763bcc90f0670e43c587928d8fefe2a94a11209c1e22cba7b09f52",
-        "signature": "2a0390a665763bcc90f0670e43c587928d8fefe2a94a11209c1e22cba7b09f52"
+      "../node_modules/typescript/lib/lib.es2015.core.d.ts": {
+        "version": "4ab19088d508f9e62bfc61c157e8a65b2afaefa251ecca315e7d20b5b97b256f",
+        "signature": "4ab19088d508f9e62bfc61c157e8a65b2afaefa251ecca315e7d20b5b97b256f"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.collection.d.ts": {
+      "../node_modules/typescript/lib/lib.es2015.collection.d.ts": {
         "version": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0",
         "signature": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.generator.d.ts": {
-        "version": "828413486bdcaa342558e8e4570b1b287b776cb61b4b70b0214bd10c5d9a94c3",
-        "signature": "828413486bdcaa342558e8e4570b1b287b776cb61b4b70b0214bd10c5d9a94c3"
+      "../node_modules/typescript/lib/lib.es2015.generator.d.ts": {
+        "version": "765e0e9c9d74cf4d031ca8b0bdb269a853e7d81eda6354c8510218d03db12122",
+        "signature": "765e0e9c9d74cf4d031ca8b0bdb269a853e7d81eda6354c8510218d03db12122"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.iterable.d.ts": {
-        "version": "6c9f73334f8bf47aea685ca5b46a8f7e992a223e96fbceb030f26a4d2324ba21",
-        "signature": "6c9f73334f8bf47aea685ca5b46a8f7e992a223e96fbceb030f26a4d2324ba21"
+      "../node_modules/typescript/lib/lib.es2015.iterable.d.ts": {
+        "version": "285958e7699f1babd76d595830207f18d719662a0c30fac7baca7df7162a9210",
+        "signature": "285958e7699f1babd76d595830207f18d719662a0c30fac7baca7df7162a9210"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.promise.d.ts": {
+      "../node_modules/typescript/lib/lib.es2015.promise.d.ts": {
         "version": "e6b8ff2798f8ebd7a1c7afd8671f2cb67ee1901c422f5964d74b0b34c6574ea2",
         "signature": "e6b8ff2798f8ebd7a1c7afd8671f2cb67ee1901c422f5964d74b0b34c6574ea2"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.proxy.d.ts": {
+      "../node_modules/typescript/lib/lib.es2015.proxy.d.ts": {
         "version": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe",
         "signature": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.reflect.d.ts": {
+      "../node_modules/typescript/lib/lib.es2015.reflect.d.ts": {
         "version": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976",
         "signature": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.symbol.d.ts": {
+      "../node_modules/typescript/lib/lib.es2015.symbol.d.ts": {
         "version": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230",
         "signature": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": {
+      "../node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": {
         "version": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303",
         "signature": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2016.array.include.d.ts": {
+      "../node_modules/typescript/lib/lib.es2016.array.include.d.ts": {
         "version": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0",
         "signature": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.object.d.ts": {
+      "../node_modules/typescript/lib/lib.es2017.object.d.ts": {
         "version": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4",
         "signature": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": {
+      "../node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": {
         "version": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f",
         "signature": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.string.d.ts": {
+      "../node_modules/typescript/lib/lib.es2017.string.d.ts": {
         "version": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c",
         "signature": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.intl.d.ts": {
+      "../node_modules/typescript/lib/lib.es2017.intl.d.ts": {
         "version": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6",
         "signature": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": {
+      "../node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": {
         "version": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46",
         "signature": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": {
-        "version": "42102aaeb1bfec213be1e9777466a6d551eeba8567fed18c0cdbca8c35e3c6e4",
-        "signature": "42102aaeb1bfec213be1e9777466a6d551eeba8567fed18c0cdbca8c35e3c6e4"
+      "../node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts": {
+        "version": "93c0c9ae60e46e4d1389dd33936bbfa24d9c66ef83a1569fcbb67a46432405e0",
+        "signature": "93c0c9ae60e46e4d1389dd33936bbfa24d9c66ef83a1569fcbb67a46432405e0"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.intl.d.ts": {
+      "../node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": {
+        "version": "16c06e535d8e03be7c35735f9ce92c9e591cfea50cdcd0ac1353a0b85c60ab10",
+        "signature": "16c06e535d8e03be7c35735f9ce92c9e591cfea50cdcd0ac1353a0b85c60ab10"
+      },
+      "../node_modules/typescript/lib/lib.es2018.intl.d.ts": {
         "version": "1b820b57379c726f94af50cd60053674af53ff9d079c1563cc70071e8b757dd0",
         "signature": "1b820b57379c726f94af50cd60053674af53ff9d079c1563cc70071e8b757dd0"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.promise.d.ts": {
+      "../node_modules/typescript/lib/lib.es2018.promise.d.ts": {
         "version": "efe049114bad1035b0aa9a4a0359f50ab776e3897c411521e51d3013079cbd62",
         "signature": "efe049114bad1035b0aa9a4a0359f50ab776e3897c411521e51d3013079cbd62"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.regexp.d.ts": {
+      "../node_modules/typescript/lib/lib.es2018.regexp.d.ts": {
         "version": "e7780d04cd4120ee554c665829db2bbdd6b947cbaa3c150b7d9ea74df3beb2e8",
         "signature": "e7780d04cd4120ee554c665829db2bbdd6b947cbaa3c150b7d9ea74df3beb2e8"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.array.d.ts": {
+      "../node_modules/typescript/lib/lib.es2019.array.d.ts": {
         "version": "fc7c02b980e7dda0ed14d57ee71705c09efc51ec6286a10b971a25a3bb29262b",
         "signature": "fc7c02b980e7dda0ed14d57ee71705c09efc51ec6286a10b971a25a3bb29262b"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.object.d.ts": {
+      "../node_modules/typescript/lib/lib.es2019.object.d.ts": {
         "version": "989b95205f1189943fab0ce12a39c80570edf8f200aca60e0fdc500afc4d5859",
         "signature": "989b95205f1189943fab0ce12a39c80570edf8f200aca60e0fdc500afc4d5859"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.string.d.ts": {
-        "version": "669427ac10ef9f52b6a7a502a66670eaabba675e0a660eb971041bd73c9894e3",
-        "signature": "669427ac10ef9f52b6a7a502a66670eaabba675e0a660eb971041bd73c9894e3"
+      "../node_modules/typescript/lib/lib.es2019.string.d.ts": {
+        "version": "9a13dd96b56e11eb3b170b9dbdb2e6b323b0023e9a0a275554f1116c1a0b2658",
+        "signature": "9a13dd96b56e11eb3b170b9dbdb2e6b323b0023e9a0a275554f1116c1a0b2658"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.symbol.d.ts": {
+      "../node_modules/typescript/lib/lib.es2019.symbol.d.ts": {
         "version": "7a842c21e0fe143eb3ad4d689a1470bab5ed9bc7fd7223fe8b56cbae27038d62",
         "signature": "7a842c21e0fe143eb3ad4d689a1470bab5ed9bc7fd7223fe8b56cbae27038d62"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.esnext.intl.d.ts": {
+      "../node_modules/typescript/lib/lib.esnext.intl.d.ts": {
         "version": "f6e0c89daaf72eac38dfb1d5ef0972183f7f26a68da15bfe5bcb7cfccf0c7db8",
         "signature": "f6e0c89daaf72eac38dfb1d5ef0972183f7f26a68da15bfe5bcb7cfccf0c7db8"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.esnext.bigint.d.ts": {
+      "../node_modules/typescript/lib/lib.esnext.bigint.d.ts": {
         "version": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8",
         "signature": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/tslib/tslib.d.ts": {
+      "../node_modules/tslib/tslib.d.ts": {
         "version": "4984b48a97160eac5282ffeae690315420a626de83ccf6045c36d934c5c957c0",
         "signature": "4984b48a97160eac5282ffeae690315420a626de83ccf6045c36d934c5c957c0"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/src/utill/arraybuffer.ts": {
+      "../src/utill/arraybuffer.ts": {
         "version": "f72c57daf6130a6c1ec5a1eb1c83a3193fb91be855729537d7807a78497db477",
         "signature": "06552b7026b071f455401fccf674ab21b92e27c392416658dca71a0c67386410"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/core/index.d.ts": {
+      "../node_modules/rx.mini/lib/core/index.d.ts": {
         "version": "210460915da954f149420413f19386d5c0a8a2791bbf5381a8002f07a173850a",
         "signature": "210460915da954f149420413f19386d5c0a8a2791bbf5381a8002f07a173850a"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/extensions/pack/index.d.ts": {
+      "../node_modules/rx.mini/lib/extensions/pack/index.d.ts": {
         "version": "27f5acd92cb1f9659f7277b526ed64eddf649d88095b3b52bbd99e38a5ce54d0",
         "signature": "27f5acd92cb1f9659f7277b526ed64eddf649d88095b3b52bbd99e38a5ce54d0"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/extensions/wait/index.d.ts": {
+      "../node_modules/rx.mini/lib/extensions/wait/index.d.ts": {
         "version": "eea6e870b13a4a704e53c346f75fd0e9889100e4507ec026e0096a9d42a7414c",
         "signature": "eea6e870b13a4a704e53c346f75fd0e9889100e4507ec026e0096a9d42a7414c"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/extensions/buffer/index.d.ts": {
+      "../node_modules/rx.mini/lib/extensions/buffer/index.d.ts": {
         "version": "7f98bc2c3cc760d32b2e448004eb5642c7837b83698475c825e701d0c7da901e",
         "signature": "7f98bc2c3cc760d32b2e448004eb5642c7837b83698475c825e701d0c7da901e"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/index.d.ts": {
+      "../node_modules/rx.mini/lib/index.d.ts": {
         "version": "862f6f132a776bbfb75f69bce67836b147234ffb82d81cfbe4eeea6bbf49cd99",
         "signature": "862f6f132a776bbfb75f69bce67836b147234ffb82d81cfbe4eeea6bbf49cd99"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/src/services/arraybuffer.ts": {
+      "../src/services/arraybuffer.ts": {
         "version": "ecdc4e11054ffd01db7f02751ec5cdf047433068344033e128fcaab6c5b7a647",
         "signature": "d41ba0a1136e4d9ba2c3baccf085fdecc61f0e69b21e558dcfab59f8b6275eaf"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/src/services/datachannel.ts": {
+      "../src/services/datachannel.ts": {
         "version": "ea05998674015fee22bd29e9bcd4c8af43fda89c77ddee6bda53e35dcc17380a",
         "signature": "7cb7540f273fda14ea9e13fe507ba93bd6c0e9719fdae6e380059f2a93a2eaa4"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/src/core.ts": {
-        "version": "ec124edf6cd3a9f39bed005be0a45ee6988b041909f707df6e17cc0ed4f7361b",
-        "signature": "2d1327328384399f414b184dea4f742313bf65c21f3bc6d8c7f464d006207814"
+      "../src/core.ts": {
+        "version": "51745a37056f2ff55d25437058d629e9215742f0d533a47716332f79e5e14561",
+        "signature": "d6aae5d7c92f8c5da367cf644598bdd371ab54b480100d19a72fed32135c4a80"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/src/utill/media.ts": {
+      "../src/utill/media.ts": {
         "version": "9f77ed1f1523c5c29f7fd653ddb73b739d8838b23d47c699f626cb81a1352979",
         "signature": "bad0e84fa5368261050f0e166ab7acffd5d53263ad73787b236d67c870d8e570"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/src/modules/stream.ts": {
+      "../src/modules/stream.ts": {
         "version": "de7fb6527ae6c8958002ee7bb0186d400458866c7fe8509b25db6ea27d0b2f9e",
         "signature": "1002a1b354e13df0a4b8a71604f4c2c10d833760fa7f694c14d6324cef88f996"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/src/modules/file.ts": {
+      "../src/modules/file.ts": {
         "version": "8ff037a84ddabf191c803721ccb83c5cafb4be91581a03973ac5a647d6d4a220",
         "signature": "46bfdaec81cb20d7e9ec63a2a4a201f1bf2b0b89a44d8c06be3f8b445e313b13"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/src/modules/filequick.ts": {
+      "../src/modules/filequick.ts": {
         "version": "eab6380e09301d938024a2dc7e0fc1d1d3abc20aa498ef5a25b206f360c55c07",
         "signature": "301b1695215985ab9777ccba84a5313dd163afc43a49194916dcc1c8b0bf4c88"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/src/modules/signaling.ts": {
+      "../src/modules/signaling.ts": {
         "version": "ad89b4befa9493fadce0ca0ce474e6104633090408b746b592255bf7f54b738f",
         "signature": "3e1914ee00b1a5e033b5e57633e3cabf345329e40966955e81116976d8d97e9b"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/src/index.ts": {
+      "../src/index.ts": {
         "version": "105cfac4d47c21ed1d4e5c25cc6f8cec2e7c523f52c9f3afd776a6a1ed4cb8ef",
         "signature": "da38c24c4a268f7da8bd75aeab2d7a40a5b7c1fe0fbb89ad5f4c88239628f0d0"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/src/tests/close.test.ts": {
+      "../src/tests/close.test.ts": {
         "version": "1eb2d2627996ff2d0dcf4b3790ecea4165b5e817db1e40691e92c48238596349",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/src/tests/sendjson.test.ts": {
+      "../src/tests/sendjson.test.ts": {
         "version": "4dbb65ec8c8c2f901390e5fb3c46f95d928b1bb4f680ab7a23d1071da665ca50",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/src/utill/testtools.ts": {
+      "../src/utill/testtools.ts": {
         "version": "5b8e990e3ea2a510e0b2086c211f6770627b00fca23005dd0270aa7ff47647a0",
         "signature": "229f0de1e6470424c9aec14ab33a3ae2b39cb0a4abf25b11350ada1e9e2f7110"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/src/tests/trickle.test.ts": {
+      "../src/tests/trickle.test.ts": {
         "version": "ebb8ed67c852cbea71e6fb5719fd22e42495d3501876da46f778e9af292543b2",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/src/tests/tsnode.ts": {
+      "../src/tests/tsnode.ts": {
         "version": "aed552168249812c150c3461a4b171cce99865256715adacfd757b5ff067a229",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/src/tests/vanilla.test.ts": {
+      "../src/tests/vanilla.test.ts": {
         "version": "0aa40a57979c961b2b0c37667b55525bf28044816c0d8495f9bc77d049eb57b6",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts": {
+      "../src/typings/wrtc.d.ts": {
         "version": "a38b0dd865f71fbd2f659aa8b13ed47fda43d661f0eb46f6f6769e6eb894a0f9",
         "signature": "a38b0dd865f71fbd2f659aa8b13ed47fda43d661f0eb46f6f6769e6eb894a0f9"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/jest/index.d.ts": {
+      "../node_modules/@types/jest/index.d.ts": {
         "version": "37dbdee3bb13bc254e9d75bbb75569e807369868e5cbd89ce72aa77fb22fcb75",
         "signature": "37dbdee3bb13bc254e9d75bbb75569e807369868e5cbd89ce72aa77fb22fcb75"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/globals.d.ts": {
-        "version": "8b41d4fdf2d67d6e572c2c8fc03b6cfc8f7e13b07a88f88460a3e8463604506b",
-        "signature": "8b41d4fdf2d67d6e572c2c8fc03b6cfc8f7e13b07a88f88460a3e8463604506b"
+      "../node_modules/@types/node/globals.d.ts": {
+        "version": "1c56244348d2e259a3d7cee5d116c82c65252f9f8e1001ed1c87d3e876037252",
+        "signature": "1c56244348d2e259a3d7cee5d116c82c65252f9f8e1001ed1c87d3e876037252"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/assert.d.ts": {
+      "../node_modules/@types/node/assert.d.ts": {
         "version": "58a52f282f1dad18179023804c1f3a7536bf875748a0a314abd43f60fd5b244f",
         "signature": "58a52f282f1dad18179023804c1f3a7536bf875748a0a314abd43f60fd5b244f"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/async_hooks.d.ts": {
+      "../node_modules/@types/node/async_hooks.d.ts": {
         "version": "138476cfdccbb9e2c7e06602bc216af843a56c4f3469a79106bc660ba94bd66a",
         "signature": "138476cfdccbb9e2c7e06602bc216af843a56c4f3469a79106bc660ba94bd66a"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/buffer.d.ts": {
+      "../node_modules/@types/node/buffer.d.ts": {
         "version": "fe892fea1e75a442fffb4a604d7eeb451e858787a9f2f01c4e83bf12a3b5048d",
         "signature": "fe892fea1e75a442fffb4a604d7eeb451e858787a9f2f01c4e83bf12a3b5048d"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/child_process.d.ts": {
+      "../node_modules/@types/node/child_process.d.ts": {
         "version": "df18c49bd3f5c6c9497a9986bb6dd6a40ae7195a3f0265a7b558736fb7333356",
         "signature": "df18c49bd3f5c6c9497a9986bb6dd6a40ae7195a3f0265a7b558736fb7333356"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/cluster.d.ts": {
+      "../node_modules/@types/node/cluster.d.ts": {
         "version": "ce629710e5e58724902b753212e97861fd73e2aa09f5d88cb6d55dc763cf8c8a",
         "signature": "ce629710e5e58724902b753212e97861fd73e2aa09f5d88cb6d55dc763cf8c8a"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/console.d.ts": {
+      "../node_modules/@types/node/console.d.ts": {
         "version": "525c8fc510d9632d2a0a9de2d41c3ac1cdd79ff44d3b45c6d81cacabb683528d",
         "signature": "525c8fc510d9632d2a0a9de2d41c3ac1cdd79ff44d3b45c6d81cacabb683528d"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/constants.d.ts": {
-        "version": "b952021e804dcd9cb5e5552e1ec8bf9f479b61e20da5641e2a542fe77db9a598",
-        "signature": "b952021e804dcd9cb5e5552e1ec8bf9f479b61e20da5641e2a542fe77db9a598"
+      "../node_modules/@types/node/constants.d.ts": {
+        "version": "e1e8a8a24bc0fe64cc9c5ccfa60e89f6e20783da8e8b76a242ebf99ef0ef07f3",
+        "signature": "e1e8a8a24bc0fe64cc9c5ccfa60e89f6e20783da8e8b76a242ebf99ef0ef07f3"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/crypto.d.ts": {
-        "version": "a15466cfe77b4f8bcd936634d3d2828ee340819c3f136d31f87d6084e86994d0",
-        "signature": "a15466cfe77b4f8bcd936634d3d2828ee340819c3f136d31f87d6084e86994d0"
+      "../node_modules/@types/node/crypto.d.ts": {
+        "version": "dcff2bb48105337cf777aa7061fa48c8e0f83d9f4ec9bb37b2dec336236118ac",
+        "signature": "dcff2bb48105337cf777aa7061fa48c8e0f83d9f4ec9bb37b2dec336236118ac"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/dgram.d.ts": {
+      "../node_modules/@types/node/dgram.d.ts": {
         "version": "b6c6861bccf209a98eeddb99bdb7bd987fb29fc52130d5d9fd2f79d3607a0a7a",
         "signature": "b6c6861bccf209a98eeddb99bdb7bd987fb29fc52130d5d9fd2f79d3607a0a7a"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/dns.d.ts": {
+      "../node_modules/@types/node/dns.d.ts": {
         "version": "05e732266b5a36789fd9eb846b1f45fec1b6e318b740e3f20fc22fd95f9ebf31",
         "signature": "05e732266b5a36789fd9eb846b1f45fec1b6e318b740e3f20fc22fd95f9ebf31"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/domain.d.ts": {
+      "../node_modules/@types/node/domain.d.ts": {
         "version": "d5b7c8819ce1bd31a45f7675309e145ec28e3aa1b60a8e0637fd0e8916255baa",
         "signature": "d5b7c8819ce1bd31a45f7675309e145ec28e3aa1b60a8e0637fd0e8916255baa"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts": {
-        "version": "cff7f1ff41519a28adfedb85b9d91325e13d7993bebcfd0dd9ce30c3ed1240bb",
-        "signature": "cff7f1ff41519a28adfedb85b9d91325e13d7993bebcfd0dd9ce30c3ed1240bb"
+      "../node_modules/@types/node/events.d.ts": {
+        "version": "c53b63229a0b7e9d64347c4fc975dd52a9e9a81f9be099f5a21220e2a1276d28",
+        "signature": "c53b63229a0b7e9d64347c4fc975dd52a9e9a81f9be099f5a21220e2a1276d28"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/fs.d.ts": {
-        "version": "258fa562adef4a94ea5b1ce265c607eb2d2067157601856296c24e874878f07a",
-        "signature": "258fa562adef4a94ea5b1ce265c607eb2d2067157601856296c24e874878f07a"
+      "../node_modules/@types/node/fs.d.ts": {
+        "version": "7d587a6c108c8bdd2d331a0e0e0d5ccbf8de6280f32bdd5820376c7928d6ad31",
+        "signature": "7d587a6c108c8bdd2d331a0e0e0d5ccbf8de6280f32bdd5820376c7928d6ad31"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/http.d.ts": {
-        "version": "cc4cd9d8af7f5689b5df3c91d0fc287fafbd89e6e305183da28a6877a8aa08a8",
-        "signature": "cc4cd9d8af7f5689b5df3c91d0fc287fafbd89e6e305183da28a6877a8aa08a8"
+      "../node_modules/@types/node/http.d.ts": {
+        "version": "946c7e412926cc0ed539d0002005a0a07572e85e1bb91828162680debd898a6e",
+        "signature": "946c7e412926cc0ed539d0002005a0a07572e85e1bb91828162680debd898a6e"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/http2.d.ts": {
+      "../node_modules/@types/node/http2.d.ts": {
         "version": "28fdca6c7a3d5dd62c738461051ef345b50d167efab39dceb2fcc9a079db1b07",
         "signature": "28fdca6c7a3d5dd62c738461051ef345b50d167efab39dceb2fcc9a079db1b07"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/https.d.ts": {
+      "../node_modules/@types/node/https.d.ts": {
         "version": "dacbe08610729f6343ea9880ea8e737c6d7a6efa4a318d8f6acaf85db4aceed6",
         "signature": "dacbe08610729f6343ea9880ea8e737c6d7a6efa4a318d8f6acaf85db4aceed6"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/inspector.d.ts": {
+      "../node_modules/@types/node/inspector.d.ts": {
         "version": "8cfa78f4c052a93ac1e7accb0a78ce331dbd14f277ee0e193279ec31ce7efb25",
         "signature": "8cfa78f4c052a93ac1e7accb0a78ce331dbd14f277ee0e193279ec31ce7efb25"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/module.d.ts": {
+      "../node_modules/@types/node/module.d.ts": {
         "version": "03394bf8deb8781b490ae9266a843fbdf00647947d79e25fcbf1d89a9e9c8a66",
         "signature": "03394bf8deb8781b490ae9266a843fbdf00647947d79e25fcbf1d89a9e9c8a66"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts": {
+      "../node_modules/@types/node/net.d.ts": {
         "version": "cc5fac2b9e45a6670b96fd32cb42c97e0d4a7b2ee12c87963c6fe0f55fa84f50",
         "signature": "cc5fac2b9e45a6670b96fd32cb42c97e0d4a7b2ee12c87963c6fe0f55fa84f50"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/os.d.ts": {
-        "version": "1a6016bd905855b2b45881e9edbd7ab8c7175f8bcbb711ff06989c4bcdc75486",
-        "signature": "1a6016bd905855b2b45881e9edbd7ab8c7175f8bcbb711ff06989c4bcdc75486"
+      "../node_modules/@types/node/os.d.ts": {
+        "version": "37307ad10f30884fb9470a4e170b7be5f68a33b3d458cc3b7c63cd494802e594",
+        "signature": "37307ad10f30884fb9470a4e170b7be5f68a33b3d458cc3b7c63cd494802e594"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/path.d.ts": {
+      "../node_modules/@types/node/path.d.ts": {
         "version": "5fb30076f0e0e5744db8993648bfb67aadd895f439edad5cce039127a87a8a36",
         "signature": "5fb30076f0e0e5744db8993648bfb67aadd895f439edad5cce039127a87a8a36"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/perf_hooks.d.ts": {
+      "../node_modules/@types/node/perf_hooks.d.ts": {
         "version": "27ef4001526ee9d8afa57687a60bb3b59c52b32d29db0a2260094ab64726164f",
         "signature": "27ef4001526ee9d8afa57687a60bb3b59c52b32d29db0a2260094ab64726164f"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/process.d.ts": {
+      "../node_modules/@types/node/process.d.ts": {
         "version": "3a8848a9c307429b861402cc69bc472ffe0c05b86474fc158723169161e16389",
         "signature": "3a8848a9c307429b861402cc69bc472ffe0c05b86474fc158723169161e16389"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/punycode.d.ts": {
+      "../node_modules/@types/node/punycode.d.ts": {
         "version": "30ec6f9c683b988c3cfaa0c4690692049c4e7ed7dc6f6e94f56194c06b86f5e1",
         "signature": "30ec6f9c683b988c3cfaa0c4690692049c4e7ed7dc6f6e94f56194c06b86f5e1"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/querystring.d.ts": {
-        "version": "e0070c45bf15b872f58eee948f71ad6f4f424f36330b2477753fc1aed3ece36e",
-        "signature": "e0070c45bf15b872f58eee948f71ad6f4f424f36330b2477753fc1aed3ece36e"
+      "../node_modules/@types/node/querystring.d.ts": {
+        "version": "5b34786b5d59b4e627c76f1294a00b5e92260a31ca87b29d9b7cb9acd3ba1acc",
+        "signature": "5b34786b5d59b4e627c76f1294a00b5e92260a31ca87b29d9b7cb9acd3ba1acc"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/readline.d.ts": {
+      "../node_modules/@types/node/readline.d.ts": {
         "version": "94cf93922adcc9cb4acf11d8d71641af728de919a50ae55d8e83159afea1a42c",
         "signature": "94cf93922adcc9cb4acf11d8d71641af728de919a50ae55d8e83159afea1a42c"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/repl.d.ts": {
+      "../node_modules/@types/node/repl.d.ts": {
         "version": "65dbe15ed8a8ed5d4707a63868178dc38111cfc06de28a2e50713ca017a9c157",
         "signature": "65dbe15ed8a8ed5d4707a63868178dc38111cfc06de28a2e50713ca017a9c157"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts": {
+      "../node_modules/@types/node/stream.d.ts": {
         "version": "15087156b728a1bdf46de0e1299f904c6a658af37f80851f6fe76fb21bb99b65",
         "signature": "15087156b728a1bdf46de0e1299f904c6a658af37f80851f6fe76fb21bb99b65"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/string_decoder.d.ts": {
+      "../node_modules/@types/node/string_decoder.d.ts": {
         "version": "17e157df6125098a1a34eb4d201ee4ac03bbe97e471ab5627bb2c40fce555948",
         "signature": "17e157df6125098a1a34eb4d201ee4ac03bbe97e471ab5627bb2c40fce555948"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/timers.d.ts": {
+      "../node_modules/@types/node/timers.d.ts": {
         "version": "b40652bf8ce4a18133b31349086523b219724dca8df3448c1a0742528e7ad5b9",
         "signature": "b40652bf8ce4a18133b31349086523b219724dca8df3448c1a0742528e7ad5b9"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/tls.d.ts": {
+      "../node_modules/@types/node/tls.d.ts": {
         "version": "8fd6756e8a6fac64089e19e4fbe822bcfafa62f79b237172288eaa1379e84083",
         "signature": "8fd6756e8a6fac64089e19e4fbe822bcfafa62f79b237172288eaa1379e84083"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/trace_events.d.ts": {
+      "../node_modules/@types/node/trace_events.d.ts": {
         "version": "978aecd2e6bc2ac094e9a35eda98ff8586713857b3655e7c98ca5ed8f7d50662",
         "signature": "978aecd2e6bc2ac094e9a35eda98ff8586713857b3655e7c98ca5ed8f7d50662"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/tty.d.ts": {
-        "version": "0fd8dac24f12d9fd1fcc275200dd1b6771072f20331a07b18f7dbcbe20f7d3f4",
-        "signature": "0fd8dac24f12d9fd1fcc275200dd1b6771072f20331a07b18f7dbcbe20f7d3f4"
+      "../node_modules/@types/node/tty.d.ts": {
+        "version": "9e666de17856eb640570276c9c71755080f0ba0bfea840438cabf25ef063886e",
+        "signature": "9e666de17856eb640570276c9c71755080f0ba0bfea840438cabf25ef063886e"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/url.d.ts": {
+      "../node_modules/@types/node/url.d.ts": {
         "version": "1e3da92862604b1f7a32265169f9aa712c4567742d42597704e04ae3e07019e7",
         "signature": "1e3da92862604b1f7a32265169f9aa712c4567742d42597704e04ae3e07019e7"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts": {
+      "../node_modules/@types/node/util.d.ts": {
         "version": "20e55abae3dd750a85fda7c4d140670ada679c3d5b640de5e4f3eaafcee18a0d",
         "signature": "20e55abae3dd750a85fda7c4d140670ada679c3d5b640de5e4f3eaafcee18a0d"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/v8.d.ts": {
+      "../node_modules/@types/node/v8.d.ts": {
         "version": "6ad2dd29dbf3aea031062298e9978d4b2a1fadd0997eb9d8caaf95aaa89e7033",
         "signature": "6ad2dd29dbf3aea031062298e9978d4b2a1fadd0997eb9d8caaf95aaa89e7033"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/vm.d.ts": {
+      "../node_modules/@types/node/vm.d.ts": {
         "version": "f98df5ec124f441b465332271d0b083aeec815cd3c92d9249b9739e6318477a9",
         "signature": "f98df5ec124f441b465332271d0b083aeec815cd3c92d9249b9739e6318477a9"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/worker_threads.d.ts": {
+      "../node_modules/@types/node/worker_threads.d.ts": {
         "version": "16de20ae20cd1d948409a56b55832f3d416c66c8cb44bb8475e1e9db14d8e402",
         "signature": "16de20ae20cd1d948409a56b55832f3d416c66c8cb44bb8475e1e9db14d8e402"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/zlib.d.ts": {
+      "../node_modules/@types/node/zlib.d.ts": {
         "version": "f91189e04264b0e41ee96ff96661c3871e739b90156df2f2288da7a81019dcd9",
         "signature": "f91189e04264b0e41ee96ff96661c3871e739b90156df2f2288da7a81019dcd9"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/base.d.ts": {
+      "../node_modules/@types/node/base.d.ts": {
         "version": "6622f76993bdfeaacb947ba7c4cf26f2e5c5194194d02d792c3cba4174cd8fce",
         "signature": "6622f76993bdfeaacb947ba7c4cf26f2e5c5194194d02d792c3cba4174cd8fce"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts": {
+      "../node_modules/@types/node/ts3.2/util.d.ts": {
         "version": "4f54f0a9dd3b644c99ec32b32f8804d5978bc854799b228ae9c467bf3c84c64c",
         "signature": "4f54f0a9dd3b644c99ec32b32f8804d5978bc854799b228ae9c467bf3c84c64c"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/globals.d.ts": {
+      "../node_modules/@types/node/ts3.2/globals.d.ts": {
         "version": "ce6b191c382ee19f23678b8c364484627bcf424e8f408357a2f5530fb8d52a45",
         "signature": "ce6b191c382ee19f23678b8c364484627bcf424e8f408357a2f5530fb8d52a45"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/index.d.ts": {
+      "../node_modules/@types/node/ts3.2/index.d.ts": {
         "version": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c",
         "signature": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/webrtc/MediaStream.d.ts": {
+      "../node_modules/@types/webrtc/MediaStream.d.ts": {
         "version": "7a2b5345b82d57f6e43c4e5a2c32b10175ba32216287c98113d8e91257f68bc0",
         "signature": "7a2b5345b82d57f6e43c4e5a2c32b10175ba32216287c98113d8e91257f68bc0"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/webrtc/RTCPeerConnection.d.ts": {
+      "../node_modules/@types/webrtc/RTCPeerConnection.d.ts": {
         "version": "dbfbbb48de625793e3b7d52581101a14865749fb7a1d0c227cbd469f67591ae5",
         "signature": "dbfbbb48de625793e3b7d52581101a14865749fb7a1d0c227cbd469f67591ae5"
       },
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/webrtc/index.d.ts": {
+      "../node_modules/@types/webrtc/index.d.ts": {
         "version": "c7fe7e3c1fd7c9934fa4cde1032204128466b09924b94e69aebf59a52fdb7cf6",
         "signature": "c7fe7e3c1fd7c9934fa4cde1032204128466b09924b94e69aebf59a52fdb7cf6"
       }
@@ -435,7 +439,7 @@
       ],
       "incremental": true,
       "declaration": true,
-      "outDir": "/home/runner/work/webrtc4me/webrtc4me/lib",
+      "outDir": "./",
       "strict": true,
       "moduleResolution": 2,
       "allowSyntheticDefaultImports": true,
@@ -447,1351 +451,1362 @@
       "noUnusedLocals": false,
       "skipLibCheck": true,
       "jsx": 1,
-      "configFilePath": "/home/runner/work/webrtc4me/webrtc4me/tsconfig.json"
+      "configFilePath": "../tsconfig.json"
     },
     "referencedMap": {
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es5.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2016.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.esnext.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.dom.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.scripthost.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.core.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.object.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.string.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.intl.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.promise.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.array.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.object.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.string.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.symbol.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.esnext.intl.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/tslib/tslib.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/utill/arraybuffer.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/core/index.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/extensions/pack/index.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/core/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/extensions/wait/index.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/extensions/buffer/index.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/core/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/index.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/core/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/extensions/pack/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/extensions/wait/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/extensions/buffer/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/services/arraybuffer.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/utill/arraybuffer.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/core.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/services/datachannel.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/core.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/services/arraybuffer.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/services/datachannel.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/utill/media.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/modules/stream.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/core.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/utill/media.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/modules/file.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/core.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/modules/filequick.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/core.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/utill/arraybuffer.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/modules/signaling.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/core.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/index.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/index.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/core.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/modules/stream.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/modules/file.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/utill/media.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/utill/arraybuffer.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/modules/filequick.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/modules/signaling.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/tests/close.test.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/index.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/tests/sendjson.test.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/index.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/utill/testtools.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/tests/trickle.test.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/index.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/utill/testtools.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/tests/tsnode.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/core.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/tests/vanilla.test.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/index.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/jest/index.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/globals.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/assert.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/async_hooks.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/buffer.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/child_process.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/cluster.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/child_process.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/console.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/constants.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/crypto.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/dgram.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/dns.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/dns.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/domain.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/fs.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/url.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/http.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/url.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/http2.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/fs.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/tls.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/url.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/http.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/https.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/tls.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/http.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/url.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/inspector.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/module.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/dns.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/os.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/path.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/perf_hooks.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/async_hooks.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/process.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/punycode.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/querystring.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/readline.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/repl.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/readline.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/vm.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/string_decoder.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/timers.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/tls.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/crypto.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/dns.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/trace_events.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/tty.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/url.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/querystring.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/v8.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/vm.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/worker_threads.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/vm.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/zlib.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/base.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/globals.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/assert.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/async_hooks.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/buffer.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/child_process.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/cluster.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/console.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/constants.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/crypto.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/dgram.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/dns.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/domain.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/fs.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/http.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/http2.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/https.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/inspector.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/module.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/os.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/path.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/perf_hooks.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/process.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/punycode.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/querystring.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/readline.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/repl.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/string_decoder.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/timers.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/tls.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/trace_events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/tty.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/url.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/v8.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/vm.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/worker_threads.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/zlib.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/globals.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/globals.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/index.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/base.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/globals.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/webrtc/MediaStream.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/webrtc/RTCPeerConnection.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/webrtc/MediaStream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/webrtc/index.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/webrtc/RTCPeerConnection.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/webrtc/MediaStream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      "../node_modules/typescript/lib/lib.es5.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2016.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2017.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2018.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2019.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.esnext.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.dom.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.scripthost.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.core.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.collection.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.generator.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.promise.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2017.object.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2017.string.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2017.intl.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2018.intl.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2018.promise.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2019.array.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2019.object.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2019.string.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2019.symbol.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.esnext.intl.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/tslib/tslib.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/utill/arraybuffer.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/rx.mini/lib/core/index.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/rx.mini/lib/extensions/pack/index.d.ts": [
+        "../node_modules/rx.mini/lib/core/index.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/rx.mini/lib/extensions/wait/index.d.ts": [
+        "../node_modules/rx.mini/lib/index.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/rx.mini/lib/extensions/buffer/index.d.ts": [
+        "../node_modules/rx.mini/lib/core/index.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/rx.mini/lib/index.d.ts": [
+        "../node_modules/rx.mini/lib/core/index.d.ts",
+        "../node_modules/rx.mini/lib/extensions/pack/index.d.ts",
+        "../node_modules/rx.mini/lib/extensions/wait/index.d.ts",
+        "../node_modules/rx.mini/lib/extensions/buffer/index.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/services/arraybuffer.ts": [
+        "../src/utill/arraybuffer.ts",
+        "../node_modules/rx.mini/lib/index.d.ts",
+        "../src/core.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/services/datachannel.ts": [
+        "../node_modules/rx.mini/lib/index.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/core.ts": [
+        "../src/services/arraybuffer.ts",
+        "../src/services/datachannel.ts",
+        "../node_modules/rx.mini/lib/index.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/utill/media.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/modules/stream.ts": [
+        "../src/core.ts",
+        "../src/utill/media.ts",
+        "../node_modules/rx.mini/lib/index.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/modules/file.ts": [
+        "../src/core.ts",
+        "../node_modules/rx.mini/lib/index.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/modules/filequick.ts": [
+        "../src/core.ts",
+        "../src/utill/arraybuffer.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/modules/signaling.ts": [
+        "../src/core.ts",
+        "../node_modules/rx.mini/lib/index.d.ts",
+        "../src/index.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/index.ts": [
+        "../src/core.ts",
+        "../src/modules/stream.ts",
+        "../src/modules/file.ts",
+        "../src/utill/media.ts",
+        "../src/utill/arraybuffer.ts",
+        "../src/modules/filequick.ts",
+        "../src/modules/signaling.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/tests/close.test.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../src/index.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/tests/sendjson.test.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../src/index.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/utill/testtools.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/tests/trickle.test.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../src/index.ts",
+        "../src/utill/testtools.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/tests/tsnode.ts": [
+        "../src/core.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/tests/vanilla.test.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../src/index.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/typings/wrtc.d.ts": [
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/jest/index.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/globals.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/assert.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/async_hooks.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/buffer.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/child_process.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/cluster.d.ts": [
+        "../node_modules/@types/node/child_process.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/console.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/constants.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/crypto.d.ts": [
+        "../node_modules/@types/node/stream.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/dgram.d.ts": [
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/dns.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/dns.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/domain.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/events.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/fs.d.ts": [
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/http.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/http2.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/https.d.ts": [
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/inspector.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/module.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/net.d.ts": [
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/dns.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/os.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/path.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/perf_hooks.d.ts": [
+        "../node_modules/@types/node/async_hooks.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/process.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/punycode.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/querystring.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/readline.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/repl.d.ts": [
+        "../node_modules/@types/node/readline.d.ts",
+        "../node_modules/@types/node/vm.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/stream.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/string_decoder.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/timers.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/tls.d.ts": [
+        "../node_modules/@types/node/crypto.d.ts",
+        "../node_modules/@types/node/dns.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/trace_events.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/tty.d.ts": [
+        "../node_modules/@types/node/net.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/url.d.ts": [
+        "../node_modules/@types/node/querystring.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/util.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/v8.d.ts": [
+        "../node_modules/@types/node/stream.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/vm.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/worker_threads.d.ts": [
+        "../node_modules/@types/node/vm.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/zlib.d.ts": [
+        "../node_modules/@types/node/stream.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/base.d.ts": [
+        "../node_modules/@types/node/globals.d.ts",
+        "../node_modules/@types/node/assert.d.ts",
+        "../node_modules/@types/node/async_hooks.d.ts",
+        "../node_modules/@types/node/buffer.d.ts",
+        "../node_modules/@types/node/child_process.d.ts",
+        "../node_modules/@types/node/cluster.d.ts",
+        "../node_modules/@types/node/console.d.ts",
+        "../node_modules/@types/node/constants.d.ts",
+        "../node_modules/@types/node/crypto.d.ts",
+        "../node_modules/@types/node/dgram.d.ts",
+        "../node_modules/@types/node/dns.d.ts",
+        "../node_modules/@types/node/domain.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/http2.d.ts",
+        "../node_modules/@types/node/https.d.ts",
+        "../node_modules/@types/node/inspector.d.ts",
+        "../node_modules/@types/node/module.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/os.d.ts",
+        "../node_modules/@types/node/path.d.ts",
+        "../node_modules/@types/node/perf_hooks.d.ts",
+        "../node_modules/@types/node/process.d.ts",
+        "../node_modules/@types/node/punycode.d.ts",
+        "../node_modules/@types/node/querystring.d.ts",
+        "../node_modules/@types/node/readline.d.ts",
+        "../node_modules/@types/node/repl.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/string_decoder.d.ts",
+        "../node_modules/@types/node/timers.d.ts",
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/trace_events.d.ts",
+        "../node_modules/@types/node/tty.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/v8.d.ts",
+        "../node_modules/@types/node/vm.d.ts",
+        "../node_modules/@types/node/worker_threads.d.ts",
+        "../node_modules/@types/node/zlib.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/ts3.2/util.d.ts": [
+        "../node_modules/@types/node/util.d.ts",
+        "../src/typings/wrtc.d.ts"
+      ],
+      "../node_modules/@types/node/ts3.2/globals.d.ts": [
+        "../node_modules/@types/node/globals.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/ts3.2/index.d.ts": [
+        "../node_modules/@types/node/base.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/ts3.2/globals.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/webrtc/MediaStream.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/webrtc/RTCPeerConnection.d.ts": [
+        "../node_modules/@types/webrtc/MediaStream.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/webrtc/index.d.ts": [
+        "../node_modules/@types/webrtc/RTCPeerConnection.d.ts",
+        "../node_modules/@types/webrtc/MediaStream.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
       ]
     },
     "exportedModulesMap": {
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es5.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2016.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.esnext.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.dom.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.scripthost.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.core.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.object.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.string.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.intl.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.promise.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.array.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.object.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.string.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.symbol.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.esnext.intl.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/tslib/tslib.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/index.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/core.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/modules/stream.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/modules/file.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/utill/media.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/utill/arraybuffer.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/modules/filequick.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/modules/signaling.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/modules/signaling.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/index.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/core.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/modules/filequick.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/core.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/services/arraybuffer.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/core.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/core.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/index.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/modules/file.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/core.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/modules/stream.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/core.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/utill/media.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/core/index.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/index.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/core/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/extensions/pack/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/extensions/wait/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/extensions/buffer/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/services/datachannel.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/index.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/extensions/wait/index.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/extensions/buffer/index.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/core/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/extensions/pack/index.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/core/index.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/jest/index.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/globals.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/assert.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/base.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/globals.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/assert.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/async_hooks.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/buffer.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/child_process.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/cluster.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/console.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/constants.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/crypto.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/dgram.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/dns.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/domain.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/fs.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/http.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/http2.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/https.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/inspector.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/module.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/os.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/path.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/perf_hooks.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/process.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/punycode.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/querystring.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/readline.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/repl.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/string_decoder.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/timers.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/tls.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/trace_events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/tty.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/url.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/v8.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/vm.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/worker_threads.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/zlib.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/index.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/base.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/globals.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/async_hooks.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/perf_hooks.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/async_hooks.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/buffer.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/child_process.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/cluster.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/child_process.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/console.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/constants.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/crypto.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/tls.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/crypto.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/dns.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/https.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/tls.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/http.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/url.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/http2.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/fs.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/tls.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/url.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/http.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/dgram.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/dns.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/dns.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/dns.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/tty.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/http.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/url.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/domain.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/worker_threads.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/vm.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/zlib.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/v8.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/readline.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/repl.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/readline.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/vm.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/fs.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/url.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/inspector.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/module.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/os.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/path.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/process.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/punycode.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/querystring.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/url.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/querystring.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/string_decoder.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/timers.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/trace_events.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/webrtc/index.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/webrtc/RTCPeerConnection.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/webrtc/MediaStream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/webrtc/RTCPeerConnection.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/webrtc/MediaStream.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/webrtc/MediaStream.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/globals.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/globals.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts"
-      ],
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/vm.d.ts": [
-        "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-        "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts"
+      "../node_modules/typescript/lib/lib.es5.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2016.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2017.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2018.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2019.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.esnext.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.dom.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.scripthost.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.core.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.collection.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.generator.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.promise.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2017.object.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2017.string.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2017.intl.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2018.intl.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2018.promise.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2019.array.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2019.object.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2019.string.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.es2019.symbol.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.esnext.intl.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/tslib/tslib.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/index.ts": [
+        "../src/core.ts",
+        "../src/modules/stream.ts",
+        "../src/modules/file.ts",
+        "../src/utill/media.ts",
+        "../src/utill/arraybuffer.ts",
+        "../src/modules/filequick.ts",
+        "../src/modules/signaling.ts"
+      ],
+      "../src/modules/signaling.ts": [
+        "../src/index.ts",
+        "../src/core.ts"
+      ],
+      "../src/modules/filequick.ts": [
+        "../src/core.ts"
+      ],
+      "../src/services/arraybuffer.ts": [
+        "../src/core.ts"
+      ],
+      "../src/core.ts": [
+        "../node_modules/rx.mini/lib/index.d.ts"
+      ],
+      "../src/modules/file.ts": [
+        "../node_modules/rx.mini/lib/index.d.ts",
+        "../src/core.ts"
+      ],
+      "../src/modules/stream.ts": [
+        "../node_modules/rx.mini/lib/index.d.ts",
+        "../src/core.ts",
+        "../src/utill/media.ts"
+      ],
+      "../node_modules/rx.mini/lib/core/index.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/rx.mini/lib/index.d.ts": [
+        "../node_modules/rx.mini/lib/core/index.d.ts",
+        "../node_modules/rx.mini/lib/extensions/pack/index.d.ts",
+        "../node_modules/rx.mini/lib/extensions/wait/index.d.ts",
+        "../node_modules/rx.mini/lib/extensions/buffer/index.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/services/datachannel.ts": [
+        "../node_modules/rx.mini/lib/index.d.ts"
+      ],
+      "../node_modules/rx.mini/lib/extensions/wait/index.d.ts": [
+        "../node_modules/rx.mini/lib/index.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/rx.mini/lib/extensions/buffer/index.d.ts": [
+        "../node_modules/rx.mini/lib/core/index.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/rx.mini/lib/extensions/pack/index.d.ts": [
+        "../node_modules/rx.mini/lib/core/index.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/typings/wrtc.d.ts": [
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/jest/index.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/globals.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/assert.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/base.d.ts": [
+        "../node_modules/@types/node/globals.d.ts",
+        "../node_modules/@types/node/assert.d.ts",
+        "../node_modules/@types/node/async_hooks.d.ts",
+        "../node_modules/@types/node/buffer.d.ts",
+        "../node_modules/@types/node/child_process.d.ts",
+        "../node_modules/@types/node/cluster.d.ts",
+        "../node_modules/@types/node/console.d.ts",
+        "../node_modules/@types/node/constants.d.ts",
+        "../node_modules/@types/node/crypto.d.ts",
+        "../node_modules/@types/node/dgram.d.ts",
+        "../node_modules/@types/node/dns.d.ts",
+        "../node_modules/@types/node/domain.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/http2.d.ts",
+        "../node_modules/@types/node/https.d.ts",
+        "../node_modules/@types/node/inspector.d.ts",
+        "../node_modules/@types/node/module.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/os.d.ts",
+        "../node_modules/@types/node/path.d.ts",
+        "../node_modules/@types/node/perf_hooks.d.ts",
+        "../node_modules/@types/node/process.d.ts",
+        "../node_modules/@types/node/punycode.d.ts",
+        "../node_modules/@types/node/querystring.d.ts",
+        "../node_modules/@types/node/readline.d.ts",
+        "../node_modules/@types/node/repl.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/string_decoder.d.ts",
+        "../node_modules/@types/node/timers.d.ts",
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/trace_events.d.ts",
+        "../node_modules/@types/node/tty.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/v8.d.ts",
+        "../node_modules/@types/node/vm.d.ts",
+        "../node_modules/@types/node/worker_threads.d.ts",
+        "../node_modules/@types/node/zlib.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/ts3.2/index.d.ts": [
+        "../node_modules/@types/node/base.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/ts3.2/globals.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/node/async_hooks.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/perf_hooks.d.ts": [
+        "../node_modules/@types/node/async_hooks.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/buffer.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/child_process.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/cluster.d.ts": [
+        "../node_modules/@types/node/child_process.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/console.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/constants.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/crypto.d.ts": [
+        "../node_modules/@types/node/stream.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/tls.d.ts": [
+        "../node_modules/@types/node/crypto.d.ts",
+        "../node_modules/@types/node/dns.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/https.d.ts": [
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/http2.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/dgram.d.ts": [
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/dns.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/dns.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/net.d.ts": [
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/dns.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/tty.d.ts": [
+        "../node_modules/@types/node/net.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/http.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/domain.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/events.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/worker_threads.d.ts": [
+        "../node_modules/@types/node/vm.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/stream.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/zlib.d.ts": [
+        "../node_modules/@types/node/stream.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/v8.d.ts": [
+        "../node_modules/@types/node/stream.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/readline.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/repl.d.ts": [
+        "../node_modules/@types/node/readline.d.ts",
+        "../node_modules/@types/node/vm.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/fs.d.ts": [
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/inspector.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/module.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/os.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/path.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/process.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/punycode.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/querystring.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/url.d.ts": [
+        "../node_modules/@types/node/querystring.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/string_decoder.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/timers.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/trace_events.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/util.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/webrtc/index.d.ts": [
+        "../node_modules/@types/webrtc/RTCPeerConnection.d.ts",
+        "../node_modules/@types/webrtc/MediaStream.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/webrtc/RTCPeerConnection.d.ts": [
+        "../node_modules/@types/webrtc/MediaStream.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/webrtc/MediaStream.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/ts3.2/globals.d.ts": [
+        "../node_modules/@types/node/globals.d.ts",
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/node/ts3.2/util.d.ts": [
+        "../node_modules/@types/node/util.d.ts",
+        "../src/typings/wrtc.d.ts"
+      ],
+      "../node_modules/@types/node/vm.d.ts": [
+        "../src/typings/wrtc.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es5.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2016.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.esnext.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.dom.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.scripthost.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.core.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.collection.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.generator.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.iterable.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.promise.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.proxy.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.reflect.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.symbol.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2016.array.include.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.object.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.string.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.intl.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.intl.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.promise.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2018.regexp.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.array.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.object.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.string.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.es2019.symbol.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.esnext.intl.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/typescript/lib/lib.esnext.bigint.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/tslib/tslib.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/src/utill/arraybuffer.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/core/index.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/extensions/pack/index.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/extensions/wait/index.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/extensions/buffer/index.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/rx.mini/lib/index.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/src/services/arraybuffer.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/src/services/datachannel.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/src/core.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/src/utill/media.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/src/modules/stream.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/src/modules/file.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/src/modules/filequick.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/src/modules/signaling.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/src/index.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/src/tests/close.test.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/src/tests/sendjson.test.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/src/utill/testtools.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/src/tests/trickle.test.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/src/tests/tsnode.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/src/tests/vanilla.test.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/src/typings/wrtc.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/jest/index.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/globals.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/assert.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/async_hooks.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/buffer.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/child_process.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/cluster.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/console.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/constants.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/crypto.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/dgram.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/dns.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/domain.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/events.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/fs.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/http.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/http2.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/https.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/inspector.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/module.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/net.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/os.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/path.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/perf_hooks.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/process.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/punycode.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/querystring.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/readline.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/repl.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/stream.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/string_decoder.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/timers.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/tls.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/trace_events.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/tty.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/url.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/util.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/v8.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/vm.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/worker_threads.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/zlib.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/base.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/util.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/globals.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/node/ts3.2/index.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/webrtc/MediaStream.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/webrtc/RTCPeerConnection.d.ts",
-      "/home/runner/work/webrtc4me/webrtc4me/node_modules/@types/webrtc/index.d.ts"
+      "../node_modules/tslib/tslib.d.ts",
+      "../src/utill/arraybuffer.ts",
+      "../node_modules/rx.mini/lib/core/index.d.ts",
+      "../node_modules/rx.mini/lib/extensions/pack/index.d.ts",
+      "../node_modules/rx.mini/lib/extensions/wait/index.d.ts",
+      "../node_modules/rx.mini/lib/extensions/buffer/index.d.ts",
+      "../node_modules/rx.mini/lib/index.d.ts",
+      "../src/services/arraybuffer.ts",
+      "../src/services/datachannel.ts",
+      "../src/core.ts",
+      "../src/utill/media.ts",
+      "../src/modules/stream.ts",
+      "../src/modules/file.ts",
+      "../src/modules/filequick.ts",
+      "../src/modules/signaling.ts",
+      "../src/index.ts",
+      "../src/tests/close.test.ts",
+      "../src/tests/sendjson.test.ts",
+      "../src/utill/testtools.ts",
+      "../src/tests/trickle.test.ts",
+      "../src/tests/tsnode.ts",
+      "../src/tests/vanilla.test.ts",
+      "../src/typings/wrtc.d.ts",
+      "../node_modules/@types/jest/index.d.ts",
+      "../node_modules/@types/node/globals.d.ts",
+      "../node_modules/@types/node/assert.d.ts",
+      "../node_modules/@types/node/async_hooks.d.ts",
+      "../node_modules/@types/node/buffer.d.ts",
+      "../node_modules/@types/node/child_process.d.ts",
+      "../node_modules/@types/node/cluster.d.ts",
+      "../node_modules/@types/node/console.d.ts",
+      "../node_modules/@types/node/constants.d.ts",
+      "../node_modules/@types/node/crypto.d.ts",
+      "../node_modules/@types/node/dgram.d.ts",
+      "../node_modules/@types/node/dns.d.ts",
+      "../node_modules/@types/node/domain.d.ts",
+      "../node_modules/@types/node/events.d.ts",
+      "../node_modules/@types/node/fs.d.ts",
+      "../node_modules/@types/node/http.d.ts",
+      "../node_modules/@types/node/http2.d.ts",
+      "../node_modules/@types/node/https.d.ts",
+      "../node_modules/@types/node/inspector.d.ts",
+      "../node_modules/@types/node/module.d.ts",
+      "../node_modules/@types/node/net.d.ts",
+      "../node_modules/@types/node/os.d.ts",
+      "../node_modules/@types/node/path.d.ts",
+      "../node_modules/@types/node/perf_hooks.d.ts",
+      "../node_modules/@types/node/process.d.ts",
+      "../node_modules/@types/node/punycode.d.ts",
+      "../node_modules/@types/node/querystring.d.ts",
+      "../node_modules/@types/node/readline.d.ts",
+      "../node_modules/@types/node/repl.d.ts",
+      "../node_modules/@types/node/stream.d.ts",
+      "../node_modules/@types/node/string_decoder.d.ts",
+      "../node_modules/@types/node/timers.d.ts",
+      "../node_modules/@types/node/tls.d.ts",
+      "../node_modules/@types/node/trace_events.d.ts",
+      "../node_modules/@types/node/tty.d.ts",
+      "../node_modules/@types/node/url.d.ts",
+      "../node_modules/@types/node/util.d.ts",
+      "../node_modules/@types/node/v8.d.ts",
+      "../node_modules/@types/node/vm.d.ts",
+      "../node_modules/@types/node/worker_threads.d.ts",
+      "../node_modules/@types/node/zlib.d.ts",
+      "../node_modules/@types/node/base.d.ts",
+      "../node_modules/@types/node/ts3.2/util.d.ts",
+      "../node_modules/@types/node/ts3.2/globals.d.ts",
+      "../node_modules/@types/node/ts3.2/index.d.ts",
+      "../node_modules/@types/webrtc/MediaStream.d.ts",
+      "../node_modules/@types/webrtc/RTCPeerConnection.d.ts",
+      "../node_modules/@types/webrtc/index.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.d.ts",
+      "../node_modules/typescript/lib/lib.es2016.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.d.ts",
+      "../node_modules/typescript/lib/lib.es2019.d.ts",
+      "../node_modules/typescript/lib/lib.esnext.d.ts",
+      "../node_modules/typescript/lib/lib.esnext.bigint.d.ts",
+      "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
+      "../node_modules/typescript/lib/lib.es2019.symbol.d.ts",
+      "../node_modules/typescript/lib/lib.es2019.string.d.ts",
+      "../node_modules/typescript/lib/lib.es2019.object.d.ts",
+      "../node_modules/typescript/lib/lib.es2019.array.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.regexp.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.promise.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.intl.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.intl.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.string.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.object.d.ts",
+      "../node_modules/typescript/lib/lib.es2016.array.include.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.promise.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.generator.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.collection.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.core.d.ts",
+      "../node_modules/typescript/lib/lib.scripthost.d.ts",
+      "../node_modules/typescript/lib/lib.dom.d.ts",
+      "../node_modules/typescript/lib/lib.es5.d.ts"
     ]
   },
-  "version": "3.5.3"
+  "version": "3.6.4"
 }
