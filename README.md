@@ -8,7 +8,50 @@ Support multi label datachannel and media stream.
 
 # How to use?
 
-look ```src/tests/```  ```example/```
+look `src/tests/`  `example/`
 
-# example 
-https://shinyoshiaki.github.io/webrtc4me/example/build/
+## vanilla ice
+
+```typescript
+  const peerOffer = new WebRTC({ nodeId: "offer" });
+  const peerAnswer = new WebRTC({ nodeId: "answer" });
+
+  peerOffer.makeOffer();
+  const offer = await peerOffer.onSignal.asPromise();
+  peerAnswer.setSdp(offer);
+  const answer = await peerAnswer.onSignal.asPromise();
+  peerOffer.setSdp(answer);
+
+  await Promise.all([
+    peerOffer.onConnect.asPromise(),
+    peerAnswer.onConnect.asPromise()
+  ]);
+```
+
+## trickle ice
+
+```typescript
+    const peerOffer = new WebRTC({ nodeId: "offer", trickle: true });
+    const peerAnswer = new WebRTC({ nodeId: "answer", trickle: true });
+      
+
+    peerOffer.makeOffer();
+    peerOffer.onSignal.subscribe(sdp => {
+      peerAnswer.setSdp(sdp);
+    });
+    peerAnswer.onSignal.subscribe(sdp => {
+      peerOffer.setSdp(sdp);
+    });
+
+    peerOffer.onConnect.once(() => {
+        
+    });
+
+    peerAnswer.onConnect.once(() => {
+        
+    });
+```
+
+# example
+
+<https://shinyoshiaki.github.io/webrtc4me/page>
