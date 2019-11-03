@@ -39,6 +39,7 @@ jobs:
         run: |
           mkdir deploy          
           mv README.md deploy
+          mv package.json deploy
           mv lib deploy
           mv example/build deploy/page
           shopt -s dotglob
