@@ -30,8 +30,8 @@ export default class WebRTC {
   private event = this.pack.event;
 
   onSignal = this.event<Signal>();
-  onConnect = this.event();
-  onDisconnect = this.event();
+  onConnect = this.event<undefined>();
+  onDisconnect = this.event<undefined>();
   onData = this.event<Message>();
   onAddTrack = this.event<MediaStream>();
   onOpenDC = this.event<RTCDataChannel>();
@@ -68,7 +68,7 @@ export default class WebRTC {
     });
     this.dataChannelService.onOpenDC.once(() => {
       this.isConnected = true;
-      this.onConnect.execute(null);
+      this.onConnect.execute(undefined);
 
       this.dataChannelService.onOpenDC.subscribe(dc => {
         this.onOpenDC.execute(dc);
@@ -375,7 +375,7 @@ export default class WebRTC {
 
     this.isDisconnected = true;
     this.isConnected = false;
-    this.onDisconnect.execute(null);
+    this.onDisconnect.execute(undefined);
 
     this.pack.finishAll();
   }
