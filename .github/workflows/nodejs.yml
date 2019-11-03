@@ -38,9 +38,9 @@ jobs:
       - name: ready_deploy
         run: |
           mkdir deploy
-          shopt -s extglob
-          shopt -s dotglob
-          mv !(deploy|node_modules) deploy
+          mv example/build deploy
+          mv lib deploy
+          mv README.md deploy
 
       - name: deploy
         uses: peaceiris/actions-gh-pages@v2.5.0
