@@ -70,13 +70,13 @@ export default class WebRTC {
       this.isConnected = true;
       this.onConnect.execute(undefined);
 
-      this.dataChannelService.onOpenDC.subscribe(dc => {
+      this.dataChannelService.onOpenDC.subscribe((dc) => {
         this.onOpenDC.execute(dc);
       });
     });
 
     if (stream) {
-      stream.getTracks().forEach(track => this.rtc.addTrack(track, stream));
+      stream.getTracks().forEach((track) => this.rtc.addTrack(track, stream));
     } else if (track) {
       this.rtc.addTrack(track);
     }
@@ -89,12 +89,12 @@ export default class WebRTC {
         ? []
         : [
             {
-              urls: "stun:stun.l.google.com:19302"
-            }
-          ]
+              urls: "stun:stun.l.google.com:19302",
+            },
+          ],
     });
 
-    peer.ontrack = evt => {
+    peer.ontrack = (evt) => {
       const stream = evt.streams[0];
       this.onAddTrack.execute(stream);
       this.remoteStream = stream;
@@ -133,7 +133,7 @@ export default class WebRTC {
           if (trickle) {
             this.onSignal.execute({
               type: "candidate",
-              ice: JSON.parse(JSON.stringify(candidate))
+              ice: JSON.parse(JSON.stringify(candidate)),
             });
           }
         } else {
@@ -299,7 +299,7 @@ export default class WebRTC {
             label: channel.label as string | "datachannel",
             data,
             nodeId: this.nodeId,
-            dataType
+            dataType,
           });
         }
       }
@@ -348,11 +348,7 @@ export default class WebRTC {
   }
 
   addStream(stream: MediaStream) {
-    try {
-      this.rtc.addTrack(stream.getVideoTracks()[0], stream);
-    } catch (error) {
-      console.warn(error);
-    }
+    this.addTrack(stream.getVideoTracks()[0], stream);
   }
 
   async hangUp() {

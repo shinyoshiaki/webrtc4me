@@ -35,17 +35,19 @@ const App: FC = () => {
   };
 
   const loadStream = async (peer: WebRTC) => {
-    const local = await getLocalVideo();
-    peer.onAddTrack.subscribe(stream => {
+    const local = getLocalVideo();
+    
+    peer.onAddTrack.subscribe(async (stream) => {
+      console.log("onadd", stream);
       event.current.stream.execute(stream);
 
       if (!peer.isOffer) {
-        peer.addStream(local);
+        peer.addStream(await local);
       }
     });
-
+    
     if (peer.isOffer) {
-      peer.addStream(local);
+      peer.addStream(await local);
     }
   };
 
